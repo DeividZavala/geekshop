@@ -1,2 +1,106 @@
-<h1>CATALOGO</h1>
-<link rel="stylesheet" href="">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>geekShop</title>
+    <link rel="stylesheet" href="../..\assets\css\main.css">
+  </head>
+  <body>
+    <header>
+      <h1>CABEZERA DEL PROYECTO</h1>
+    </header>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <section class="filtrado">
+        <p>FILTROS</p>
+      </section>
+      <section class="filtrado">
+        <p>Color</p>
+      </section>
+      <section class="filtrado">
+        <p>Talla</p>
+      </section>
+      <section class="filtrado">
+        <p>Precio</p>
+      </section>
+      <section class="filtrado">
+        <p>Valoracion</p>
+      </section>
+    </div>
+    <div  id="main" >
+      <section>
+        MUJERES --> TECNOLOGIA
+      </section>
+      <section>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; FILTROS</span>
+      </section>
+      <section>
+        <div class="columnas">
+          <div class="column">
+            <div class="container">
+              <img src="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\app\catalogo\images\playera.jpg" alt="Avatar" class="image" style="width:100%">
+              <div class="middle">
+                <div class="text">PLAYERA X</div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="container">
+              <img src="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\app\catalogo\images\playera.jpg" alt="Avatar" class="image" style="width:100%">
+              <div class="middle">
+                <div class="text">PLAYERA X</div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="container">
+              <img src="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\app\catalogo\images\playera.jpg" alt="Avatar" class="image" style="width:100%">
+              <div class="middle">
+                <div class="text">PLAYERA X</div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="container">
+              <img src="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\app\catalogo\images\playera.jpg" alt="Avatar" class="image" style="width:100%">
+              <div class="middle">
+                <div class="text">PLAYERA X</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <ul class="pagination">
+              <li><a href="#">&laquo;</a></li>
+              <li><a href="#">1</a></li>
+              <li><a class="active" href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">6</a></li>
+              <li><a href="#">&raquo;</a></li>
+            </ul>
+        </div>
+      </section>
+      <section>
+         <h2>YA VISTOS</h2>
+         <div style="text-align:center;">
+         </div>
+      </section>
+    </div>
+    <footer>
+      <h1>PIE DE PAGINA</h1>
+    </footer>
+    <script>
+      function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+       }
+
+       function closeNav() {
+           document.getElementById("mySidenav").style.width = "0";
+           document.getElementById("main").style.marginLeft= "0";
+      }
+    </script>
+  </body>
+</html>

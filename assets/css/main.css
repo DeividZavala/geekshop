@@ -1,1 +1,4 @@
-@import "_card.css"
+@import "_card.css";
+@import "_margenesCatalogo.css";
+@import "assets\package.json"
+@import "assets\node_modules\bulma\css\bulma.css"
