@@ -1,6 +1,6 @@
 (function () {
 
     angular
-        .module('geekshop',[])
+        .module('geekshop',['ngRoute'])
 
 })();
