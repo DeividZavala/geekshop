@@ -52,7 +52,7 @@
           <div class="columns">
             <div class="column">
               <div class="imgContenedor">
-                <img src="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\app\catalogo\images\playera.jpg" alt="Avatar" class="imageCat" style="width:70%">
+                <img src="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\assets\images\playera1.jpg" alt="Avatar" class="imageCat" style="width:70%">
                 <div class="middle">
                   <div class="textGaleria">PLAYERA A</div>
                 </div>
@@ -60,7 +60,7 @@
             </div>
             <div class="column">
               <div class="imgContenedor">
-                <img src="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\app\catalogo\images\playera2.jpg" alt="Avatar" class="imageCat" style="width:70%">
+                <img src="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\assets\images\playera2.jpg" alt="Avatar" class="imageCat" style="width:70%">
                 <div class="middle">
                   <div class="textGaleria">PLAYERA B</div>
                 </div>
@@ -68,7 +68,7 @@
             </div>
             <div class="column">
               <div class="imgContenedor">
-                <img src="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\app\catalogo\images\playera.jpg" alt="Avatar" class="imageCat" style="width:70%">
+                <img src="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\assets\images\playera3.jpg" alt="Avatar" class="imageCat" style="width:70%">
                 <div class="middle">
                   <div class="textGaleria">PLAYERA C</div>
                 </div>
@@ -76,15 +76,15 @@
             </div>
             <div class="column">
               <div class="imgContenedor">
-                <img src="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\app\catalogo\images\playera2.jpg" alt="Avatar" class="imageCat" style="width:70%">
+                <img src="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\assets\images\playera4.jpg" alt="Avatar" class="imageCat" style="width:70%">
                 <div class="middle">
                   <div class="textGaleria">PLAYERA D</div>
-          </section>
-          <section>
-            <div class="columns">
+        </section>
+        <section>
+          <div class="columns">
               <div class="column">
                 <div class="imgContenedor">
-                  <img src="/assets/images/playera.jpg" alt="Avatar" class="imageCat" style="width:70%">
+                  <img src="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\assets\images\playera3.jpg" alt="Avatar" class="imageCat" style="width:70%">
                   <div class="middle">
                     <div class="textGaleria">PLAYERA A</div>
                   </div>
@@ -92,7 +92,7 @@
               </div>
               <div class="column">
                 <div class="imgContenedor">
-                  <img src="/assets/images/playera2.jpg" alt="Avatar" class="imageCat" style="width:70%">
+                  <img src="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\assets\images\playera4.jpg" alt="Avatar" class="imageCat" style="width:70%">
                   <div class="middle">
                     <div class="textGaleria">PLAYERA B</div>
                   </div>
@@ -100,7 +100,7 @@
               </div>
               <div class="column">
                 <div class="imgContenedor">
-                  <img src="/assets/images/playera.jpg" alt="Avatar" class="imageCat" style="width:70%">
+                  <img src="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\assets\images\playera2.jpg" alt="Avatar" class="imageCat" style="width:70%">
                   <div class="middle">
                     <div class="textGaleria">PLAYERA C</div>
                   </div>
@@ -108,14 +108,13 @@
               </div>
               <div class="column">
                 <div class="imgContenedor">
-                  <img src="/assets/images/playera2.jpg" alt="Avatar" class="imageCat" style="width:70%">
+                  <img src="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\assets\images\playera1.jpg" alt="Avatar" class="imageCat" style="width:70%">
                   <div class="middle">
                     <div class="textGaleria">PLAYERA D</div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
           <div class="columns is-mobile">
             <div class="column is-4 is-offset-8">
               <nav class="pagination">
@@ -141,7 +140,7 @@
                   <div class="numbertext">1/3</div>
                   <img src="..\catalogo\images\carrito1.jpg" alt="uno" style="width:70%">
                   <div class="text">PLAYERA X</div>
-            <div class="columns is-mobile">
+             <div class="columns is-mobile">
               <div class="column is-11 is-offset-1">
                 <div class="slideshow-container">
                   <div class="mySlides fade">
@@ -190,23 +189,24 @@
 
                 function currentSlide(n) {
                   showSlides(slideIndex = n);
-                  }
+                }
 
-                  function showSlides(n) {
+                function showSlides(n) {
                     var i;
                     var slides = document.getElementsByClassName("mySlides");
                     var dots = document.getElementsByClassName("dot");
                     if (n > slides.length) {slideIndex = 1}
                     if (n < 1) {slideIndex = slides.length}
-                    for (i = 0; i < slides.length; i++) {
-                      slides[i].style.display = "none";
+                      for (i = 0; i < slides.length; i++) {
+                          slides[i].style.display = "none";
                       }
+
                       for (i = 0; i < dots.length; i++) {
                         dots[i].className = dots[i].className.replace(" active", "");
-                        }
-                        slides[slideIndex-1].style.display = "block";
-                        dots[slideIndex-1].className += " active";
-                        }
+                      }
+                           slides[slideIndex-1].style.display = "block";
+                           dots[slideIndex-1].className += " active";
+                }
               </script>
             </div>
           </div>
