@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Detail</title>
+	<link rel="stylesheet" type="text/css" href="/assets/node_modules/bulma/css/bulma.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<body>
+
+	<section class="hero">
+		<article class="content">
+			<div class="container">
+
+				
+					
+				
+
+					<div class="columns">
+
+					<div class="column is-2">
+					
+						<figure class="image is-square">
+							<img src="/assets/images/playera1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+						</figure>
+						<br>
+						<figure class="image is-square">
+							<img src="/assets/images/playera3.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+						</figure>
+						<br>
+						<figure class="image is-square">
+							<img src="/assets/images/playera2.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+						</figure>
+					</div>
+					<div class="column">
+						<figure class="image is-square">
+							<img src="/assets/images/playera4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+						</figure>
+					</div>
+					<div class="column is-4">
+					<h1 align="center">Nombre del producto</h1>
+						<h4>Precio: $300</h4>
+						<h4>Color:</h4>
+						 <div class="block">
+						  <a class="button is-primary">Color1</a>
+						  <a class="button is-info">Color2</a>
+						  <a class="button is-success">Color3</a>
+						  <a class="button is-danger">Color4</a>
+						  
+						  
+						</div>
+						<h4>Talla:</h4>
+						 <div class="block">
+						  <a class="button">Chica</a>
+						  <a class="button">Mediana</a>
+						  <a class="button">Grande</a>
+						  			  
+						</div>
+						
+						
+						<h4>Cantidad:</h4>
+						<input class="input is-medium" type="number" placeholder="1">
+						<br><br>
+						<a class="button is-large">Añadir</a>
+						<br>
+
+						<span>Comparte: </span> <br>
+						<a class="button"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+						<a class="button"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+						
+						
+					</div>
+				</div>
+				<br>
+
+					<div class="box">
+						<h4>Comentarios:</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+			</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      
+      	<img class="imslide" src="/assets/images/playera1.jpg">	
+      
+      
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      
+      	<img class="imslide" src="/assets/images/playera3.jpg">	
+      
+
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      
+      	<img class="imslide" src="/assets/images/playera2.jpg">	
+      
+
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      
+      	<img class="imslide" src="/assets/images/playera4.jpg">	
+      
+
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!--<div class="caption-container">
+      <p id="caption"></p>
+    </div>-->
+
+
+    <!--<div class="column">
+      <img class="demo cursor" src="/assets/images/playera1.jpg" onclick="currentSlide(1)" alt="Nature and sunrise">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="/assets/images/playera3.jpg" onclick="currentSlide(2)" alt="Trolltunga, Norway">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="/assets/images/playera2.jpg" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="/assets/images/playera4.jpg" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>-->
+  </div>
+</div>
+
+
+
+		</article>
+	</section>
+
+	<script>
+		function openModal() {
+		  document.getElementById('myModal').style.display = "block";
+		}
+
+		function closeModal() {
+		  document.getElementById('myModal').style.display = "none";
+		}
+
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  //var dots = document.getElementsByClassName("demo");
+		  //var captionText = document.getElementById("caption");
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		      slides[i].style.display = "none";
+		  }
+		  //for (i = 0; i < dots.length; i++) {
+		    //  dots[i].className = dots[i].className.replace(" active", "");
+		  //}
+		  slides[slideIndex-1].style.display = "block";
+		  //dots[slideIndex-1].className += " active";
+		  //captionText.innerHTML = dots[slideIndex-1].alt;
+		}
+	</script>
+
+</body>
+</html>
