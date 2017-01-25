@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.6.1",
+    "angular-route": "^1.6.1",
     "bulma": "^0.3.1",
     "jquery": "^3.1.1"
   }
