@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GeekShop</title>
+<section class="hero is-primary is-small">
+  <!-- Hero header: will stick at the top -->
+  <div class="hero-head">
+    <header class="nav">
+      <div class="container">
+        <div class="nav-left">
+          <a class="nav-item">
+            <i class="fa fa-bolt"></i>
+          </a>
+        </div>
+        <span class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <div class="nav-right nav-menu">
+          <a class="nav-item is-active">
+            Home
+          </a>
+          <a class="nav-item">
+            Diseños de la comunidad
+          </a>
+           <span class="nav-item">
+            <a class="button is-primary is-inverted">
+              <span class="icon">
+                <i class="fa fa-user"></i>
+              </span>
+              <span>Usuario</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        GeekShop
+      </h1>
+      <h2 class="subtitle">
+        Be the nerd... or dress like one
+      </h2>
+    </div>
+  </div>
+
+  <!-- Hero footer: will stick at the bottom -->
+  <div class="hero-foot">
+    <nav class="tabs">
+      <div class="container">
+        <ul>
+          <li class="is-active"><a>Mujeres</a></li>
+          <li><a>Hombres</a></li>
+          <li><a>Adolescentes</a></li>
+          <li><a>Niños</a></li>
+          <li><a>Descuentos</a></li>
+          <li><a>UMaker!</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
+</header>
+
+<link href="C:\Users\danyp\Documents\RepoGeekShop\geekshop\assets\node_modules\bulma\css\bulma.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link href="main.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<body>
+<br/><br/>
+
+<div class="tile is-ancestor" style="margin-left:25%">
+  <div class="tile  is-vertical is-8">
+    <div class="tile">
+      <div class="tile is-parent is-vertical">
+        <article class="tile is-child notification is-primary">
+          <p class="title" >Tecnologia</p>
+          <p class="subtitle">Lo mas </p>
+        </article>
+        <article class="tile is-child notification is-warning">
+          <p class="title">Cultura Geek</p>
+          <p class="subtitle"></p>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-info">
+          <p class="title">Musica</p>
+          <p class="subtitle">La musica en ti</p>
+          <figure class="image is-4by3">
+            <img src="../../images/imgmusic.jpg">
+          </figure>
+        </article>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child notification is-danger">
+        <p class="title">Diseños de la comunidad</p>
+        <p class="subtitle">Descubre la creatividad colectiva!</p>
+        <div class="content">
+          <!-- Content -->
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+<br/><br/>
+<h1 class="title is-3 has-text-centered">Lo mas buscado</h1>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="../../images/img1.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="../../images/img2.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="../../images/img3.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</body>
+</html>
