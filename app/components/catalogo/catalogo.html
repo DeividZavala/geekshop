@@ -1,216 +1,125 @@
-<head>
-  <meta charset="utf-8">
-  <title>Geek Shop</title>
-  <link rel="stylesheet" href="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\assets\css\main.css">
-  <link rel="stylesheet" href="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\assets\node_modules\bulma\css\bulma.css">
-</head>
-<body>
-    <div class="container is-fluid">
+  <head>
+    <meta charset="utf-8">
+    <title>CATALOGO GEEKSHOP</title>
+    <link rel="stylesheet" href="..\..\..\assets\css\main.css">
+    <link rel="stylesheet" href="..\..\..\assets\node_modules\bulma\css\bulma.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  </head>
+  <body>
+    <!-- Inicio del Navbar -->
+    <header>
+      <nav class="nav has-shadow">
+          <div class="container">
+              <div class="nav-left">
+                  <a class="nav-item">
+                      <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
+                  </a>
+              </div>
+              <div class="nav-center">
+                  <a class="nav-item is-tab is-hidden-mobile is-active">Mujeres</a>
+                  <a class="nav-item is-tab is-hidden-mobile">Hombres</a>
+                  <a class="nav-item is-tab is-hidden-mobile">Descuentos</a>
+                  <a class="nav-item is-tab is-hidden-mobile">UMarker!</a>
+              </div>
+              <span class="nav-toggle">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </span>
+              <div class="nav-right nav-menu">
+                  <a class="nav-item is-tab is-hidden-tablet is-active">Home</a>
+                  <a class="nav-item is-tab is-hidden-tablet">Features</a>
+                  <a class="nav-item is-tab is-hidden-tablet">Pricing</a>
+                  <a class="nav-item is-tab is-hidden-tablet">About</a>
+                  <a class="nav-item is-tab"><i class="fa fa-search" aria-hidden="true"></i></a>
+                  <a class="nav-item is-tab">
+                      <figure class="image is-16x16" style="margin-right: 8px;">
+                      <img src="http://bulma.io/images/jgthms.png">
+                      </figure>
+                      Profile
+                   </a>
+                  <a class="nav-item is-tab">Log out</a>
+                  <a class="nav-item is-tab"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  <div class="input_search">
+                      <input class="input" type="text" placeholder="Buscar">
+                  </div>
+              </div>
+          </div>
+      </nav>
+    </header>
+    <!-- Fin del Navbar -->
+
+    <!-- Inicio del Catalogo -->
+    <div class="columns is-mobile">
+      <!--Inicio SideNav-->
       <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <section class="filtrado">
-          <p>FILTROS</p>
-        </section>
-        <section class="filtrado">
-          <p>Color</p>
-        </section>
-        <section class="filtrado">
-          <p>Talla</p>
-        </section>
-        <section class="filtrado">
-          <p>Precio</p>
-        </section>
-        <section class="filtrado">
-          <p>Valoracion</p>
-        </section>
-      </div>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="columns">
+              <div class="column is-narrow">
+                <p>FILTROS</p>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column is-narrow">
+                <p>Color</p>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column is-narrow">
+                <p>Talla</p>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column is-narrow">
+                <p>Valoracion</p>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column is-narrow">
+                <p>Precio</p>
+              </div>
+            </div>
+        </div>
       <script>
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-         }
-
-         function closeNav() {
+            document.getElementById("main").style.marginLeft = "50px";
+        }
+        function closeNav() {
              document.getElementById("mySidenav").style.width = "0";
              document.getElementById("main").style.marginLeft= "0";
-        }
+         }
       </script>
-      <div id="main">
-        <section>
-          <div class="columns">
-            <div class="column">
-              <p>MUJERES --> TECNOLOGIA</p>
-            </div>
-          </div>
-          <div class="columns">
-            <div class="column">
-              <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; FILTROS</span>
-            </div>
-          </div>
-        </section>
-        <section>
-          <div class="columns">
-            <div class="column">
-              <div class="imgContenedor">
-                <img src="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\assets\images\playera1.jpg" alt="Avatar" class="imageCat" style="width:70%">
-                <div class="middle">
-                  <div class="textGaleria">PLAYERA A</div>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="imgContenedor">
-                <img src="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\assets\images\playera2.jpg" alt="Avatar" class="imageCat" style="width:70%">
-                <div class="middle">
-                  <div class="textGaleria">PLAYERA B</div>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="imgContenedor">
-                <img src="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\assets\images\playera3.jpg" alt="Avatar" class="imageCat" style="width:70%">
-                <div class="middle">
-                  <div class="textGaleria">PLAYERA C</div>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="imgContenedor">
-                <img src="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\assets\images\playera4.jpg" alt="Avatar" class="imageCat" style="width:70%">
-                <div class="middle">
-                  <div class="textGaleria">PLAYERA D</div>
-        </section>
-        <section>
-          <div class="columns">
-              <div class="column">
-                <div class="imgContenedor">
-                  <img src="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\assets\images\playera3.jpg" alt="Avatar" class="imageCat" style="width:70%">
-                  <div class="middle">
-                    <div class="textGaleria">PLAYERA A</div>
-                  </div>
-                </div>
-              </div>
-              <div class="column">
-                <div class="imgContenedor">
-                  <img src="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\assets\images\playera4.jpg" alt="Avatar" class="imageCat" style="width:70%">
-                  <div class="middle">
-                    <div class="textGaleria">PLAYERA B</div>
-                  </div>
-                </div>
-              </div>
-              <div class="column">
-                <div class="imgContenedor">
-                  <img src="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\assets\images\playera2.jpg" alt="Avatar" class="imageCat" style="width:70%">
-                  <div class="middle">
-                    <div class="textGaleria">PLAYERA C</div>
-                  </div>
-                </div>
-              </div>
-              <div class="column">
-                <div class="imgContenedor">
-                  <img src="C:\Users\DIANA\Documents\ESTADIA\geekShop\geekshop\assets\images\playera1.jpg" alt="Avatar" class="imageCat" style="width:70%">
-                  <div class="middle">
-                    <div class="textGaleria">PLAYERA D</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <div class="columns is-mobile">
-            <div class="column is-4 is-offset-8">
-              <nav class="pagination">
-                <ul class="pagination-list">
-                  <li><a class="pagination-link is-current">1</a></li>
-                  <li><a class="pagination-link">2</a></li>
-                  <li><a class="pagination-link">3</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </section>
-        <section>
-          <div class="columns is-mobile">
-            <div class="column is-half is-offset-one-quarter">
-              <h1>YA VISTOS</h1>
-            </div>
-          </div>
-          <div class="columns is-mobile">
-            <div class="column is-11 is-offset-1">
-              <div class="slideshow-container">
-                <div class="mySlides fade">
-                  <div class="numbertext">1/3</div>
-                  <img src="..\catalogo\images\carrito1.jpg" alt="uno" style="width:70%">
-                  <div class="text">PLAYERA X</div>
-             <div class="columns is-mobile">
-              <div class="column is-11 is-offset-1">
-                <div class="slideshow-container">
-                  <div class="mySlides fade">
-                    <div class="numbertext">1/3</div>
-                    <img src="/assets/images/carrito1.jpg" alt="uno" style="width:70%">
-                    <div class="text">PLAYERA X</div>
-                  </div>
-                  <div class="mySlides fade">
-                    <div class="numbertext">2/3</div>
-                    <img src="/assets/images/carrito2.jpg" alt="dos" style="width:70%">
-                    <div class="text">PLAYERA Y</div>
-                  </div>
-                  <div class="mySlides fade">
-                    <div class="numbertext">3/3</div>
-                    <img src="/assets/images/carrito3.jpg" alt="tres" style="width:70%">
-                    <div class="text">PLAYERA Z</div>
-                  </div>
-                  <a class="prev" onclick="plusSlides(-1)">?</a>
-                  <a class="next" onclick="plusSlides(1)">?</a>
-                </div>
-                <div class="mySlides fade">
-                  <div class="numbertext">2/3</div>
-                  <img src="..\catalogo\images\carrito2.jpg" alt="dos" style="width:70%">
-                  <div class="text">PLAYERA Y</div>
-                </div>
-                <div class="mySlides fade">
-                  <div class="numbertext">3/3</div>
-                  <img src="..\catalogo\images\carrito3.jpg" alt="tres" style="width:70%">
-                  <div class="text">PLAYERA Z</div>
-                </div>
-                <a class="prev" onclick="plusSlides(-1)">?</a>
-                <a class="next" onclick="plusSlides(1)">?</a>
-              </div>
-              <div class="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-              </div>
-              <script>
-                var slideIndex = 1;
-                showSlides(slideIndex);
-
-                function plusSlides(n) {
-                  showSlides(slideIndex += n);
-                }
-
-                function currentSlide(n) {
-                  showSlides(slideIndex = n);
-                }
-
-                function showSlides(n) {
-                    var i;
-                    var slides = document.getElementsByClassName("mySlides");
-                    var dots = document.getElementsByClassName("dot");
-                    if (n > slides.length) {slideIndex = 1}
-                    if (n < 1) {slideIndex = slides.length}
-                      for (i = 0; i < slides.length; i++) {
-                          slides[i].style.display = "none";
-                      }
-
-                      for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" active", "");
-                      }
-                           slides[slideIndex-1].style.display = "block";
-                           dots[slideIndex-1].className += " active";
-                }
-              </script>
-            </div>
-          </div>
-        </section>
-      </div>
+      <!--Fin SideNav-->
+      <section>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; FILTROS</span>
+      </section>
     </div>
-</body>
+    <!-- Fin del Catalogo -->
+
+    <!-- Inicio del Footer -->
+    <footer class="columns">
+        <div class="menu_container-footer column is-three-quarters">
+            <div class="nav-right">
+                <a class="nav-item is-tab is-hidden-mobile is-active">Mujeres</a>
+                <a class="nav-item is-tab is-hidden-mobile">Hombres</a>
+                <a class="nav-item is-tab is-hidden-mobile">Descuentos</a>
+                <a class="nav-item is-tab is-hidden-mobile">UMarker!</a>
+            </div>
+        </div>
+        <div class="social_container column">
+            <span class="social_header" >Siguenos!</span>
+            <span><i class="fa fa-pinterest" aria-hidden="true"></i></span>
+            <span><i class="fa fa-twitter" aria-hidden="true"></i></span>
+            <span><i class="fa fa-facebook-square" aria-hidden="true"></i></span>
+        </div>
+    </footer>
+    <!-- Fin del Foter -->
+  <!--barras-->
+    <script src="/assets/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/assets/node_modules/angular/angular.js"></script>
+    <script src="/assets/node_modules/angular-route/angular-route.js"></script>
+    <script src="/app/app.js"></script>
+    <script src="/app/routes.js"></script>
+  </body>
+<!-- -->
