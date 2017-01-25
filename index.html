@@ -11,54 +11,12 @@
 </head>
 <body>
 
-    <!-- Inicio del Navbar -->
-    <header>
-        <nav class="nav has-shadow">
-            <div class="container">
-                <div class="nav-left">
-                    <a class="nav-item">
-                        <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
-                    </a>
-                </div>
-                <div class="nav-center">
-                    <a class="nav-item is-tab is-hidden-mobile is-active">Mujeres</a>
-                    <a class="nav-item is-tab is-hidden-mobile">Hombres</a>
-                    <a class="nav-item is-tab is-hidden-mobile">Descuentos</a>
-                    <a class="nav-item is-tab is-hidden-mobile">UMarker!</a>
-                </div>
-                <span class="nav-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
-
-                <div class="nav-right nav-menu">
-                    <a class="nav-item is-tab is-hidden-tablet is-active">Home</a>
-                    <a class="nav-item is-tab is-hidden-tablet">Features</a>
-                    <a class="nav-item is-tab is-hidden-tablet">Pricing</a>
-                    <a class="nav-item is-tab is-hidden-tablet">About</a>
-                    <a class="nav-item is-tab"><i class="fa fa-search" aria-hidden="true"></i></a>
-                    <a class="nav-item is-tab">
-                        <figure class="image is-16x16" style="margin-right: 8px;">
-                        <img src="http://bulma.io/images/jgthms.png">
-                        </figure>
-                        Profile
-                    </a>
-                    <a class="nav-item is-tab">Log out</a>
-                    <a class="nav-item is-tab"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-                    <div class="input_search">
-                        <input class="input" type="text" placeholder="Buscar">
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- Fin del Navbar -->
+    <navbar-component></navbar-component>
 
     <main ng-view></main>
 
     <footer class="columns">
-        <div class="menu_container-footer column is-three-quarters">
+        <div class="menu_container-footer column is-three-quarters is-hidden-mobile">
             <div class="nav-right">
                 <a class="nav-item is-tab is-hidden-mobile is-active">Mujeres</a>
                 <a class="nav-item is-tab is-hidden-mobile">Hombres</a>
@@ -85,6 +43,7 @@
     <!-- Angular Components -->
     <script src="/app/components/checkout/checkout.js"></script>
     <script src="/app/components/detalle/detalle.js"></script>
+    <script src="/app/components/navbar/navbar.js"></script>
 
 </body>
 </html>

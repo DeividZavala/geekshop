@@ -3,3 +3,7 @@
 @import "_footer.css";
 @import "_header.css";
 @import "_detail.css";
+
+main{
+    min-height: 100vh;
+}
