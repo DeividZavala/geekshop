@@ -8,7 +8,16 @@
             .when('/',{
                 template:""
             })
-            .when("/catalogo",{
+            .when('/catalogo',{
+                template:""
+            })
+            .when('/details/:product_id',{
+                template:""
+            })
+            .when('/checkout',{
+                template:""
+            })
+            .when('/profile/:user_id',{
                 template:""
             })
             .otherwise({
@@ -16,4 +25,4 @@
             })
     }
 
-})()
+})();
