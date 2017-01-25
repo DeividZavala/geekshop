@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es" ng-app="geekshop">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>GeekShop</title>
@@ -9,7 +10,7 @@
     <link rel="stylesheet" href="/assets/css/main.css">
     
 </head>
-<body>
+<body ng-controller="tabsMenu">
 
     <navbar-component></navbar-component>
 
@@ -18,10 +19,10 @@
     <footer class="columns">
         <div class="menu_container-footer column is-three-quarters is-hidden-mobile">
             <div class="nav-right">
-                <a class="nav-item is-tab is-hidden-mobile is-active">Mujeres</a>
-                <a class="nav-item is-tab is-hidden-mobile">Hombres</a>
-                <a class="nav-item is-tab is-hidden-mobile">Descuentos</a>
-                <a class="nav-item is-tab is-hidden-mobile">UMarker!</a>
+                <a class="nav-item is-tab is-hidden-mobile" ng-class="{'is-active':checkRoute()}">Mujeres</a>
+                <a class="nav-item is-tab is-hidden-mobile" ng-class="{'is-active':checkRoute()}">Hombres</a>
+                <a class="nav-item is-tab is-hidden-mobile" ng-class="{'is-active':checkRoute('/catalogo')}">Catalogo</a>
+                <a class="nav-item is-tab is-hidden-mobile" ng-class="{'is-active':checkRoute()}">UMarker!</a>
             </div>
         </div>
         <div class="social_container column">

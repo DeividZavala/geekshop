@@ -7,7 +7,15 @@
 
     }
 
-    function navbarCtrl($scope) {
+    function navbarCtrl($scope,$location) {
+
+        $scope.selectedTab = 1;
+        $scope.checkRoute = checkRoute;
+            
+        function checkRoute(route) {
+            return $location.path() == route;
+        }
+                
         
         $(".nav-toggle").on('click',function () {
             $(".nav-toggle").toggleClass("is-active")
@@ -16,7 +24,7 @@
         })
 
         $("#search").on("click",function () {
-            $("#search_box").slideToggle("slow");
+            $("#search_box").slideToggle("fast");
         })
 
     }
