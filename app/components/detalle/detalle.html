@@ -20,11 +20,11 @@
 						</figure>
 						<br>
 						<figure class="image is-square">
-							<img src="/assets/images/playera3.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+							<img src="/assets/images/playera2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
 						</figure>
 						<br>
 						<figure class="image is-square">
-							<img src="/assets/images/playera2.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+							<img src="/assets/images/playera3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
 						</figure>
 					</div>
 					<div class="column">
@@ -94,7 +94,7 @@
     <div class="mySlides">
       <div class="numbertext">2 / 4</div>
       
-      	<img class="imslide" src="/assets/images/playera3.jpg">	
+      	<img class="imslide" src="/assets/images/playera2.jpg">	
       
 
     </div>
@@ -102,7 +102,7 @@
     <div class="mySlides">
       <div class="numbertext">3 / 4</div>
       
-      	<img class="imslide" src="/assets/images/playera2.jpg">	
+      	<img class="imslide" src="/assets/images/playera3.jpg">	
       
 
     </div>
@@ -137,6 +137,45 @@
     </div>-->
   </div>
 </div>
+
+<script>
+	function openModal() {
+		  document.getElementById('myModal').style.display = "block";
+		}
+
+		function closeModal() {
+		  document.getElementById('myModal').style.display = "none";
+		}
+
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  //var dots = document.getElementsByClassName("demo");
+		  //var captionText = document.getElementById("caption");
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		      slides[i].style.display = "none";
+		  }
+		  //for (i = 0; i < dots.length; i++) {
+		    //  dots[i].className = dots[i].className.replace(" active", "");
+		  //}
+		  slides[slideIndex-1].style.display = "block";
+		  //dots[slideIndex-1].className += " active";
+		  //captionText.innerHTML = dots[slideIndex-1].alt;
+	}
+</script>
 
 
 
