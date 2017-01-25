@@ -1,9 +1,8 @@
 footer{
-    position: absolute;
     width: 100%;
-    bottom: 0;
     height: 20%;
     margin: 0 !important;
+    background: #00d1b2;
 }
 footer .menu_container-footer{
     display: flex;
