@@ -4,7 +4,8 @@
 @import "_header.css";
 @import "_catalogo.css";
 @import "_detail.css";
+@import "_checkout.css";
 
 main{
-    min-height: 100vh;
+    min-height: 80vh;
 }
