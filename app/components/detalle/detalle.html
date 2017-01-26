@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Detail</title>
-	<link rel="stylesheet" type="text/css" href="/assets/node_modules/bulma/css/bulma.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-</head>
-<body>
-
 	<section class="hero">
+	<div class="hero">
+		<div class="hero-body">
+			<h1 align="center">Nombre del producto</h1>
+		</div>
+	</div>
 		<article class="content">
 			<div class="container">
 
@@ -25,11 +20,11 @@
 						</figure>
 						<br>
 						<figure class="image is-square">
-							<img src="/assets/images/playera3.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+							<img src="/assets/images/playera2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
 						</figure>
 						<br>
 						<figure class="image is-square">
-							<img src="/assets/images/playera2.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+							<img src="/assets/images/playera3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
 						</figure>
 					</div>
 					<div class="column">
@@ -38,7 +33,7 @@
 						</figure>
 					</div>
 					<div class="column is-4">
-					<h1 align="center">Nombre del producto</h1>
+					
 						<h4>Precio: $300</h4>
 						<h4>Color:</h4>
 						 <div class="block">
@@ -99,7 +94,7 @@
     <div class="mySlides">
       <div class="numbertext">2 / 4</div>
       
-      	<img class="imslide" src="/assets/images/playera3.jpg">	
+      	<img class="imslide" src="/assets/images/playera2.jpg">	
       
 
     </div>
@@ -107,7 +102,7 @@
     <div class="mySlides">
       <div class="numbertext">3 / 4</div>
       
-      	<img class="imslide" src="/assets/images/playera2.jpg">	
+      	<img class="imslide" src="/assets/images/playera3.jpg">	
       
 
     </div>
@@ -143,13 +138,8 @@
   </div>
 </div>
 
-
-
-		</article>
-	</section>
-
-	<script>
-		function openModal() {
+<script>
+	function openModal() {
 		  document.getElementById('myModal').style.display = "block";
 		}
 
@@ -184,8 +174,11 @@
 		  slides[slideIndex-1].style.display = "block";
 		  //dots[slideIndex-1].className += " active";
 		  //captionText.innerHTML = dots[slideIndex-1].alt;
-		}
-	</script>
+	}
+</script>
 
-</body>
-</html>
+
+
+		</article>
+	</section>
+
