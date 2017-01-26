@@ -1,7 +1,7 @@
 (function (){
 
   var catalogo = {
-    templateUrl: "/app/components/catalogo/catalogo.html",
+    templateUrl: "app/components/catalogo/catalogo.html",
     controller: catalogCtrl
   }
 
