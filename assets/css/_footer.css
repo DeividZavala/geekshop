@@ -3,6 +3,16 @@ footer{
     height: 20%;
     margin: 0 !important;
     background: #00d1b2;
+    color: white !important;
+}
+footer a.nav-item.is-tab.is-active{
+    border-bottom: 3px solid #1976D2;
+}
+footer a{
+    color: white !important;
+}
+footer a.nav-item.is-tab:hover{
+    border-bottom-color: #1976D2 !important;
 }
 footer .menu_container-footer{
     display: flex;

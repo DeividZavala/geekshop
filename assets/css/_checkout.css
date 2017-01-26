@@ -1,0 +1,11 @@
+.checkout_forms .payment_info .icon{
+    padding-left: 10%;
+}
+.checkout_forms .card_info .slash{
+    padding: 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.checkout_forms .card_info .card_date_expiration{
+    margin-top: 2%;
+}
