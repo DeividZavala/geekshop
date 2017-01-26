@@ -6,14 +6,23 @@
     function routes($routeProvider) {
         $routeProvider
             .when('/',{
-                template:""
+                template:`<landing-component></landing-component>`
             })
-            .when("/catalogo",{
-                template:""
+            .when('/catalogo',{
+                template:`<catalog-component></catalog-component>`
+            })
+            .when('/details/:product_id',{
+                template:`<detalle-component></detalle-component>`
+            })
+            .when('/checkout',{
+                template:`<check-out></check-out>`
+            })
+            .when('/profile/:user_id',{
+                template:``
             })
             .otherwise({
                 redirectTo:"/"
             })
     }
 
-})()
+})();
