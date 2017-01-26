@@ -1,0 +1,43 @@
+<!-- Inicio del Navbar -->
+    <header>
+        <nav class="nav has-shadow">
+            <div class="container">
+                <div class="nav-left">
+                    <a href="#/" class="nav-item">
+                        <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
+                    </a>
+                </div>
+                <div class="nav-center">
+                    <a class="nav-item is-tab is-hidden-mobile" ng-class="{'is-active':checkTab(1)}">Mujeres</a>
+                    <a class="nav-item is-tab is-hidden-mobile" ng-class="{'is-active':checkTab(2)}">Hombres</a>
+                    <a href="#/catalogo" class="nav-item is-tab is-hidden-mobile" ng-class="{'is-active':checkRoute('/catalogo')}">Catalogo</a>
+                    <a class="nav-item is-tab is-hidden-mobile" ng-class="{'is-active':checkTab(3)}">UMarker!</a>
+                </div>
+                <span class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+
+                <div class="nav-right nav-menu">
+                    <a class="nav-item is-tab is-hidden-tablet">Home</a>
+                    <a class="nav-item is-tab is-hidden-tablet">Features</a>
+                    <a href="#/catalogo" class="nav-item is-tab is-hidden-tablet">Catalogo</a>
+                    <a class="nav-item is-tab is-hidden-tablet">About</a>
+                    <a class="nav-item is-tab is-hidden-mobile" id="search"><i class="fa fa-search" aria-hidden="true"></i></a>
+                    <a class="nav-item is-tab">
+                        <figure class="image is-16x16" style="margin-right: 8px;">
+                        <img src="http://bulma.io/images/jgthms.png">
+                        </figure>
+                        Profile
+                    </a>
+                    <a class="nav-item is-tab">Log out</a>
+                    <a class="nav-item is-tab"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                    <div class="input_search is-hidden-mobile" id="search_box">
+                        <input class="input" type="text" placeholder="Buscar">
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Fin del Navbar -->
