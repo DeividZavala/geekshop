@@ -1,7 +1,7 @@
 (function (){
 
 	var landingCompo = {
-			templateUrl: "landing.html",
+			templateUrl: "app/components/landing/landing.html",
       controller: landingCtrl
 	}
 
