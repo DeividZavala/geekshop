@@ -31,6 +31,7 @@
                         </figure>
                         Profile
                     </a>
+                    <a class="nav-item is-tab" id="login">Inicia sesión</a>
                     <a class="nav-item is-tab">Log out</a>
                     <a class="nav-item is-tab"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
                     <div class="input_search is-hidden-mobile" id="search_box">
@@ -41,3 +42,66 @@
         </nav>
     </header>
     <!-- Fin del Navbar -->
+
+    <!-- Inicio Login -->
+
+        <div class="modal">
+            <div class="modal-background"></div>
+                <div class="modal-content">
+                    <!-- Any other Bulma elements you want -->
+                    <div class="login_container">
+
+                        <p>
+                            Inicia Sesión con redes sociales
+                        </p>
+
+                        <div class="btn_redes">
+
+                            <!--<button class="btn_facebook">
+                                <span class="icon"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+                                facebook
+                            </button>
+                            <button class="btn_google">
+                                <span class="icon"><i class="fa fa-google" aria-hidden="true"></i></span>
+                                Google
+                            </button>-->
+
+                            <a class="button is-large btn facebook">
+                                <span class="icon is-medium">
+                                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                </span>
+                                <span>facebook</span>
+                            </a>
+                            <a class="button is-large btn google_plus">
+                                <span class="icon is-medium">
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                </span>
+                                <span>Google</span>
+                            </a>
+
+                        </div>
+                        <hr>
+                        <div class="login_form">
+                            <form>
+                                <label class="label">Username</label>
+                                <p class="control">
+                                    <input class="input" type="text" placeholder="Username">
+                                </p>
+                                <label class="label">Password</label>
+                                <p class="control">
+                                    <input class="input" type="password" placeholder="Password">
+                                </p>
+                                <p class="control">
+                                    <button class="button is-success is-medium">
+                                        Login
+                                    </button>
+                                </p>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            <button class="modal-close" id="close_login"></button>
+        </div>
+
+    <!-- Fin Login -->
