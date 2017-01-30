@@ -3,6 +3,8 @@
 @import "_footer.css";
 @import "_header.css";
 @import "_detail.css";
+@import "_profile.css";
+@import "_cart.css";
 
 main{
     min-height: 100vh;
