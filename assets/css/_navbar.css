@@ -1,0 +1,55 @@
+header{
+    margin-bottom: 3%;
+}
+.nav-right{
+    position: relative;
+}
+.nav-right .input_search{
+    padding-top: 2%;
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    width: 70%;
+}
+.nav-right .input_search .input{
+    border: 1px solid #00d1b2;
+}
+#search_box{
+    display: none;
+}
+.modal{
+    z-index: 10 !important;
+}
+.modal-content{
+    border-radius: 5px;
+}
+.login_container{
+    padding: 5%;
+}
+.login_container p{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.login_container .btn_redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn{
+    margin: 2% 0;
+    width: 50%;
+    border: none;
+    color: white;
+}
+.login_form{
+    padding: 0 10%;
+}
+.facebook{
+    background-color: #3b5998;
+}
+.facebook .fa-facebook-square{
+    color: white !important;
+}
+.google_plus{
+    background-color: #dd4b39;
+}
