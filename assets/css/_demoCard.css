@@ -11,6 +11,8 @@
   border-radius: 25px;
   border: 1px solid;
   border-color: grey;
+  overflow: hidden;
+  background-color: #212121;
 }
 
 img {

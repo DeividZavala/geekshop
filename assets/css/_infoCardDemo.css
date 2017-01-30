@@ -1,14 +1,62 @@
 .middle {
-  border: 5px solid;
   transition: .5s ease;
   opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
+  text-align: center;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%)
+
 }
 
 .card:hover .middle {
   opacity: 1;
+}
+
+.btnMiddle {
+  animation-iteration-count: 1;
+  text-align: center;
+	background-color: #4fc3f7;
+	border-radius:5px;
+	border:1px solid #29b6f6;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	padding: 1%;
+	text-decoration:none;
+  width: 100px;
+  margin: 2%;
+}
+
+.btnMiddle:hover {
+	background-color:#0277bd;
+}
+
+.btnMiddle:active {
+	position:relative;
+	top:1%;
+}
+
+#btnNombre{
+  animation-duration: 2s;
+  animation-delay: 0s;
+}
+#btnPrecio{
+  animation-duration: 2s;
+  animation-delay: 70ms;
+}
+#btnCarrito{
+  animation-duration: 2s;
+  animation-delay: 50ms;
+}
+#btnVer{
+  animation-duration: 2s;
+  animation-delay: 110ms;
+}
+
+.container span{
+  margin: 1%;
 }
