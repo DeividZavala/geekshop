@@ -6,7 +6,10 @@
     -webkit-transition: all .2s ease-out;
     -moz-transition: all .2s ease-out;
     transition: all .2s ease-out;
-    box-shadow: 0 1px 3px 0 #D4D4D5, 0 0 0 1px #D4D4D5
+    box-shadow: 0 1px 3px 0 #D4D4D5, 0 0 0 1px #D4D4D5;
+    margin: .5% 1%;
+    max-width: 245px;
+    max-height: 316px;
 }
 .card_container:hover{
     box-shadow: none;
