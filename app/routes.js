@@ -23,6 +23,9 @@
             .when('/cart',{
                 template:`<cart-component></cart-component>`
             })
+            .when('/testcard',{
+                template:`<card-component></card-component>`
+            })
             .otherwise({
                 redirectTo:"/"
             })

@@ -9,6 +9,17 @@
 .checkout_forms .card_info .card_date_expiration{
     margin-top: 2%;
 }
+/*.products_container-checkout{
+    overflow: hidden;
+}*/
+.products_container-checkout .products_container{
+    padding: 1% 5%;
+    overflow: scroll;
+    height: 100%;
+}
+::-webkit-scrollbar {
+display: none;
+}
 .input_quantity{
     width: 20%;
 }
@@ -17,4 +28,19 @@
 }
 .product_data span{
     margin-left: 5%;
+}
+
+@media screen and (max-width: 768px){
+    .level-left-movil{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .container-movil{
+        margin-bottom: 10%;
+        padding: 5%;
+    }
+    .level-item:not(:last-child){
+        margin-bottom: 0 !important;
+    }
 }
