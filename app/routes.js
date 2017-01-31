@@ -20,6 +20,9 @@
             .when('/profile/:user_id',{
                 template:``
             })
+            .when('/testcard',{
+                template:`<card-component></card-component>`
+            })
             .otherwise({
                 redirectTo:"/"
             })
