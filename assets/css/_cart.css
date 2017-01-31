@@ -32,11 +32,11 @@
   height: 100%;
   width: 260px;
   /* header height */
-  padding-top: 50px;
+  
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  z-index: 3;
+  z-index: 10;
 }
 @media only screen and (min-width: 768px) {
   #cd-cart {
@@ -233,4 +233,12 @@ xkeyframes
   100% {
     opacity: 1;
   }
+}
+.cd-cart-total{
+  bottom: 0;
+}
+/**/
+.level .cantidad{
+  margin-right: .75rem;
+  margin-left: .75rem;
 }

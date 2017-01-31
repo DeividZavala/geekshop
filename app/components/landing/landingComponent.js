@@ -1,7 +1,7 @@
 (function (){
 
 	var landingCompo = {
-			templateUrl: "/app/components/landing/landing.html",
+			templateUrl: "app/components/landing/PruebaLanding.html",
       controller: landingCtrl
 	}
 
@@ -22,9 +22,9 @@
 					for (i = 0; i < dots.length; i++) {
 							dots[i].className = dots[i].className.replace(" active", "");
 					}
-					slides[slideIndex-1].style.display = "block";
-					dots[slideIndex-1].className += " active";
-					setTimeout(showSlides, 3000); // Change image every 2 seconds
+					//slides[slideIndex-1].style.display = "block";
+					//dots[slideIndex-1].className += " active";
+					//setTimeout(showSlides, 3000); // Change image every 2 seconds
 			}
 
   }
