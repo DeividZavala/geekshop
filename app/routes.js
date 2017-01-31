@@ -18,7 +18,10 @@
                 template:`<check-out></check-out>`
             })
             .when('/profile/:user_id',{
-                template:``
+                template:`<user-component></user-component>`
+            })
+            .when('/cart',{
+                template:`<cart-component></cart-component>`
             })
             .otherwise({
                 redirectTo:"/"

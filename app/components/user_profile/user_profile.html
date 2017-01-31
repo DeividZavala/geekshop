@@ -1,0 +1,74 @@
+<section class="losusuarios">
+	<div class="hero">
+		<div class="hero-body">
+			<h1 class="title" align="center">Mi Perfil</h1>
+		</div>
+	</div>
+		<article class="content">
+
+			<div class="container">
+				<div class="columns">
+					<div class="column is-3">
+						<div class="profilepic">
+							<div class="profileimg">
+								<figure class="image is-96x96">
+									<img src="/assets/images/user.png">
+								</figure>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="tabs is-medium">
+						  <ul>
+						    <li ng-class = "{active:isSelected(1)}" class="is-active"><a href ng-click="selectTab(1)">Personal</a> </li>
+						     <li ng-class = "{active:isSelected(2)}"><a href ng-click="selectTab(2)">Direcciones</a></li>
+						     <li ng-class = "{active:isSelected(3)}"><a href ng-click="selectTab(3)">Compras</a></li>
+						     <li ng-class = "{active:isSelected(4)}"><a href ng-click="selectTab(4)">Wishlist</a></li>
+						     <li ng-class = "{active:isSelected(5)}"><a href ng-click="selectTab(5)">Diseños</a></li>
+						  </ul>
+
+						</div>
+						<div class="panel" ng-show="tab===1">
+							<h3>Nombrss</h3>
+							<h3>Correo</h3>
+							<h3>otro</h3>
+							<h3>Nombre</h3>
+
+						</div>
+						<div class="panel" ng-show="isSelected(2)">Direcciones</div>
+						<div class="panel" ng-show="isSelected(3)">Compras</div>
+						<div class="panel" ng-show="isSelected(4)">
+							<div class="whish">
+								<div class="card">
+								  <div class="card-image">
+								    <figure class="image is-128x128">
+								      <img src="/assets/images/playera1.jpg" alt="Image">
+								    </figure>
+								  </div>
+								  <div class="card-content">
+								    <div class="media">
+								    <div class="content">
+								      <h4>Playera1</h4><a class="button is-primary">Comprar</a>
+								     </div>
+									</div>
+								  </div>
+								</div>
+
+
+
+							</div>
+
+
+						<div class="panel" ng-show="isSelected(5)">
+							hola
+						</div>
+						
+
+					</div>
+				</div>
+			</div>
+		</article>
+		
+
+	
+</section>

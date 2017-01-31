@@ -4,7 +4,12 @@
 @import "_navbar.css";
 @import "_catalogo.css";
 @import "_detail.css";
+
+@import "_profile.css";
+@import "_cart.css";
+
 @import "_checkout.css";
+
 
 main{
     min-height: 80vh;

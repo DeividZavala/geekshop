@@ -1,0 +1,12 @@
+.Recatangulo:hover{
+	opacity: 0.5;
+	box-shadow: 10px 5px 8px rgba(0, 0, 0, .5);
+	-webkit-transition: box-shadow 1s;
+	padding: 20px;
+}
+
+.Recatangulo{
+	-webkit-transition: opacity: 1s;
+	-webkit-transition: box-shadow 1s;
+	padding: 20px;
+}
