@@ -1,0 +1,120 @@
+<title>PruebaLanding</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../../assets/node_modules/bulma/css/bulma.css">
+  <link rel="stylesheet" href="../../../assets/css/main.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="animate.css" rel="stylesheet" type="text/css">
+
+<body >
+<nav class="nav has-shadow">
+  <div class="container">
+                <div class="nav-left">
+                    <a href="#/" class="nav-item">
+                        <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
+                    </a>
+                </div>
+                <div class="nav-center">
+                    <a class="nav-item is-tab is-hidden-mobile" ng-class="{'is-active':checkTab(1)}">Mujeres</a>
+                    <a class="nav-item is-tab is-hidden-mobile" ng-class="{'is-active':checkTab(2)}">Hombres</a>
+                    <a href="#/catalogo" class="nav-item is-tab is-hidden-mobile" ng-class="{'is-active':checkRoute('/catalogo')}">Catalogo</a>
+                    <a class="nav-item is-tab is-hidden-mobile" ng-class="{'is-active':checkTab(3)}">UMarker!</a>
+                </div>
+                <span class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+
+                <div class="nav-right nav-menu">
+                    <a class="nav-item is-tab is-hidden-tablet">Home</a>
+                    <a class="nav-item is-tab is-hidden-tablet">Features</a>
+                    <a href="#/catalogo" class="nav-item is-tab is-hidden-tablet">Catalogo</a>
+                    <a class="nav-item is-tab is-hidden-tablet">About</a>
+                    <a class="nav-item is-tab is-hidden-mobile" id="search"><i class="fa fa-search" aria-hidden="true"></i></a>
+                    <a class="nav-item is-tab">
+                        <figure class="image is-16x16" style="margin-right: 8px;">
+                        <img src="http://bulma.io/images/jgthms.png">
+                        </figure>
+                        Profile
+                    </a>
+                    <a class="nav-item is-tab">Log out</a>
+                    <a class="nav-item is-tab"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                    <div class="input_search is-hidden-mobile" id="search_box">
+                        <input class="input" type="text" placeholder="Buscar">
+                    </div>
+                </div>
+            </div>
+</nav>
+
+<div style="position: relative">
+	<img class="animated fadeIn" src="BannerPrueba5.jpg" style="width: 100%; height:500px; position: relative">
+		<div class="animated fadeInLeftBig" style="position: absolute; top: 150px;
+		font-size: 40px; font-weight: 400; font-style: normal; color: #FFFFFF; left: 200px;">
+		GeekShop
+		</div>
+		<div class="animated fadeInLeft" style="position: absolute; top: 220px; font-size: 25px; font-weight: bold; font-family: Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif; font-style: normal; color: #FFFFFF; left: 200px">
+		Aqui encontraras playeras con disenos unicos!
+		</div>
+		<a class="button is-primary is-large animated fadeInLeft" style="bottom:200px; left: 200px" >Conoce mas</a>
+		<img class="animated fadeInRight" src="imagen1.png" style="position: absolute; top: 75px; right:250px; height: 300px; width: 300px ">
+		<img class="animated fadeInRight" src="imagen2.png" style="position: absolute; top: 75px; right:300px; height: 300px; width: 300px ">
+	</img>
+</div>
+
+<div style="font-size: 36px; text-align: center; font-weight: bold; position:relative;">
+	Bienvenido a GeekShop!
+</div>
+<div style="font-size: 25px; text-align: center; position:relative;">
+	Estas en una tienda online con disenos geniales creados por nosotros mismos
+</div>
+<br/><br/><br/>
+
+<section style="width: 80%; margin-left: 10%; height: 30%; position: relative">
+	<article style="width: 25%; left: 0; border-style: solid; height: 100%; position: absolute; border-radius: 15px" class="Recatangulo">
+		<div style="position: absolute; width: 100%; text-align: center; text">
+
+		</div>
+	</article>
+
+	<article style="width: 25%; left: 38%; border-style: solid; height: 100%; position: absolute; border-radius: 15px" class="Recatangulo">
+		<div style="position: absolute">
+
+		</div>
+	</article>
+
+	<article style="width: 25%; right: 0; border-style: solid; height: 100%; position: absolute; border-radius: 15px" class="Recatangulo">
+		<div style="position: absolute">
+
+		</div>
+	</article>
+</section>
+<br/><br/><br/>
+<footer class="columns">
+        <div class="menu_container-footer column is-three-quarters is-hidden-mobile">
+            <div class="nav-right">
+                <a class="nav-item is-tab is-hidden-mobile" ng-class="{'is-active':checkRoute()}">Mujeres</a>
+                <a class="nav-item is-tab is-hidden-mobile" ng-class="{'is-active':checkRoute()}">Hombres</a>
+                <a class="nav-item is-tab is-hidden-mobile" ng-class="{'is-active':checkRoute('/catalogo')}">Catalogo</a>
+                <a class="nav-item is-tab is-hidden-mobile" ng-class="{'is-active':checkRoute()}">UMarker!</a>
+            </div>
+        </div>
+        <div class="social_container column">
+            <span class="social_header" >Siguenos!</span>
+            <span><i class="fa fa-pinterest" aria-hidden="true"></i></span>
+            <span><i class="fa fa-twitter" aria-hidden="true"></i></span>
+            <span><i class="fa fa-facebook-square" aria-hidden="true"></i></span>
+        </div>
+</footer>
+<script src="../../..//assets/node_modules/jquery/dist/jquery.js"></script>
+<script src="../../..//assets/node_modules/angular/angular.js"></script>
+<script src="../../..//assets/node_modules/angular-route/angular-route.js"></script>
+<script src="../../..//app/app.js"></script>
+    <!-- Angular Components -->
+    <script src="../../..//app/routes.js"></script>
+<script src="../../../app/components/checkout/checkout.js"></script>
+<script src="../../../app/components/detalle/detalle.js"></script>
+<script src="../../..//app/components/navbar/navbar.js"></script>
+<script src="../../..//app/components/landing/landingComponent.js"></script>
+<script src="../../..//app/components/catalogo/_compoCatalog.js"></script>
+</body>
