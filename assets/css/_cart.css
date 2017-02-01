@@ -47,7 +47,7 @@
   #cd-cart {
     width: 30%;
     /* header height has changed */
-    padding-top: 80px;
+    padding-top: 0;
   }
 }
 
@@ -65,10 +65,11 @@
 #cd-cart > * {
   padding: 0 1em;
 }
-#cd-cart h2 {
+#cd-cart .cabin {
   font-size: 14px;
   font-size: 0.875rem;
   font-weight: bold;
+  font-family: 'Cabin', sans-serif !important;
   text-transform: uppercase;
   margin: 1em 0;
 }
@@ -241,4 +242,9 @@ xkeyframes
 .level .cantidad{
   margin-right: .75rem;
   margin-left: .75rem;
+}
+.bot{
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
 }

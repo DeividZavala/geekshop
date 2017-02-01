@@ -10,6 +10,8 @@
     margin: .5% 1%;
     max-width: 245px;
     max-height: 316px;
+    min-width: 245px;
+    min-height: 245px;
 }
 .card_container:hover{
     box-shadow: none;
