@@ -3,11 +3,16 @@
     var card = {
 
         templateUrl:"/app/components/card/card.html",
-        controller: cardCtrl
+        controller: cardCtrl,
+        bindings: {
+            product : "="
+        }
 
     }
 
-    function cardCtrl($scope) {
+    function cardCtrl($scope,cartService) {
+
+        $scope.cart = cartService;
 
         $(".card_container").hover(function () {
             $(".btn_card").toggleClass("animated tada")

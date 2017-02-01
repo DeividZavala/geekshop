@@ -19,6 +19,12 @@
 
             };
 
+            function save(){
+                localStorage.setItem("count", this.count);
+                localStorage.setItem("total", this.total);
+                localStorage.setItem("details", JSON.stringify(this.details));
+            }
+
             function clear() {
                 this.count = 0;
                 this.total = 0;

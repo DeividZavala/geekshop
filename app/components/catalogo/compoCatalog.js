@@ -5,9 +5,15 @@
     controller: catalogCtrl
   }
 
-  function catalogCtrl($scope) {
+  function catalogCtrl($scope,DataServices) {
 
-          $scope.openNav = openNav
+        DataServices.getProducts()
+          .then(function (response) {
+            $scope.info = response.data
+            console.log($scope.info)
+          })
+
+          /*$scope.openNav = openNav
           $scope.closeNav = closeNav
 
             function openNav() {
@@ -46,7 +52,7 @@
                           }
                                slides[slideIndex-1].style.display = "block";
                                dots[slideIndex-1].className += " active";
-                    }
+                    }*/
   }
 
 
