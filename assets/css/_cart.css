@@ -65,9 +65,16 @@
 #cd-cart > * {
   padding: 0 1em;
 }
+#cd-cart .cabin span i{
+	font-size: 2rem;
+}
+#cd-cart .cabin span{
+	margin-right: 3%;
+}
 #cd-cart .cabin {
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 1.5rem;
+  border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+  padding-bottom: 5%;
   font-weight: bold;
   font-family: 'Cabin', sans-serif !important;
   text-transform: uppercase;
@@ -111,6 +118,7 @@
 #cd-cart .cd-cart-total {
   padding-top: 1em;
   padding-bottom: 1em;
+  font-size: 2rem;
 }
 #cd-cart .cd-cart-total span {
   float: right;
@@ -129,6 +137,10 @@
   background: #7dcf85;
   color: #FFF;
   text-align: center;
+}
+.btn_checkout{
+	font-size: 1.5rem;
+	color: white;
 }
 .no-touch #cd-cart .checkout-btn:hover {
   background: #a2dda8;
@@ -244,7 +256,8 @@ xkeyframes
   margin-left: .75rem;
 }
 .bot{
-  position: absolute;
-  bottom: 30px;
-  width: 100%;
+	border-top: 1px solid rgba(10, 10, 10, 0.1);
+  	position: absolute;
+  	bottom: 30px;
+  	width: 100%;
 }
