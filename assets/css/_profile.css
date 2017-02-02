@@ -1,0 +1,42 @@
+.profilepic{
+	width: 100%;
+	min-height: 250px;
+	background: url("/assets/images/tshirt.png") no-repeat;
+	background-size: 100% 250px;
+	
+}
+.profileimg{
+	margin: 0 !important;
+	padding: 17% 25% 10% 25%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	overflow: hidden;
+
+}
+.losusuarios .content .container .columns .column .tabs ul{
+	margin-top: 0;
+}
+.whish{
+	width: 25%;
+	margin: 0 ;
+}
+.whish .card{
+	max-width: 100%;
+	margin: 0 !important;
+
+}
+.whish .card-image{
+	max-width: 128px;
+	margin: 0 auto;
+	padding-top: 1%;
+	display: flex;
+	justify-content:center;
+}
+.whish .card-content{
+	padding: 2%;
+}
+.whish .card-image figure{
+	margin:0 !important;
+}

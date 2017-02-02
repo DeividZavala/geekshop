@@ -15,9 +15,16 @@
                 'clear'         : clear,
                 'getDetail'     : getDetail,
                 'deleteProduct' : deleteProduct,
+                'removeProduct' : removeProduct,
                 'save'          : save
 
             };
+
+            function save(){
+                localStorage.setItem("count", this.count);
+                localStorage.setItem("total", this.total);
+                localStorage.setItem("details", JSON.stringify(this.details));
+            }
 
             function clear() {
                 this.count = 0;
@@ -40,10 +47,21 @@
                         product  : product
                     }
                 } else {
-                    this.details[product_id].quantity += 1
+                    this.details[product.id].quantity += 1
                 }
                 this.count += 1;
                 this.total += product.price;
+                this.save();
+            }
+
+            function removeProduct(item) { 
+                if(item.quantity < 1){
+                    this.deleteProduct(item.product.id)
+                }else{
+                    this.details[item.product.id].quantity -= 1;
+                }
+                this.count -= 1;
+                this.total -= item.product.price;
                 this.save();
             }
 
