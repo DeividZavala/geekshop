@@ -261,3 +261,8 @@ xkeyframes
   	bottom: 30px;
   	width: 100%;
 }
+.cart_message{
+	font-size: 2rem;
+	padding: 1% 15% !important;
+	text-align: center;
+}

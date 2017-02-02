@@ -1,4 +1,4 @@
-<div class="card_container">
+<div class="card_container" ng-mouseover="animations()">
     <div class="info_container">
         <div class="info_opacity">
             <div class="info">
@@ -11,7 +11,7 @@
                 </div>
                 <p class="data price">{{$ctrl.product.price | currency}}</p>
                 
-                <button class="btn_card" ng-click="cart.addProduct($ctrl.product)">Agregar al Carrito</button>
+                <button class="btn_card" ng-click="cart.addProduct($ctrl.product);added()">Agregar al Carrito</button>
                 <a href="" class="mas_info">Más Información</a>
             </div>
         </div>

@@ -8,7 +8,6 @@
 	function cartController(cartService,$scope){
 
 		$scope.cart = cartService;
-		console.log($scope.cart.details)
 
 		
 			//if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well

@@ -5,24 +5,24 @@
             <div class="products_container">
 
                 <!-- Inicia Product Item -->
-                <div class="box">
+                <div class="box" ng-repeat="item in cart.details">
                     <article class="media">
                         <figure class="media-left">
                             <p class="image is-128x128">
-                            <img src="/assets/images/playera4.jpg">
+                            <img ng-src="{{item.product.image}}">
                             </p>
                         </figure>
                         <div class="media-content">
                             <div class="content">
                             <p>
-                                <strong>Playera Angular</strong>
+                                <strong>{{item.product.name}}</strong>
                                 <br>
                                 <ul class="product_data">
                                     <li>
-                                        <strong>Precio:</strong><span>$120.00</span>
+                                        <strong>Precio:</strong><span>{{item.product.price | currency}}</span>
                                     </li>
                                     <li>
-                                        <strong>Talla:</strong><span>M</span>
+                                        <strong>Talla:</strong><span>{{item.product.size}}</span>
                                     </li>
                                     <li>
                                         <strong>Color:</strong><span>Blanco</span>
@@ -32,20 +32,20 @@
                             </div>
                             <nav class="level">
                             <div class="level-left level-left-movil">
-                                <a class="level-item">
-                                <span class="icon is-small"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                <a class="level-item" ng-click="cart.removeProduct(item)" ng-class="{'is-disabled disabled':item.quantity == 1}">
+                                    <span class="icon is-small"><i class="fa fa-minus" aria-hidden="true"></i></span>
                                 </a>
                                 <span class="level-item input_quantity">
-                                <input type="text" class="input">
+                                    <input type="text" class="input" value="{{item.quantity}}">
                                 </span>
-                                <a class="level-item">
-                                <span class="icon is-small"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                <a class="level-item" ng-click="cart.addProduct(item.product)" >
+                                    <span class="icon is-small"><i class="fa fa-plus" aria-hidden="true"></i></span>
                                 </a>
                             </div>
                             </nav>
                         </div>
                         <div class="media-right">
-                            <button class="delete"></button>
+                            <button class="delete" ng-click="cart.deleteProduct(item.product.id)"></button>
                         </div>
                     </article>
                 </div>

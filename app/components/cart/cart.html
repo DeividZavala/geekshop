@@ -7,6 +7,9 @@
 			</span>
 			Carrito
 		</div>
+		<div class="notification is-info cart_message" ng-if="!cart.count">
+			Aún estoy vacío ¡Agrega Productos!
+		</div>
 		<ul class="cd-cart-items">
 			<li ng-repeat="item in cart.details">
 				<article class="media">
@@ -54,7 +57,7 @@
 			<p>Total <span>{{cart.total | currency}}</span></p>
 		</div> <!-- cd-cart-total -->
 
-		<a href="#/checkout">
+		<a href="#/checkout" ng-if="cart.count">
 			<div class="notification is-primary btn_checkout"><h3 align="center">Checkout</h3></div>
 		</a>
 		</div>

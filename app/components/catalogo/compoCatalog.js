@@ -10,8 +10,9 @@
         DataServices.getProducts()
           .then(function (response) {
             $scope.info = response.data
-            console.log($scope.info)
           })
+
+
 
           /*$scope.openNav = openNav
           $scope.closeNav = closeNav
