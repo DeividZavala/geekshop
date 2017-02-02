@@ -46,7 +46,7 @@
                         product  : product
                     }
                 } else {
-                    this.details[product_id].quantity += 1
+                    this.details[product.id].quantity += 1
                 }
                 this.count += 1;
                 this.total += product.price;
