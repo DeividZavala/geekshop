@@ -1,240 +1,49 @@
-
-
-
-
-	
-
-	<div id="cd-shadow-layer"></div>
+<div id="cd-shadow-layer"></div>
 
 	<div id="cd-cart">
-		<h2 align="center"><i class="fa fa-shopping-cart" aria-hidden="true"></i></h2>
+		<div class="cabin" align="center">		
+			<span>
+				<i class="fa fa-shopping-cart fa-1x" aria-hidden="true"></i>
+			</span>
+			Carrito
+		</div>
 		<ul class="cd-cart-items">
-		
-			<li>
+			<li ng-repeat="item in cart.details">
 				<article class="media">
 				  <figure class="media-left">
 				    <p class="image is-64x64">
-				      <img src="/assets/images/playera1.jpg">
+				      <img ng-src="{{item.product.image}}">
 				    </p>
 				  </figure>
 				  <div class="media-content">
 				    <div class="content">
 				      <p>
-				        <strong>Playera color negro</strong> 
+								<strong>{{item.product.name}}</strong> 
 				        <br>
 				      </p>
 				    </div>
 				    <nav class="level">
 				      <div class="level-left">
-				         <a class="button is-small">
-					    <span class="icon is-small">
-					      <i class="fa fa-minus"></i>
-					    </span>
-					    
-					  </a>
-							<span class="cantidad">5</span>	        
-				        <a class="button is-small">
-						    <span class="icon is-small">
-						      <i class="fa fa-plus"></i>
-						    </span>
-						    
-						  </a>
-				        	<span class="cantidad">Subtotal:</span><strong>$500</strong>
+
+				         <a class="button is-small" ng-click="cart.removeProduct(item)" ng-class="{'is-disabled':item.quantity == 1}">
+										<span class="icon is-small">
+											<i class="fa fa-minus"></i>
+										</span>
+										
+									</a>
+									<span class="cantidad">{{item.quantity}}</span>	 
+									<a class="button is-small" ng-click="cart.addProduct(item.product)">
+										<span class="icon is-small">
+											<i class="fa fa-plus"></i>
+										</span>	    
+									</a>
+									<span class="cantidad">Subtotal:</span><strong>{{item.product.price * item.quantity | currency}}</strong>
+
 				      </div>
 				    </nav>
 				  </div>
 				  <div class="media-right">
-				    <button class="delete"></button>
-				  </div>
-				</article>
-			</li>
-			<li>
-				<article class="media">
-				  <figure class="media-left">
-				    <p class="image is-64x64">
-				      <img src="/assets/images/playera1.jpg">
-				    </p>
-				  </figure>
-				  <div class="media-content">
-				    <div class="content">
-				      <p>
-				        <strong>Playera color negro</strong> 
-				        <br>
-				      </p>
-				    </div>
-				    <nav class="level">
-				      <div class="level-left">
-				         <a class="button is-small">
-					    <span class="icon is-small">
-					      <i class="fa fa-minus"></i>
-					    </span>
-					    
-					  </a>
-							<span class="cantidad">5</span>	        
-				        <a class="button is-small">
-						    <span class="icon is-small">
-						      <i class="fa fa-plus"></i>
-						    </span>
-						    
-						  </a>
-				        	<span class="cantidad">Subtotal:</span><strong>$500</strong>
-				      </div>
-				    </nav>
-				  </div>
-				  <div class="media-right">
-				    <button class="delete"></button>
-				  </div>
-				</article>
-			</li>
-			<li>
-				<article class="media">
-				  <figure class="media-left">
-				    <p class="image is-64x64">
-				      <img src="/assets/images/playera1.jpg">
-				    </p>
-				  </figure>
-				  <div class="media-content">
-				    <div class="content">
-				      <p>
-				        <strong>Playera color negro</strong> 
-				        <br>
-				      </p>
-				    </div>
-				    <nav class="level">
-				      <div class="level-left">
-				         <a class="button is-small">
-					    <span class="icon is-small">
-					      <i class="fa fa-minus"></i>
-					    </span>
-					    
-					  </a>
-							<span class="cantidad">5</span>	        
-				        <a class="button is-small">
-						    <span class="icon is-small">
-						      <i class="fa fa-plus"></i>
-						    </span>
-						    
-						  </a>
-				        	<span class="cantidad">Subtotal:</span><strong>$500</strong>
-				      </div>
-				    </nav>
-				  </div>
-				  <div class="media-right">
-				    <button class="delete"></button>
-				  </div>
-				</article>
-			</li>
-			<li>
-				<article class="media">
-				  <figure class="media-left">
-				    <p class="image is-64x64">
-				      <img src="/assets/images/playera1.jpg">
-				    </p>
-				  </figure>
-				  <div class="media-content">
-				    <div class="content">
-				      <p>
-				        <strong>Playera color negro</strong> 
-				        <br>
-				      </p>
-				    </div>
-				    <nav class="level">
-				      <div class="level-left">
-				         <a class="button is-small">
-					    <span class="icon is-small">
-					      <i class="fa fa-minus"></i>
-					    </span>
-					    
-					  </a>
-							<span class="cantidad">5</span>	        
-				        <a class="button is-small">
-						    <span class="icon is-small">
-						      <i class="fa fa-plus"></i>
-						    </span>
-						    
-						  </a>
-				        	<span class="cantidad">Subtotal:</span><strong>$500</strong>
-				      </div>
-				    </nav>
-				  </div>
-				  <div class="media-right">
-				    <button class="delete"></button>
-				  </div>
-				</article>
-			</li>
-			<li>
-				<article class="media">
-				  <figure class="media-left">
-				    <p class="image is-64x64">
-				      <img src="/assets/images/playera1.jpg">
-				    </p>
-				  </figure>
-				  <div class="media-content">
-				    <div class="content">
-				      <p>
-				        <strong>Playera color negro</strong> 
-				        <br>
-				      </p>
-				    </div>
-				    <nav class="level">
-				      <div class="level-left">
-				         <a class="button is-small">
-					    <span class="icon is-small">
-					      <i class="fa fa-minus"></i>
-					    </span>
-					    
-					  </a>
-							<span class="cantidad">5</span>	        
-				        <a class="button is-small">
-						    <span class="icon is-small">
-						      <i class="fa fa-plus"></i>
-						    </span>
-						    
-						  </a>
-				        	<span class="cantidad">Subtotal:</span><strong>$500</strong>
-				      </div>
-				    </nav>
-				  </div>
-				  <div class="media-right">
-				    <button class="delete"></button>
-				  </div>
-				</article>
-			</li>
-			<li>
-				<article class="media">
-				  <figure class="media-left">
-				    <p class="image is-64x64">
-				      <img src="/assets/images/playera1.jpg">
-				    </p>
-				  </figure>
-				  <div class="media-content">
-				    <div class="content">
-				      <p>
-				        <strong>Playera color negro</strong> 
-				        <br>
-				      </p>
-				    </div>
-				    <nav class="level">
-				      <div class="level-left">
-				         <a class="button is-small">
-					    <span class="icon is-small">
-					      <i class="fa fa-minus"></i>
-					    </span>
-					    
-					  </a>
-							<span class="cantidad">5</span>	        
-				        <a class="button is-small">
-						    <span class="icon is-small">
-						      <i class="fa fa-plus"></i>
-						    </span>
-						    
-						  </a>
-				        	<span class="cantidad">Subtotal:</span><strong>$500</strong>
-				      </div>
-				    </nav>
-				  </div>
-				  <div class="media-right">
-				    <button class="delete"></button>
+				    <button class="delete" ng-click="cart.deleteProduct(item.product.id)"></button>
 				  </div>
 				</article>
 			</li>
@@ -242,11 +51,11 @@
 
 		<div class="bot">
 			<div class="cd-cart-total">
-			<p>Total <span>$39.96</span></p>
+			<p>Total <span>{{cart.total | currency}}</span></p>
 		</div> <!-- cd-cart-total -->
 
 		<a href="#/checkout">
-			<div class="notification is-primary"><h3 align="center">Checkout</h3></div>
+			<div class="notification is-primary btn_checkout"><h3 align="center">Checkout</h3></div>
 		</a>
 		</div>
 	</div> <!-- cd-cart -->

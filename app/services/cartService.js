@@ -15,6 +15,7 @@
                 'clear'         : clear,
                 'getDetail'     : getDetail,
                 'deleteProduct' : deleteProduct,
+                'removeProduct' : removeProduct,
                 'save'          : save
 
             };
@@ -50,6 +51,17 @@
                 }
                 this.count += 1;
                 this.total += product.price;
+                this.save();
+            }
+
+            function removeProduct(item) { 
+                if(item.quantity < 1){
+                    this.deleteProduct(item.product.id)
+                }else{
+                    this.details[item.product.id].quantity -= 1;
+                }
+                this.count -= 1;
+                this.total -= item.product.price;
                 this.save();
             }
 
