@@ -1,12 +1,171 @@
-.Recatangulo:hover{
-	opacity: 0.5;
-	box-shadow: 10px 5px 8px rgba(0, 0, 0, .5);
-	-webkit-transition: box-shadow 1s;
-	padding: 20px;
+.Rectangulo:hover{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-webkit-transition: box-shadow 0.2s;
+	font-weight: bold;
+	position: relative;
+	z-index: 2;
 }
 
-.Recatangulo{
-	-webkit-transition: opacity: 1s;
-	-webkit-transition: box-shadow 1s;
-	padding: 20px;
+.Rectangulo{
+	-webkit-transition: box-shadow 2s;
+	position: relative;
 }
+
+.parallax {
+    /* The image used */
+    background-image: url("img_parallax.jpg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+	position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	padding-top: 5%;
+	margin: 0;
+}
+
+
+.BannerPrincipal{
+	position: relative; 
+	height:70%;
+}
+
+
+.BannerPrincipal img{
+	width: 100%; 
+	height:100% ; 
+	position: absolute;
+}
+
+.BannerPrincipal h1{
+	color: white;
+	font-size: 36px;
+	margin-top: 10%;
+	text-align: justify;
+	margin-top: 120;
+}
+
+.BannerPrincipal h2{
+	color: white;
+	font-size: 25px;
+	font-style: normal;
+	text-align: left;
+}
+
+.BannerPrincipal #im1{
+
+	top:15%;
+	right: 10%;
+	height: 40vh; 
+	width: 20vw;
+}
+
+.BannerPrincipal #im2{ 
+	top: 15%; 
+	height: 40vh;
+	width: 20vw;
+}
+
+
+.BannerCaracteristicas{
+	padding: 6%;
+	position: relative;
+	
+}
+
+.BannerCaracteristicas h2{
+	font-size: 36px; 
+	text-align: center; 
+	font-weight: bold; 
+	position: relative;
+}
+
+.BannerCaracteristicas h3 {
+	font-size: 25px; 
+	text-align: center; 
+	position:relative;
+	
+}
+
+.BannerCaracteristicas #cua1{
+	border-radius: 15px; 
+	height: 30%; 
+	font-size: 2vw;
+	margin-bottom: 5%;
+	margin-top: 5%;
+}
+
+.BannerCaracteristicas #cua2{
+
+	height: 30%; 
+	border-radius: 15px;
+	font-size: 2vw;
+	margin-bottom: 5%;
+	margin-top: 5%;
+}
+
+.BannerCaracteristicas #cua3{
+
+	height: 30%; 
+	border-radius: 15px;
+	font-size: 2vw;
+	margin-bottom: 5%;
+	margin-top: 5%;
+}
+
+.BannerCaracteristicas p{
+	position: absolute; 
+	text-align: center; 
+	top: 30%; 
+	width: 80%;
+	margin-bottom: 10%;
+	margin-left: 7%;
+	
+}
+
+.IconSuperior{
+	position: absolute; 
+	top:5%; 
+	left: 0; 
+	right: 0; 
+	margin: auto;
+}
+
+.iconInferior{
+	position: absolute; 
+	bottom: 10%; 
+	left: 0; 
+	right: 0;
+	margin: auto;
+}
+
+.parallax #ip{
+	width:20em; 
+	height:40em; 
+	
+}
+
+.parallax #ip1{
+	width:20em; 
+	height:40em; 
+}
+
+.parallax span{
+	margin-top: 10%;
+	text-align: center; 
+	font-size: 25; 
+	color: white; 
+	italic; 
+	bold;
+}
+
+.parallax a{
+	position: absolute;
+	top: 60%;
+	left: 40%;
+}
+
