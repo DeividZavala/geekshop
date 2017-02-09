@@ -29,11 +29,11 @@
                  hidden = hidden += "*"
             }
             $scope.hiddenNumber = hidden + number[12] + number[13] + number[14] + number[15]
-            
+
         }
-        
+
     }
-    
+
     angular
         .module('geekshop')
         .component('checkOut',checkout);

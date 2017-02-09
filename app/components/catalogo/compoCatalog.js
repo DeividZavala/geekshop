@@ -1,7 +1,7 @@
 (function (){
 
   var catalogo = {
-    templateUrl: "/app/components/catalogo/catalogo.html",
+    templateUrl: "app/components/catalogo/catalogo.html",
     controller: catalogCtrl
   }
 
@@ -12,10 +12,10 @@
             $scope.info = response.data
           })
 
-
-
-          /*$scope.openNav = openNav
+          $scope.openNav = openNav
           $scope.closeNav = closeNav
+          $scope.next = next
+
 
             function openNav() {
                 document.getElementById("mySidenav").style.width = "250px";
@@ -27,35 +27,12 @@
                  document.getElementById("main").style.marginLeft= "0";
             }
 
-              var slideIndex = 1;
-                    showSlides(slideIndex);
+            function next(){
+              document.getElementById("imgsCarrito").style.padding = "500px";
+            }
 
-                    function plusSlides(n) {
-                      showSlides(slideIndex += n);
-                    }
 
-                    function currentSlide(n) {
-                      showSlides(slideIndex = n);
-                    }
-
-                    function showSlides(n) {
-                        var i;
-                        var slides = document.getElementsByClassName("mySlides");
-                        var dots = document.getElementsByClassName("dot");
-                        if (n > slides.length) {slideIndex = 1}
-                        if (n < 1) {slideIndex = slides.length}
-                          for (i = 0; i < slides.length; i++) {
-                              slides[i].style.display = "none";
-                          }
-
-                          for (i = 0; i < dots.length; i++) {
-                            dots[i].className = dots[i].className.replace(" active", "");
-                          }
-                               slides[slideIndex-1].style.display = "block";
-                               dots[slideIndex-1].className += " active";
-                    }*/
   }
-
 
   angular
      .module("geekshop")

@@ -36,7 +36,7 @@ main{
 }
 
 @-webkit-keyframes fadein {
-    from {left: 100%; opacity: 0;} 
+    from {left: 100%; opacity: 0;}
     to {left: 85%; opacity: 1;}
 }
 
@@ -46,7 +46,7 @@ main{
 }
 
 @-webkit-keyframes fadeout {
-    from {left: 85%; opacity: 1;} 
+    from {left: 85%; opacity: 1;}
     to {left: 100%; opacity: 0;}
 }
 

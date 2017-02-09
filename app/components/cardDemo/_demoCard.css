@@ -1,0 +1,29 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  display: inline-block;
+  position: relative;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 10px 18px 0 rgba(0,0,0,0.2);
+  border-radius: 25px;
+  border: 1px solid;
+  border-color: grey;
+  overflow: hidden;
+  background-color: #212121;
+}
+
+img {
+  position: relative;
+  width:100%;
+  max-width:300px;
+  min-width: 300px;
+  transition: 0.3s;
+}
+
+img:hover{
+   position: static;
+   border-radius: 25px;
+}
