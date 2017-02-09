@@ -67,13 +67,13 @@
                             <div class="column">
                                 <label class="label">Nombre</label>
                                 <p class="control">
-                                    <input class="input" type="text" placeholder="Nombre">
+                                    <input class="input" type="text" placeholder="Nombre" ng-model="client.name">
                                 </p>
                             </div>
                             <div class="column">
                                 <label class="label">Apellido</label>
                                 <p class="control">
-                                    <input class="input" type="text" placeholder="Apellido">
+                                    <input class="input" type="text" placeholder="Apellido" ng-model="client.lastName">
                                 </p>
                             </div>
 
@@ -81,20 +81,20 @@
 
                         <label class="label">Dirección 1</label>
                         <p class="control">
-                            <input class="input" type="text" placeholder="ej. Indepencia No. 136">
+                            <input class="input" type="text" placeholder="ej. Indepencia No. 136" ng-model="client.directionOne">
                         </p>
 
                         <label class="label">Dirección 2 (aprt,col,No.Int)</label>
                         <p class="control">
-                            <input class="input" type="text" placeholder="ej. col. Centro No.Int 4">
+                            <input class="input" type="text" placeholder="ej. col. Centro No.Int 4" ng-model="client.directionTwo">
                         </p>
 
                         <label class="label">País</label>
                         <p class="control">
                             <span class="select is-medium">
-                                <select>
-                                <option>País</option>
-                                <option>With options</option>
+                                <select ng-model="client.country" >
+                                <option value="" disabled selected>País</option>
+                                <option value="México">México</option>
                                 </select>
                             </span>
                         </p>
@@ -103,20 +103,20 @@
                             <div class="column">
                                 <label class="label">Ciudad</label>
                                 <p class="control">
-                                    <input class="input" type="text" placeholder="CDMX">
+                                    <input class="input" type="text" placeholder="CDMX" ng-model="client.city">
                                 </p>
                             </div>
                             <div class="column">
                                 <label class="label">Código Postal</label>
                                 <p class="control">
-                                    <input class="input" type="text" placeholder="ej. 09100">
+                                    <input class="input" type="text" placeholder="ej. 09131" ng-model="client.CP">
                                 </p>
                             </div>
                         </div>
 
                         <label class="label">Número telefónico</label>
                         <p class="control">
-                            <input class="input" type="text" placeholder="55 555 555 55 ">
+                            <input class="input" type="text" placeholder="55 555 555 55 " ng-model="client.number">
                         </p>
 
                         <div class="control is-grouped">
@@ -148,31 +148,31 @@
                             <tbody>
                                 <tr>
                                     <th>Nombre del Comprador:</th>
-                                    <td>Jorge Nitales</td>
+                                    <td>{{client.name}} {{client.lastName}}</td>
                                 </tr>
                                 <tr>
                                     <th>Dirección 1:</th>
-                                    <td>Tejuino 129</td>
+                                    <td>{{client.directionOne}}</td>
                                 </tr>
                                 <tr>
                                     <th>Dirección 2:</th>
-                                    <td>col. San Casteabro</td>
+                                    <td>{{client.directionTwo}}</td>
                                 </tr>
                                 <tr>
                                     <th>País:</th>
-                                    <td>México</td>
+                                    <td>{{client.country}}</td>
                                 </tr>
                                 <tr>
                                     <th>Ciudad:</th>
-                                    <td>Pachuca de Soto</td>
+                                    <td>{{client.city}}</td>
                                 </tr>
                                 <tr>
                                     <th>Código Postal:</th>
-                                    <td>00000</td>
+                                    <td>{{client.CP}}</td>
                                 </tr>
                                 <tr>
                                     <th>Número telefónico:</th>
-                                    <td>55555555555</td>
+                                    <td>{{client.number}}</td>
                                 </tr>
                             </tbody>
                         </table>

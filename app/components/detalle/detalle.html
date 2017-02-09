@@ -1,7 +1,7 @@
 <section class="hero">
 	<div class="hero">
 		<div class="hero-body">
-			<h1 class="title" align="center">Producto</h1>
+			<h1 class="title" align="center">{{product.name}}</h1>
 		</div>
 	</div>
 		<article class="content">
@@ -29,12 +29,12 @@
 					</div>
 					<div class="column">
 						<figure class="image is-square">
-							<img src="/assets/images/playera4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+							<img src="{{product.image}}" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
 						</figure>
 					</div>
 					<div class="column is-4">
 					
-						<h4>Precio: $300</h4>
+						<h4>Precio: {{product.price | currency}}</h4>
 						<h4>Color:</h4>
 						 <div class="block">
 						  <a class="button is-primary">Color1</a>

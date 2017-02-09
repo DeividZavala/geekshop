@@ -8,12 +8,17 @@
         
         return {
 
-            "getProducts" : getProducts 
+            "getProducts"       : getProducts,
+            "getProductDetail"  : getProductDetail 
 
         }
 
         function getProducts() {
             return $http.get("http://localhost:8000/api/products/")
+        }
+
+        function getProductDetail(id) {
+            return $http.get("http://localhost:8000/api/products/"+id+"/")
         }
 
 
