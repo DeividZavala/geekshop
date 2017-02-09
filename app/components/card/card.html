@@ -1,26 +1,21 @@
-<div class="card_container">
+<div class="card_container" ng-mouseover="animations()">
     <div class="info_container">
         <div class="info_opacity">
             <div class="info">
-<<<<<<< HEAD
                 <p class="data name">Nombre de la playera</p>
-=======
 
                 <p class="data name">{{$ctrl.product.name}}</p>
->>>>>>> 93ccb5a94b8a83f5992ae912e2d5b445eeab23af
                 <div class="data">
                     <div class="cuadrito" style="background: white"></div cla>
                     <div class="cuadrito" style="background: black"></div cla>
                     <div class="cuadrito" style="background: red"></div cla>
                 </div>
-<<<<<<< HEAD
                 <p class="data price">$234.00</p>
                 <button class="btn_card">Agregar al Carrito</button>
-=======
                 <p class="data price">{{$ctrl.product.price | currency}}</p>
-                
+
                 <button class="btn_card" ng-click="cart.addProduct($ctrl.product)">Agregar al Carrito</button>
->>>>>>> 93ccb5a94b8a83f5992ae912e2d5b445eeab23af
+                <button class="btn_card" ng-click="cart.addProduct($ctrl.product);added()">Agregar al Carrito</button>
                 <a href="" class="mas_info">Más Información</a>
             </div>
         </div>
@@ -28,8 +23,5 @@
     <div class="img_container">
         <img class="img-responsive" id="product_img" ng-src="{{$ctrl.product.image}}" alt="img_producto">
     </div>
-<<<<<<< HEAD
 </article>
-=======
 </div>
->>>>>>> 93ccb5a94b8a83f5992ae912e2d5b445eeab23af

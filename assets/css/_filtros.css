@@ -1,0 +1,39 @@
+.filtroC{
+  display: block;
+  position: relative;
+  border-radius: 5px;
+  max-height: 40vh;
+  max-width: 40%;
+  min-width:100%;
+  min-height: 15vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#colores button{
+  height: 3vh;
+  width: 3vh;
+  min-width:1vh;
+  min-height: 1vh;
+  border-radius: 8px;
+  box-shadow: 2px 2px 1px #263238;
+  margin: 4%;
+  border: none;
+}
+
+#talla button{
+  height: 5vh;
+  width: 5vh;
+  min-width:1vh;
+  min-height: 1vh;
+  border-radius: 3px;
+  box-shadow: 2px 2px 1px #263238;
+  margin: 3%;
+  padding: 1%;
+  background: #b2ebf2;
+  border: none;
+  text-align: center;
+}

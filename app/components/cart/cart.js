@@ -8,18 +8,17 @@
 	function cartController(cartService,$scope){
 
 		$scope.cart = cartService;
-		console.log($scope.cart.details)
 
-		
+
 			//if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
 			var $L = 1200,
 				$menu_navigation = $('#main-nav'),
 				$cart_trigger = $('#cd-cart-trigger'),
-				
+
 				$lateral_cart = $('#cd-cart'),
 				$shadow_layer = $('#cd-shadow-layer');
 
-			
+
 
 			//open cart
 			$cart_trigger.on('click', function(event){
@@ -42,7 +41,7 @@
 			move_navigation( $menu_navigation, $L);
 			$(window).on('resize', function(){
 				move_navigation( $menu_navigation, $L);
-				
+
 				if( $(window).width() >= $L && $menu_navigation.hasClass('speed-in')) {
 					$menu_navigation.removeClass('speed-in');
 					$shadow_layer.removeClass('is-visible');
@@ -50,7 +49,7 @@
 				}
 
 			});
-		
+
 
 		function toggle_panel_visibility ($lateral_panel, $background_layer, $body) {
 			if( $lateral_panel.hasClass('speed-in') ) {

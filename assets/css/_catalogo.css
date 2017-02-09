@@ -11,46 +11,49 @@
     padding-top: 40px;
 }
 
-.sidenav h1{
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #f1f1f1;
-  display: block;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
+.sidenav .closebtn {
+    position: relative;
+    font-size: 36px;
+    margin-left: 80%;
     color: #818181;
-    display: block;
-    transition: 0.3s
 }
 
 .sidenav a:hover, .offcanvas a:focus{
     color: #f1f1f1;
 }
 
-.sidenav p {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 3vh;
-    color: #818181;
-    display: block;
-    transition: 0.3s
+.misFiltros{
+  margin: 3%;
+  padding: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.sidenav p:hover, .offcanvas p:focus{
-    color: #f1f1f1;
+.misFiltros section{
+  padding: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 180px;
+  flex-direction:column;
 }
 
-.sidenav .closebtn {
-    position: relative;;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 180px;
+.misFiltros section h1{
+  padding: 8px 8px 8px 4px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f1f1f1;
+  display: block;
+}
+
+.misFiltros section p{
+  padding: 8px 8px 8px 4px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #f1f1f1;
+  display: block;
 }
 
 #main {
