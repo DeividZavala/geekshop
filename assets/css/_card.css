@@ -1,0 +1,95 @@
+.card_container{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 5px;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    box-shadow: 0 1px 3px 0 #D4D4D5, 0 0 0 1px #D4D4D5;
+    margin: .5% 1%;
+    max-width: 245px;
+    max-height: 316px;
+    min-width: 245px;
+    min-height: 245px;
+}
+.card_container:hover{
+    box-shadow: none;
+}
+.card_container:hover > .info_container{
+    visibility: visible;
+    opacity: 1;
+}
+.card_container:hover > .img_container img{
+    filter: blur(5px);
+}
+.img_container{
+    height: 100%;
+}
+.img-responsive{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.info_container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease-out .3s;
+}
+.info_container .info_opacity{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.7);
+    border-radius: 5px;
+}
+.info_container .info_opacity .info{
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.info_container .info_opacity .info .name{
+    font-size: 1.2rem;
+    font-family: 'Cabin';
+    animation-delay: .2s
+}
+.info_container .info_opacity .info .price{
+    font-size: 1.5rem;
+    animation-delay: .3s
+}
+.info_container .info_opacity .info .cuadrito{
+    width: 20px;
+    height: 20px;
+    animation-delay: .4s;
+    display: inline-block;
+    border: 1px solid white;
+}
+.info_container .info_opacity .info .data{
+    margin-bottom: 6%;
+}
+.info_container .info_opacity .info .btn_card{
+    color: white;
+    text-decoration: none;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 3% 8%;
+    font-size: 1rem;
+    display: block;
+    transition: all ease-out .3s;
+    font-family: 'Cabin';
+}
+.info_container .info_opacity .info .btn_card:hover{
+    background: white;
+    color: black;
+    cursor: pointer;
+}
+.info_container .info_opacity .info .mas_info:hover{
+    color: white;
+}

@@ -5,11 +5,15 @@
 		controller: detailController
 	}
 
-	function detailController(){
+	function detailController($scope,DataServices,$routeParams){
 
+		$scope.pID = $routeParams.product_id;
 
-	
-	
+		DataServices.getProductDetail($scope.pID)
+			.then(function (response) {
+				$scope.product = response.data;
+				console.log($scope.product)
+			})
 
 	}
 

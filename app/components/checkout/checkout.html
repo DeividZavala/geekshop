@@ -1,37 +1,58 @@
-<section class="container">
+<section class="container container-movil">
     <article class="columns">
-        <div class="column">
-            <div class="box">
-                <article class="media">
-                    <div class="media-left">
-                    <figure class="image is-64x64">
-                        <img src="http://bulma.io/images/placeholders/128x128.png" alt="Image">
-                    </figure>
-                    </div>
-                    <div class="media-content">
-                    <div class="content">
-                        <p>
-                        <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
-                        <br>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
-                        </p>
-                    </div>
-                    <nav class="level">
-                        <div class="level-left">
-                        <a class="level-item">
-                            <span class="icon is-small"><i class="fa fa-reply"></i></span>
-                        </a>
-                        <a class="level-item">
-                            <span class="icon is-small"><i class="fa fa-retweet"></i></span>
-                        </a>
-                        <a class="level-item">
-                            <span class="icon is-small"><i class="fa fa-heart"></i></span>
-                        </a>
+        <div class="column products_container-checkout">
+
+            <div class="products_container">
+
+                <!-- Inicia Product Item -->
+                <div class="box" ng-repeat="item in cart.details">
+                    <article class="media">
+                        <figure class="media-left">
+                            <p class="image is-128x128">
+                            <img ng-src="{{item.product.image}}">
+                            </p>
+                        </figure>
+                        <div class="media-content">
+                            <div class="content">
+                            <p>
+                                <strong>{{item.product.name}}</strong>
+                                <br>
+                                <ul class="product_data">
+                                    <li>
+                                        <strong>Precio:</strong><span>{{item.product.price | currency}}</span>
+                                    </li>
+                                    <li>
+                                        <strong>Talla:</strong><span>{{item.product.size}}</span>
+                                    </li>
+                                    <li>
+                                        <strong>Color:</strong><span>Blanco</span>
+                                    </li>
+                                </ul>
+                            </p>
+                            </div>
+                            <nav class="level">
+                            <div class="level-left level-left-movil">
+                                <a class="level-item" ng-click="cart.removeProduct(item)" ng-class="{'is-disabled disabled':item.quantity == 1}">
+                                    <span class="icon is-small"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                </a>
+                                <span class="level-item input_quantity">
+                                    <input type="text" class="input" value="{{item.quantity}}">
+                                </span>
+                                <a class="level-item" ng-click="cart.addProduct(item.product)" >
+                                    <span class="icon is-small"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                </a>
+                            </div>
+                            </nav>
                         </div>
-                    </nav>
-                    </div>
-                </article>
+                        <div class="media-right">
+                            <button class="delete" ng-click="cart.deleteProduct(item.product.id)"></button>
+                        </div>
+                    </article>
+                </div>
+                <!-- Inicia termina Item -->
+
             </div>
+
         </div>
 
         <div class="column checkout_forms">
@@ -39,20 +60,20 @@
                 <form>
                     
                     <!-- Primera Parte -->
-                    <div>
+                    <div ng-show="checkSection(0)">
 
                         <div class="columns">
 
                             <div class="column">
                                 <label class="label">Nombre</label>
                                 <p class="control">
-                                    <input class="input" type="text" placeholder="Nombre">
+                                    <input class="input" type="text" placeholder="Nombre" ng-model="client.name">
                                 </p>
                             </div>
                             <div class="column">
                                 <label class="label">Apellido</label>
                                 <p class="control">
-                                    <input class="input" type="text" placeholder="Apellido">
+                                    <input class="input" type="text" placeholder="Apellido" ng-model="client.lastName">
                                 </p>
                             </div>
 
@@ -60,20 +81,20 @@
 
                         <label class="label">Dirección 1</label>
                         <p class="control">
-                            <input class="input" type="text" placeholder="ej. Indepencia No. 136">
+                            <input class="input" type="text" placeholder="ej. Indepencia No. 136" ng-model="client.directionOne">
                         </p>
 
                         <label class="label">Dirección 2 (aprt,col,No.Int)</label>
                         <p class="control">
-                            <input class="input" type="text" placeholder="ej. col. Centro No.Int 4">
+                            <input class="input" type="text" placeholder="ej. col. Centro No.Int 4" ng-model="client.directionTwo">
                         </p>
 
                         <label class="label">País</label>
                         <p class="control">
-                            <span class="select">
-                                <select>
-                                <option>País</option>
-                                <option>With options</option>
+                            <span class="select is-medium">
+                                <select ng-model="client.country" >
+                                <option value="" disabled selected>País</option>
+                                <option value="México">México</option>
                                 </select>
                             </span>
                         </p>
@@ -82,28 +103,28 @@
                             <div class="column">
                                 <label class="label">Ciudad</label>
                                 <p class="control">
-                                    <input class="input" type="text" placeholder="CDMX">
+                                    <input class="input" type="text" placeholder="CDMX" ng-model="client.city">
                                 </p>
                             </div>
                             <div class="column">
                                 <label class="label">Código Postal</label>
                                 <p class="control">
-                                    <input class="input" type="text" placeholder="ej. 09100">
+                                    <input class="input" type="text" placeholder="ej. 09131" ng-model="client.CP">
                                 </p>
                             </div>
                         </div>
 
                         <label class="label">Número telefónico</label>
                         <p class="control">
-                            <input class="input" type="text" placeholder="55 555 555 55 ">
+                            <input class="input" type="text" placeholder="55 555 555 55 " ng-model="client.number">
                         </p>
 
                         <div class="control is-grouped">
                             <p class="control">
-                                <button class="button is-danger is-medium">Cancel</button>
+                                <button class="button is-danger is-medium">Cancelar</button>
                             </p>
                             <p class="control">
-                                <button class="button is-primary is-medium">
+                                <button class="button is-primary is-medium" ng-click="selectSection(1)">
                                     Siguiente
                                     <span class="icon is-small">
                                         <i class="fa fa-chevron-right" aria-hidden="true"></i>
@@ -116,7 +137,65 @@
                     <!-- Fin de primera parte -->
 
                     <!-- Inicio de la segunda parte -->
-                    <div class="card_info">
+                    <div ng-show="checkSection(1)">
+
+                        <table class="table is-striped">
+                            <thead>
+                                <tr>
+                                    <th>Información de envio</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Nombre del Comprador:</th>
+                                    <td>{{client.name}} {{client.lastName}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Dirección 1:</th>
+                                    <td>{{client.directionOne}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Dirección 2:</th>
+                                    <td>{{client.directionTwo}}</td>
+                                </tr>
+                                <tr>
+                                    <th>País:</th>
+                                    <td>{{client.country}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Ciudad:</th>
+                                    <td>{{client.city}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Código Postal:</th>
+                                    <td>{{client.CP}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Número telefónico:</th>
+                                    <td>{{client.number}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="control is-grouped">
+                            <p class="control">
+                                <button class="button is-info is-medium" ng-click="selectSection(0)">Modificar</button>
+                            </p>
+                            <p class="control">
+                                <button class="button is-primary is-medium" ng-click="selectSection(2)">
+                                    Siguiente
+                                    <span class="icon is-small">
+                                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </p>
+                        </div>
+
+                    </div>
+                    <!-- Fin de la segunda parte -->
+
+                    <!-- Inicio de la tercera parte -->
+                    <div class="card_info" ng-show="checkSection(2)">
 
                         <label class="label">Nombre del tarjetahabiente</label>
                         <p class="control">
@@ -149,24 +228,20 @@
 
                         <div class="control is-grouped">
                             <p class="control">
-                                <button class="button is-info is-medium">Atrás</button>
+                                <button class="button is-info is-medium" ng-click="selectSection(1)">Atrás</button>
                             </p>
                             <p class="control">
-                                <button class="button is-primary is-medium">
-                                    Siguiente
+                                <button class="button is-danger is-medium">Cancelar</button>
+                            </p>
+                            <p class="control">
+                                <button class="button is-success is-medium">
+                                    ¡Pagar!
                                     <span class="icon is-small">
-                                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                        <i class="fa fa-check"></i>
                                     </span>
                                 </button>
                             </p>
                         </div>
-
-
-                    </div>
-                    <!-- Fin de la segunda parte -->
-
-                    <!-- Inicio de la tercera parte -->
-                    <div>
 
                     </div>
                     <!-- Fin de la tercera parte -->

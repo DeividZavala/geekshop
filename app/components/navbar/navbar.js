@@ -27,6 +27,13 @@
             $("#search_box").slideToggle("fast");
         })
 
+        $("#login").on('click',function () {
+            $(".modal").fadeIn()
+        })
+        $("#close_login").on("click",function () {
+            $(".modal").fadeOut()
+        })
+
     }
 
     angular

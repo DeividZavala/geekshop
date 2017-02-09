@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "_card.css";
 @import "_margenesCatalogo.css";
 @import "_carrucelCatalogo.css";
@@ -11,6 +12,23 @@
 
 main{
     min-height: 100vh;
+}
+=======
+@import "_card.css";
+@import "_carrucelCatalogo.css";
+@import "_footer.css";
+@import "_navbar.css";
+@import "_catalogo.css";
+@import "_detail.css";
+
+@import "_profile.css";
+@import "_cart.css";
+
+@import "_checkout.css";
+
+
+main{
+    min-height: 80vh;
 }
 
 #toast{
@@ -54,3 +72,4 @@ main{
     from {left: 85%; opacity: 1;}
     to {left: 100%; opacity: 0;}
 }
+>>>>>>> 51a8de874b1e593fb3d51a23f913fce2d56adbf8
