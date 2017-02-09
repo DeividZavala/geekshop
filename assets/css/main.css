@@ -1,11 +1,14 @@
 @import "_card.css";
+@import "_margenesCatalogo.css";
 @import "_carrucelCatalogo.css";
+@import "_opacidadCatalogo.css";
 @import "_footer.css";
 @import "_header.css";
-@import "_catalogo.css";
 @import "_detail.css";
-@import "_checkout.css";
+@import "_carrucelCatalogo.css";
+@import "_detail.css";
+@import "_landing.css";
 
 main{
-    min-height: 80vh;
+    min-height: 100vh;
 }
