@@ -12,18 +12,18 @@
 }
 
 .parallax {
-    /* The image used */
-  background-image:url("../../assets/images/geek1.jpg");
+	background-image:url("../../assets/images/geek1.jpg");
 	background-size: cover;
 
-    /* Set a specific height */
-  max-height: 450px;
+	/* Set a specific height */
+	max-height: 450px;
+	min-height: 300px;
 	height: 70vw;
-    /* Create the parallax scrolling effect */
+	/* Create the parallax scrolling effect */
 	position: relative;
 	background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
+	background-position: center;
+	background-repeat: no-repeat;
 	margin: 0;
 }
 
@@ -31,6 +31,7 @@
 	position: relative;
 	height:70vw;
 	max-height: 450px;
+	min-height: 300px;
 	width: 100%;
 }
 
@@ -46,7 +47,6 @@
 	font-size: 36px;
 	margin-top: 10%;
 	text-align: justify;
-	margin-top: 120;
 	font-weight: bolder;
 }
 
@@ -60,15 +60,15 @@
 .BannerPrincipal #im1{
 
 	top:15%;
-	right: 10%;
-	height: 40vh;
-	width: 20vw;
+	right: 5%;
+	height: 30vh;
+	width: 15vw;
 }
 
 .BannerPrincipal #im2{
 	top: 15%;
-	height: 40vh;
-	width: 20vw;
+	height: 30vh;
+	width: 15vw;
 }
 
 
@@ -129,7 +129,7 @@
 
 }
 
-.IconSuperior{
+.iconSuperior{
 	position: absolute;
 	top:5%;
 	left: 0;
@@ -148,7 +148,7 @@
 .parallax span{
 	margin-top: 10%;
 	text-align: center;
-	font-size: 25;
+	font-size: 25px;
 	color: white;
 	italic;
 	bold;

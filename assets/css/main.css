@@ -8,6 +8,12 @@
 @import "_carrucelCatalogo.css";
 @import "_detail.css";
 @import "_landing.css";
+@import "_cart.css";
+@import "_catalogo.css";
+@import "_checkout.css";
+@import "_navbar.css";
+@import "_profile.css";
+
 
 main{
     min-height: 100vh;
