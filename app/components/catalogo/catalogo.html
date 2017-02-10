@@ -8,10 +8,6 @@
       <script src="../../../assets/node_modules/angular/angular.js"></script>
       <script src="/app/services/PaginationService.js"></script>
       <link rel="stylesheet" href="../../../assets/css/_filtros.css">
-
-
-      <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-      <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     </head>
         <div class="container is-fluid">
           <div id="mySidenav" class="sidenav">
@@ -84,39 +80,6 @@
                   </div>
                 </div>
               </article>
-              <article class="paginacion">
-               <div ng-app="geekshop">
-                     <div ng-controller="ExampleController as vm" class="container">
-                         <div class="text-center">
-                             <h1>AngularJS MI PAGINACION</h1>
-
-                             <!-- items being paged -->
-                             <div ng-repeat="item in vm.items">Item {{item}}</div>
-
-                             <!-- pager -->
-                             <div class="pagination">
-                               <ul ng-if="vm.pager.pages.length" class="pagination-list">
-                                   <li ng-class="{disabled:vm.pager.currentPage === 1}">
-                                       <a ng-click="vm.setPage(1)" class="pagination-previous">First</a>
-                                   </li>
-                                   <li ng-class="{disabled:vm.pager.currentPage === 1}">
-                                       <a ng-click="vm.setPage(vm.pager.currentPage - 1)" class="pagination-previous">Previous</a>
-                                   </li>
-                                   <li ng-repeat="page in vm.pager.pages" ng-class="{active:vm.pager.currentPage === page}">
-                                       <a ng-click="vm.setPage(page)" class="pagination-link">{{page}}</a>
-                                   </li>
-                                   <li ng-class="{disabled:vm.pager.currentPage === vm.pager.totalPages}">
-                                       <a ng-click="vm.setPage(vm.pager.currentPage + 1)" class="pagination-next">Next</a>
-                                   </li>
-                                   <li ng-class="{disabled:vm.pager.currentPage === vm.pager.totalPages}">
-                                       <a ng-click="vm.setPage(vm.pager.totalPages)" class="pagination-next">Last</a>
-                                   </li>
-                               </ul>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-              </article>
               <!--preguntar a david-->
               <article class="reemplazo">
                 <div class="columns is-mobile">
@@ -137,23 +100,6 @@
                 <div class="column is-half is-offset-one-quarter">
                   <h1>YA VISTOS</h1>
                 </div>
-                </div>
-              </article>
-              <article class="mySliderShow">
-                <div class="carrito">
-                     <div class="info_container">
-                       <div class="opacity">
-                         <div class="info">
-                           <button type="button" class="btnCarrito">A</button>
-                          <span style="font-size:30px;cursor:pointer" ng-click="next()"> Puchame!</span>
-                         </div>
-                       </div>
-                     </div>
-                     <div class="img_container" id="imgsCarrito">
-                         <span><img src="../../../assets/images/carrito1.jpg" alt="carrito1" class="img-responsive"></span>
-                         <span><img src="../../../assets/images/carrito2.jpg" alt="carrito2" class="img-responsive"></span>
-                         <span><img src="../../../assets/images/carrito3.jpg" alt="carrito3" class="img-responsive"></span>
-                     </div>
                 </div>
               </article>
             </section>
