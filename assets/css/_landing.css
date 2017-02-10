@@ -1,0 +1,173 @@
+.Rectangulo:hover{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-webkit-transition: box-shadow 0.5s;
+	font-weight: bold;
+	position: relative;
+	z-index: 2;
+}
+
+.Rectangulo{
+	-webkit-transition: box-shadow 0.5s;
+	position: relative;
+}
+
+.parallax {
+    /* The image used */
+  background-image:url("../../assets/images/geek1.jpg");
+	background-size: cover;
+
+    /* Set a specific height */
+  max-height: 450px;
+	height: 70vw;
+    /* Create the parallax scrolling effect */
+	position: relative;
+	background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+	margin: 0;
+}
+
+.BannerPrincipal{
+	position: relative;
+	height:70vw;
+	max-height: 450px;
+	width: 100%;
+}
+
+.BannerPrincipal img{
+	width: 100%;
+	height:100% ;
+	position: absolute;
+}
+
+
+.BannerPrincipal h1{
+	color: white;
+	font-size: 36px;
+	margin-top: 10%;
+	text-align: justify;
+	margin-top: 120;
+	font-weight: bolder;
+}
+
+.BannerPrincipal h2{
+	color: white;
+	font-size: 25px;
+	font-style: normal;
+	text-align: left;
+}
+
+.BannerPrincipal #im1{
+
+	top:15%;
+	right: 10%;
+	height: 40vh;
+	width: 20vw;
+}
+
+.BannerPrincipal #im2{
+	top: 15%;
+	height: 40vh;
+	width: 20vw;
+}
+
+
+.BannerCaracteristicas{
+	padding: 6%;
+	position: relative;
+
+}
+
+.BannerCaracteristicas h2{
+	font-size: 36px;
+	text-align: center;
+	font-weight: bold;
+	position: relative;
+}
+
+.BannerCaracteristicas h3 {
+	font-size: 25px;
+	text-align: center;
+	position:relative;
+
+}
+
+.BannerCaracteristicas #cua1{
+	border-radius: 15px;
+	height: 30%;
+	font-size: 2vh;
+	margin-bottom: 5%;
+	margin-top: 5%;
+	min-height: 250px;
+}
+
+.BannerCaracteristicas #cua2{
+	border-radius: 15px;
+	height: 30%;
+	font-size: 2vh;
+	margin-bottom: 5%;
+	margin-top: 5%;
+	min-height: 250px;
+}
+
+.BannerCaracteristicas #cua3{
+	border-radius: 15px;
+	height: 30%;
+	font-size: 2vw;
+	margin-bottom: 5%;
+	margin-top: 5%;
+	min-height: 250px;
+}
+
+.BannerCaracteristicas p{
+	position: absolute;
+	text-align: center;
+	top: 30%;
+	width: 80%;
+	margin-bottom: 10%;
+	margin-left: 7%;
+
+}
+
+.IconSuperior{
+	position: absolute;
+	top:5%;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.iconInferior{
+	position: absolute;
+	bottom: 10%;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.parallax span{
+	margin-top: 10%;
+	text-align: center;
+	font-size: 25;
+	color: white;
+	italic;
+	bold;
+	position: absolute;
+	z-index: 999;
+}
+
+.parallax a{
+	position: absolute;
+	z-index: 999;
+	bottom: 20%;
+}
+
+.parallax img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+	padding: 0;
+
+}
