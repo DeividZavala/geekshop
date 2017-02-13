@@ -1,8 +1,14 @@
 (function () {
 
     angular
-        .module('geekshop',['ngRoute'])
+        .module('geekshop',['ngRoute','ngCookies'])
+        .config(token)
         .controller("tabsMenu",tabsMenu);
+
+        function token($httpProvider) {
+            $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+            $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+        }
 
         function tabsMenu($scope,$location) {
 
