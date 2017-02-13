@@ -37,14 +37,3 @@
   border: none;
   text-align: center;
 }
-
-
-/*carrito*/
-
-.carrito{
-  display: flex;
-  align-items: center
-  flex-wrap: wrap;
-  flex-direction: column;
-  text-align: center;
-}

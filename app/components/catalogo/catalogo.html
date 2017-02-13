@@ -10,6 +10,7 @@ APS
       <script src="/app/services/PaginationService.js"></script>
       <!-- <link rel="stylesheet" href="../../../assets/css/_filtros.css">
       <link rel="stylesheet" href="../../../assets/css/_catalogo.css"> -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
         <div class="containerCatalog">
           <div id="mySidenav" class="sidenav">
@@ -114,14 +115,26 @@ APS
                 <div class="carritoTitle">
                   <h1 class="title is-2">YA VISTOS</h1>
                 </div>
-                <div class="imagCarrito">
-                  <img src="../../../assets/images/carrito1.jpg" alt="imag" style="width: 40%">
-                </div>
+                <div class="sliderVistos">
+                  <div class="botonesCarrito">
+                    <span class="anterior"><i class="fa fa-arrow-circle-left fa-3x" aria-hidden="true"></i></span>
+                    <span class="siguiente"><i class="fa fa-arrow-circle-right fa-3x" aria-hidden="true"></i></span>
+                  </div>
+                  <div id="cardsVistos">
+                    <card-component></card-component>
+                    <card-component></card-component>
+                    <card-component></card-component>
+                    <card-component></card-component>
+                    <card-component></card-component>
+                  </div>
                 </div>
               </article>
             </section>
           </div>
         </div>
+        <script type="text/javascript">
+
+        </script>
 <!-- Fin del Catalogo -->
 <!-- <section class="container">
   <article class="columns">

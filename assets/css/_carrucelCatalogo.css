@@ -1,0 +1,54 @@
+section article.carrito{
+  padding: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+section article div.carritoTitle{
+  text-align: center;
+  margin: 2%;
+}
+
+section article div.sliderVistos{
+  border: 2px solid white;
+  width: 80%;
+  height: 40vh;
+  padding: 2%;
+  transition: all 2s .1s;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid black;
+}
+
+section article div.sliderVistos:hover{
+  border: 2px solid #b0bec5;
+}
+
+section article div div.botonesCarrito{
+    height: 33vh;
+    width: 65%;
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+}
+
+section article div #cardsVistos{
+  width: 88%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  overflow: hidden;
+  padding: 1%;
+  border: 1px solid blue;
+}
+
+section article div #cardsVistos card-component{
+  margin-right: 5%;
+}
