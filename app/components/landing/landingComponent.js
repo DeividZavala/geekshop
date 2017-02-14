@@ -27,6 +27,21 @@
 					//setTimeout(showSlides, 3000); // Change image every 2 seconds
 			}
 
+			$("#cua1").hover(function(){
+          $("#cua1 .iconSuperior").toggleClass("animated tada")
+
+      })
+
+			$("#cua2").hover(function(){
+          $("#cua2 .iconSuperior").toggleClass("animated tada")
+
+      })
+
+			$("#cua3").hover(function(){
+          $("#cua3 .iconSuperior").toggleClass("animated tada")
+
+      })
+
   }
 
 	angular

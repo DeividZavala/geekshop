@@ -4,22 +4,32 @@
 	font-weight: bold;
 	position: relative;
 	z-index: 2;
+	background-color: FFFAFB;
+	-webkit-transition: background-color 1s;
 }
 
 .Rectangulo{
+	-webkit-transition: background-color 1s;
 	-webkit-transition: box-shadow 0.5s;
 	position: relative;
+}
+
+.Rectangulo:hover .subtitle{
+	font-weight: bold;
+	-webkit-transition: font-weight 0.1s;
+}
+
+.Rectangulo .subtitle{
+	-webkit-transition: font-weight 0.2s;
 }
 
 .parallax {
 	background-image:url("../../assets/images/geek1.jpg");
 	background-size: cover;
-
-	/* Set a specific height */
 	max-height: 450px;
 	min-height: 300px;
 	height: 70vw;
-	/* Create the parallax scrolling effect */
+
 	position: relative;
 	background-attachment: fixed;
 	background-position: center;
@@ -45,7 +55,7 @@
 .BannerPrincipal h1{
 	color: white;
 	font-size: 36px;
-	margin-top: 10%;
+	margin-top: 15%;
 	text-align: justify;
 	font-weight: bolder;
 }
@@ -60,7 +70,7 @@
 .BannerPrincipal #im1{
 
 	top:15%;
-	right: 5%;
+	right: 20%;
 	height: 30vh;
 	width: 15vw;
 }
@@ -126,7 +136,6 @@
 	width: 80%;
 	margin-bottom: 10%;
 	margin-left: 7%;
-
 }
 
 .iconSuperior{
@@ -169,5 +178,12 @@
     background-position: center;
     background-repeat: no-repeat;
 	padding: 0;
+}
 
+.BannerSlider{
+	position: relative;
+	height:70vw;
+	max-height: 450px;
+	min-height: 300px;
+	width: 100%;	
 }
