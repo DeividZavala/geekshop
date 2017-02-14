@@ -1,9 +1,12 @@
 section article.carrito{
-  padding: 2%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height: 70vh;
+  min-width: 353px;
+  min-height: 300px;
+  margin-bottom: 10vh;
 }
 
 section article div.carritoTitle{
@@ -14,15 +17,15 @@ section article div.carritoTitle{
 section article div.sliderVistos{
   border: 2px solid white;
   width: 80%;
-  height: 40vh;
+  height: 50vh;
   padding: 2%;
   transition: all 2s .1s;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  border: 1px solid black;
+  min-width: 343px;
+  min-height: 280px;
 }
 
 section article div.sliderVistos:hover{
@@ -32,23 +35,40 @@ section article div.sliderVistos:hover{
 section article div div.botonesCarrito{
     height: 33vh;
     width: 65%;
-    padding: 2%;
+    padding: 1%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: absolute;
+    min-width: 333px;
+    min-height: 245px;
 }
 
-section article div #cardsVistos{
-  width: 88%;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
+section article div .cardsVistos{
+  width: 75%;
   overflow: hidden;
-  padding: 1%;
-  border: 1px solid blue;
+  min-width: 245px;
+  min-height: 245px;
 }
 
-section article div #cardsVistos card-component{
-  margin-right: 5%;
+section article div div ul.carousel_ul{
+  position: relative;
+  left: 0px;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  width:9999px;
+  padding-bottom:10px;
+}
+
+section article div div ul.carousel_ul li{
+  background: grey;
+  float: left;
+  width: 245px;
+  height: 245px;
+  margin-top:10px;
+  margin-left:5px;
+  margin-right:5px;
+  min-width: 245px;
+  min-height: 245px;
 }
