@@ -1,71 +1,95 @@
-.mySliderShow{
+section article.carrito{
   display: flex;
-  justify-content: center;
-  max-height: 60vh;
-  min-height: 60vh;
-}
-
-.carrito{
-  display: inline-block;
-  position: relative;
-  border-radius: 5px;
-  max-height: 45vh;
-  max-width: 48%;
-  min-width:48%;
-  min-height: 45vh;
-  overflow: hidden;
-}
-
-.carrito:hover > .info_container{
-  visibility: visible;
-  opacity: 1;
-}
-
-.img-responsive{
-  display: block;
-  width: 100%;
-  position: absolute;
-  height: auto;
-}
-
-.img_container{
-  position: relative;
-  height: 100%;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-}
-
-.carrito .info_container{
-  position: absolute;
-  opacity: 0;
-  visibility: visible;
-  height: 100%;
-  width: 100%;
-  z-index: 999;
-  transition: all .4s ease;
-}
-
-.carrito .info_container .opacity{
-  height: 100%;
-  width: 100%;
-  background-color: transparent;
-  border-radius: 5px;
-}
-
-.carrito .info_container .opacity .info{
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+  min-width: 353px;
+  min-height: 300px;
+  margin-bottom: 10vh;
 }
 
-.carrito .info_container .opacity .info .btnCarrito{
+section article div.carritoTitle{
+  text-align: center;
+  margin: 2%;
+}
+
+section article div.sliderVistos{
+  border: 2px solid white;
+  width: 80%;
+  height: 50vh;
   padding: 2%;
-  background: #00bfa5;
-  font-size: 17px;
-  color: white;
-  border-radius: 5px;
+  transition: all 2s .1s;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 343px;
+  min-height: 280px;
+}
+
+section article div.sliderVistos:hover{
+  border: 2px solid #b0bec5;
+}
+
+section article div.sliderVistos.nohover{
+  border: 2px solid white;
+  margin-right: 35px;
+}
+
+section article div h1.Mobile{
+  margin-right: 25px;
+}
+
+
+section article div div.botonesCarrito{
+    height: 33vh;
+    width: 65%;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    min-width: 333px;
+    min-height: 245px;
+}
+
+section article div div.botonesCarritoMobile{
+    height: 6vh;
+    width: 16%;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    margin-top: 50%;
+}
+
+section article div .cardsVistos{
+  width: 50vw;
+  overflow: hidden;
+  min-width: 245px;
+  min-height: 245px;
+}
+
+section article div div ul.carousel_ul{
+  position: relative;
+  left: 0px;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  width:9999px;
+  padding-bottom:10px;
+}
+
+section article div div ul.carousel_ul li{
+  background: grey;
+  float: left;
+  width: 245px;
+  height: 245px;
+  margin-top:10px;
+  margin-left:5px;
+  margin-right:5px;
+  min-width: 245px;
+  min-height: 245px;
 }

@@ -23,19 +23,6 @@
 	-webkit-transition: font-weight 0.2s;
 }
 
-.parallax {
-	background-image:url("../../assets/images/geek1.jpg");
-	background-size: cover;
-	max-height: 450px;
-	min-height: 300px;
-	height: 70vw;
-
-	position: relative;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	margin: 0;
-}
 
 .BannerPrincipal{
 	position: relative;
@@ -108,7 +95,7 @@
 	font-size: 2vh;
 	margin-bottom: 5%;
 	margin-top: 5%;
-	min-height: 250px;
+	min-height: 280px;
 }
 
 .BannerCaracteristicas #cua2{
@@ -117,7 +104,7 @@
 	font-size: 2vh;
 	margin-bottom: 5%;
 	margin-top: 5%;
-	min-height: 250px;
+	min-height: 280px;
 }
 
 .BannerCaracteristicas #cua3{
@@ -126,7 +113,7 @@
 	font-size: 2vw;
 	margin-bottom: 5%;
 	margin-top: 5%;
-	min-height: 250px;
+	min-height: 280px;
 }
 
 .BannerCaracteristicas p{
@@ -154,6 +141,29 @@
 	margin: auto;
 }
 
+.parallax {
+	background-image:url("../../assets/images/geek1.jpg");
+	background-size: cover;
+	max-height: 450px;
+	min-height: 300px;
+	height: 70vw;
+
+	position: relative;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: 0;
+}
+
+.parallax img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+	padding: 0;
+}
+
 .parallax span{
 	margin-top: 10%;
 	text-align: center;
@@ -166,24 +176,14 @@
 }
 
 .parallax a{
-	position: absolute;
-	z-index: 999;
-	bottom: 20%;
-}
+	top: 80%;
 
-.parallax img{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-    background-position: center;
-    background-repeat: no-repeat;
-	padding: 0;
 }
 
 .BannerSlider{
 	position: relative;
-	height:70vw;
+	height:100vh;
 	max-height: 450px;
 	min-height: 300px;
-	width: 100%;	
+	width: 100%;
 }

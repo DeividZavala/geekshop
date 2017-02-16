@@ -1,3 +1,4 @@
+APS
 
     <!-- Inicio del Catalogo -->
     <head>
@@ -7,19 +8,15 @@
       <link rel="stylesheet" href="../../../assets/node_modules/bulma/css/bulma.css">
       <script src="../../../assets/node_modules/angular/angular.js"></script>
       <script src="/app/services/PaginationService.js"></script>
-      <link rel="stylesheet" href="../../../assets/css/_filtros.css">
-
-
-      <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-      <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+      <!-- <link rel="stylesheet" href="../../../assets/css/_filtros.css">
+      <link rel="stylesheet" href="../../../assets/css/_catalogo.css"> -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-        <div class="container is-fluid">
+        <div class="containerCatalog">
           <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" ng-click="closeNav()">&times;</a>
+              <a href="javascript:void(0)" class="closebtn" ng-click="closeNav()">&times;</a>
+              <h1>FILTROS</h1>
             <div class="misFiltros">
-              <section>
-                <h1>FILTROS</h1>
-              </section>
               <section>
                 <p>Color</p>
                 <article class="filtroC" id="colores">
@@ -83,39 +80,20 @@
                     <card-component></card-component>
                   </div>
                 </div>
-              </article>
-              <article class="paginacion">
-               <div ng-app="geekshop">
-                     <div ng-controller="ExampleController as vm" class="container">
-                         <div class="text-center">
-                             <h1>AngularJS MI PAGINACION</h1>
-
-                             <!-- items being paged -->
-                             <div ng-repeat="item in vm.items">Item {{item}}</div>
-
-                             <!-- pager -->
-                             <div class="pagination">
-                               <ul ng-if="vm.pager.pages.length" class="pagination-list">
-                                   <li ng-class="{disabled:vm.pager.currentPage === 1}">
-                                       <a ng-click="vm.setPage(1)" class="pagination-previous">First</a>
-                                   </li>
-                                   <li ng-class="{disabled:vm.pager.currentPage === 1}">
-                                       <a ng-click="vm.setPage(vm.pager.currentPage - 1)" class="pagination-previous">Previous</a>
-                                   </li>
-                                   <li ng-repeat="page in vm.pager.pages" ng-class="{active:vm.pager.currentPage === page}">
-                                       <a ng-click="vm.setPage(page)" class="pagination-link">{{page}}</a>
-                                   </li>
-                                   <li ng-class="{disabled:vm.pager.currentPage === vm.pager.totalPages}">
-                                       <a ng-click="vm.setPage(vm.pager.currentPage + 1)" class="pagination-next">Next</a>
-                                   </li>
-                                   <li ng-class="{disabled:vm.pager.currentPage === vm.pager.totalPages}">
-                                       <a ng-click="vm.setPage(vm.pager.totalPages)" class="pagination-next">Last</a>
-                                   </li>
-                               </ul>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
+                <div class="columns">
+                  <div class="column">
+                    <card-component></card-component>
+                  </div>
+                  <div class="column">
+                    <card-component></card-component>
+                  </div>
+                  <div class="column">
+                    <card-component></card-component>
+                  </div>
+                  <div class="column">
+                    <card-component></card-component>
+                  </div>
+                </div>
               </article>
               <!--preguntar a david-->
               <article class="reemplazo">
@@ -133,32 +111,30 @@
               </article>
             </section>
             <section>
-              <article class="columns is-mobile">
-                <div class="column is-half is-offset-one-quarter">
-                  <h1>YA VISTOS</h1>
+              <article class="carrito">
+                <div class="carritoTitle">
+                  <h1 class="title is-2">YA VISTOS</h1>
                 </div>
-                </div>
-              </article>
-              <article class="mySliderShow">
-                <div class="carrito">
-                     <div class="info_container">
-                       <div class="opacity">
-                         <div class="info">
-                           <button type="button" class="btnCarrito">A</button>
-                          <span style="font-size:30px;cursor:pointer" ng-click="next()"> Puchame!</span>
-                         </div>
-                       </div>
-                     </div>
-                     <div class="img_container" id="imgsCarrito">
-                         <span><img src="../../../assets/images/carrito1.jpg" alt="carrito1" class="img-responsive"></span>
-                         <span><img src="../../../assets/images/carrito2.jpg" alt="carrito2" class="img-responsive"></span>
-                         <span><img src="../../../assets/images/carrito3.jpg" alt="carrito3" class="img-responsive"></span>
-                     </div>
+                <div class="sliderVistos">
+                  <div class="botonesCarrito">
+                    <span id='left_scroll'><i class="fa fa-arrow-circle-left fa-3x" aria-hidden="true"></i></span>
+                    <span id='right_scroll'><i class="fa fa-arrow-circle-right fa-3x" aria-hidden="true"></i></span>
+                  </div>
+                  <div class="cardsVistos">
+                    <ul class='carousel_ul'>
+                        <li><card-component></card-component></li>
+                        <li><card-component></card-component></li>
+                        <li><card-component></card-component></li>
+                        <li><card-component></card-component></li>
+                        <li><card-component></card-component></li>
+                    </ul>
+                  </div>
                 </div>
               </article>
             </section>
           </div>
         </div>
+      
 <!-- Fin del Catalogo -->
 <!-- <section class="container">
   <article class="columns">

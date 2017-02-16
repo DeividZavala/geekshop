@@ -2,18 +2,19 @@
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
     top: 0;
     left: 0;
     background-color: #111;
     overflow-x: hidden;
     transition: 0.4s;
-    padding-top: 40px;
+    padding-top: 3%;
+    z-index: 1;
+    overflow: hidden;
 }
 
 .sidenav .closebtn {
     position: relative;
-    font-size: 36px;
+    font-size: 30px;
     margin-left: 80%;
     color: #818181;
 }
@@ -22,9 +23,19 @@
     color: #f1f1f1;
 }
 
+.sidenav h1{
+  position: relative;
+  padding: 1%;
+  text-decoration: none;
+  font-size: 36px;
+  color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+}
+
 .misFiltros{
-  margin: 3%;
-  padding: 3%;
+  margin: 3% 10% 10% 10%;
+  padding: 1%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,24 +43,16 @@
 }
 
 .misFiltros section{
+  height: 20vh;
   padding: 2%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  max-width: 180px;
+  max-width: 200px;
   flex-direction:column;
 }
 
-.misFiltros section h1{
-  padding: 8px 8px 8px 4px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #f1f1f1;
-  display: block;
-}
-
 .misFiltros section p{
-  padding: 8px 8px 8px 4px;
+  padding: 1%;
   text-decoration: none;
   font-size: 20px;
   color: #f1f1f1;

@@ -42,6 +42,56 @@
 
       })
 
+		$(window).resize(function() {
+  	if ($(window).width() < 768) {
+			  $("section article div div.botonesCarrito").addClass("botonesCarritoMobile")
+				$("section article div div.botonesCarrito").removeClass("botonesCarrito")
+				$("section article div.sliderVistos").addClass("nohover")
+				$("section article div h1").addClass("Mobile")
+  	}
+		if ($(window).width() > 768) {
+				$("section article div div.botonesCarritoMobile").addClass("botonesCarrito")
+				$("section article div div.botonesCarritoMobile").removeClass("botonesCarritoMobile")
+				$("section article div.sliderVistos").removeClass("nohover")
+				$("section article div h1").removeClass("Mobile")
+		}
+
+
+
+		});
+
+			$(document).ready(function() {
+						$('.carousel_ul li:first').before($('.carousel_ul li:last'));
+
+						$('#right_scroll i').click(function(){
+
+								var item_width = $('.carousel_ul li').outerWidth() + 10;
+
+								var left_indent = parseInt($('.carousel_ul').css('left')) - item_width;
+
+								$('.carousel_ul:not(:animated)').animate({'left' : left_indent},500,function(){
+
+										$('.carousel_ul li:last').after($('.carousel_ul li:first'));
+
+										$('.carousel_ul').css({'left' : '-255px'});
+								});
+						});
+
+						$('#left_scroll i').click(function(){
+
+								var item_width = $('.carousel_ul li').outerWidth() + 10;
+
+								var left_indent = parseInt($('.carousel_ul').css('left')) + item_width;
+
+								$('.carousel_ul:not(:animated)').animate({'left' : left_indent},500,function(){
+
+								$('.carousel_ul li:first').before($('.carousel_ul li:last'));
+
+								$('.carousel_ul').css({'left' : '-255px'});
+								});
+						});
+			});
+
   }
 
 	angular
