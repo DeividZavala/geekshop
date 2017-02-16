@@ -17,6 +17,7 @@
 				
 				$lateral_cart = $('#cd-cart'),
 				$shadow_layer = $('#cd-shadow-layer');
+				$btn_checkout = $('#btn_checkout');
 
 			
 
@@ -32,6 +33,14 @@
 			$shadow_layer.on('click', function(){
 				$lateral_cart.removeClass('speed-in');
 				$menu_navigation.removeClass('speed-in');
+				$shadow_layer.removeClass('is-visible');
+				$('body').removeClass('overflow-hidden');
+			});
+
+			$btn_checkout.on('click', function(){
+				console.log("puchado")
+				$lateral_cart.removeClass('speed-in');
+				//$menu_navigation.removeClass('speed-in');
 				$shadow_layer.removeClass('is-visible');
 				$('body').removeClass('overflow-hidden');
 			});

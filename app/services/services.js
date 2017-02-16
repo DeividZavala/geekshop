@@ -15,11 +15,11 @@
         }
 
         function getProducts() {
-            return $http.get("http://192.168.100.5:8000/api/products/")
+            return $http.get("http://192.168.100.7:8000/api/products/")
         }
 
         function getProductDetail(id) {
-            return $http.get("http://192.168.100.5:8000/api/products/"+id+"/")
+            return $http.get("http://192.168.100.7:8000/api/products/"+id+"/")
         }
 
         function postOrder(order){
@@ -27,7 +27,7 @@
             console.log(csrf)
             $http({
                 method:'POST',
-                url:'http://192.168.100.5:8000/api/orders/',
+                url:'http://192.168.100.7:8000/api/orders/',
                 data: order,
                 //headers:{ 'Content-Type':  "multipart/form-data"},
             })

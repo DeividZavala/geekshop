@@ -5,9 +5,7 @@
 
                 <p class="data name">{{$ctrl.product.name}}</p>
                 <div class="data">
-                    <div class="cuadrito" style="background: white"></div cla>
-                    <div class="cuadrito" style="background: black"></div cla>
-                    <div class="cuadrito" style="background: red"></div cla>
+                    <div class="cuadrito" ng-repeat="color in $ctrl.product.colors" style="background: {{color.hexa}}"></div cla>
                 </div>
                 <p class="data price">{{$ctrl.product.price | currency}}</p>
                 
@@ -17,6 +15,6 @@
         </div>
     </div>
     <div class="img_container">
-        <img class="img-responsive" id="product_img" ng-src="{{$ctrl.product.image}}" alt="img_producto">
+        <img class="img-responsive" id="product_img" ng-src="{{$ctrl.product.producto[0].img}}" alt="img_producto">
     </div>
 </div>

@@ -15,7 +15,7 @@
 				<article class="media">
 				  <figure class="media-left">
 				    <p class="image is-64x64">
-				      <img ng-src="{{item.product.image}}">
+				      <img ng-src="{{item.product.producto[0].img}}">
 				    </p>
 				  </figure>
 				  <div class="media-content">
@@ -57,7 +57,7 @@
 			<p>Total <span>{{cart.total | currency}}</span></p>
 		</div> <!-- cd-cart-total -->
 
-		<a href="#/checkout" ng-if="cart.count">
+		<a href="#/checkout" ng-if="cart.count" id="btn_checkout">
 			<div class="notification is-primary btn_checkout"><h3 align="center">Checkout</h3></div>
 		</a>
 		</div>

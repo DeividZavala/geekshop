@@ -9,7 +9,7 @@
                     <article class="media">
                         <figure class="media-left">
                             <p class="image is-128x128">
-                            <img ng-src="{{item.product.image}}">
+                            <img ng-src="{{item.product.producto[0].img}}">
                             </p>
                         </figure>
                         <div class="media-content">
@@ -22,7 +22,7 @@
                                         <strong>Precio:</strong><span>{{item.product.price | currency}}</span>
                                     </li>
                                     <li>
-                                        <strong>Talla:</strong><span>{{item.product.size}}</span>
+                                        <strong>Talla:</strong><span>{{item.product.stock[0].size}}</span>
                                     </li>
                                     <li>
                                         <strong>Color:</strong><span>Blanco</span>

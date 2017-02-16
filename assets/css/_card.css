@@ -25,11 +25,14 @@
 }
 .img_container{
     height: 100%;
+    position: relative;
+    width: 100%;
 }
 .img-responsive{
     display: block;
     max-width: 100%;
-    height: auto;
+    height: 100%;
+    width: 100%;
 }
 .info_container{
     position: absolute;
