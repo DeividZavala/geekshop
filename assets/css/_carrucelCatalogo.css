@@ -4,7 +4,7 @@ section article.carrito{
   justify-content: center;
   flex-direction: column;
   height: 70vh;
-  min-width: 353px;
+  min-width: 290px;
   min-height: 300px;
   margin-bottom: 10vh;
 }
@@ -24,17 +24,22 @@ section article div.sliderVistos{
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 343px;
+  min-width: 288px;
   min-height: 280px;
+  position: relative;
 }
 
 section article div.sliderVistos:hover{
   border: 2px solid #b0bec5;
 }
 
+section article div.sliderVistos.nohover{
+  border: 2px solid white;
+}
+
 section article div div.botonesCarrito{
     height: 33vh;
-    width: 65%;
+    width: 80%;
     padding: 1%;
     display: flex;
     justify-content: space-between;
@@ -43,6 +48,17 @@ section article div div.botonesCarrito{
     min-width: 333px;
     min-height: 245px;
 }
+
+section article div div.botonesCarritoMobile{
+    height: 6vh;
+    width: 16%;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    margin-top: 50%;
+  }
 
 section article div .cardsVistos{
   width: 75%;
