@@ -16,7 +16,6 @@
           $scope.closeNav = closeNav
 
 
-
             function openNav() {
                 document.getElementById("mySidenav").style.width = "250px";
                 document.getElementById("main").style.marginLeft = "250px";
@@ -27,7 +26,7 @@
                  document.getElementById("main").style.marginLeft= "0";
             }
 
-              $(document).ready(function() {
+            $(document).ready(function() {
                     $('.carousel_ul li:first').before($('.carousel_ul li:last'));
 
                     $('#right_scroll i').click(function(){
@@ -59,6 +58,18 @@
                     });
               });
 
+            $(window).resize(function() {
+  	           if ($(window).width() < 768) {
+			              $("section article div div.botonesCarrito").addClass("botonesCarritoMobile")
+				            $("section article div div.botonesCarrito").removeClass("botonesCarrito")
+                    
+  	           }
+		              if ($(window).width() > 768) {
+				                 $("section article div div.botonesCarritoMobile").addClass("botonesCarrito")
+				                 $("section article div div.botonesCarritoMobile").removeClass("botonesCarritoMobile")
+
+		              }
+		         });
   }
 
   angular

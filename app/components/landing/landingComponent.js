@@ -46,14 +46,10 @@
   	if ($(window).width() < 768) {
 			  $("section article div div.botonesCarrito").addClass("botonesCarritoMobile")
 				$("section article div div.botonesCarrito").removeClass("botonesCarrito")
-				$("section article div.sliderVistos").addClass("nohover")
-				$("section article div h1").addClass("Mobile")
   	}
 		if ($(window).width() > 768) {
 				$("section article div div.botonesCarritoMobile").addClass("botonesCarrito")
 				$("section article div div.botonesCarritoMobile").removeClass("botonesCarritoMobile")
-				$("section article div.sliderVistos").removeClass("nohover")
-				$("section article div h1").removeClass("Mobile")
 		}
 
 

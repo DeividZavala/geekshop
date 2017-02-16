@@ -1,3 +1,21 @@
+.containerCatalog #main #productos .imags{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.containerCatalog #main #productos .reemplazo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerCatalog #main #productos .imags card-component{
+  margin: 3%;
+}
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -7,7 +25,7 @@
     background-color: #111;
     overflow-x: hidden;
     transition: 0.4s;
-    padding-top: 3%;
+    padding-top: 8%;
     z-index: 1;
     overflow: hidden;
 }
@@ -61,10 +79,9 @@
 
 #main {
     transition: margin-left .5s;
-    margin-left: 80px;
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-top: 10px;
+    padding-left: 6%;
+    padding-right: 5%;
+    padding-top: 2vh;
 }
 
 @media screen and (max-height: 450px) {

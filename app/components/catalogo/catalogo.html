@@ -8,8 +8,6 @@ APS
       <link rel="stylesheet" href="../../../assets/node_modules/bulma/css/bulma.css">
       <script src="../../../assets/node_modules/angular/angular.js"></script>
       <script src="/app/services/PaginationService.js"></script>
-      <!-- <link rel="stylesheet" href="../../../assets/css/_filtros.css">
-      <link rel="stylesheet" href="../../../assets/css/_catalogo.css"> -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
         <div class="containerCatalog">
@@ -52,51 +50,33 @@ APS
             </div>
           </div>
           <div id="main">
-            <section>
+            <section id="titulos">
               <div class="columns">
                 <div class="column">
                   <p>MUJERES  TECNOLOGIA</p>
                 </div>
               </div>
               <div class="columns">
-                <div class="column">
+                <div class="column is-hidden-touch">
                   <span style="font-size:30px;cursor:pointer" ng-click="openNav()">&#9776; FILTROS</span>
                 </div>
               </div>
             </section>
-            <section>
+            <section id="productos">
               <article class="imags">
-                <div class="columns">
-                  <div class="column">
-                    <card-component></card-component>
-                  </div>
-                  <div class="column">
-                    <card-component></card-component>
-                  </div>
-                  <div class="column">
-                    <card-component></card-component>
-                  </div>
-                  <div class="column">
-                    <card-component></card-component>
-                  </div>
-                </div>
-                <div class="columns">
-                  <div class="column">
-                    <card-component></card-component>
-                  </div>
-                  <div class="column">
-                    <card-component></card-component>
-                  </div>
-                  <div class="column">
-                    <card-component></card-component>
-                  </div>
-                  <div class="column">
-                    <card-component></card-component>
-                  </div>
-                </div>
+                <card-component></card-component>
+                <card-component></card-component>
+                <card-component></card-component>
+                <card-component></card-component>
+                <card-component></card-component>
+                <card-component></card-component>
+                <card-component></card-component>
+                <card-component></card-component>
+                <card-component></card-component>
+                <card-component></card-component>
               </article>
               <!--preguntar a david-->
-              <article class="reemplazo">
+              <!-- <article class="reemplazo">
                 <div class="columns is-mobile">
                   <div class="column is-4 is-offset-8">
                     <nav class="pagination">
@@ -108,17 +88,18 @@ APS
                     </nav>
                   </div>
                 </div>
+              </article> -->
               </article>
             </section>
-            <section>
+            <section id="slider">
               <article class="carrito">
                 <div class="carritoTitle">
                   <h1 class="title is-2">YA VISTOS</h1>
                 </div>
                 <div class="sliderVistos">
                   <div class="botonesCarrito">
-                    <span id='left_scroll'><i class="fa fa-arrow-circle-left fa-3x" aria-hidden="true"></i></span>
-                    <span id='right_scroll'><i class="fa fa-arrow-circle-right fa-3x" aria-hidden="true"></i></span>
+                    <span id='left_scroll'><i class="fa fa-arrow-circle-left fa-2x" aria-hidden="true"></i></span>
+                    <span id='right_scroll'><i class="fa fa-arrow-circle-right fa-2x" aria-hidden="true"></i></span>
                   </div>
                   <div class="cardsVistos">
                     <ul class='carousel_ul'>
@@ -134,7 +115,7 @@ APS
             </section>
           </div>
         </div>
-      
+
 <!-- Fin del Catalogo -->
 <!-- <section class="container">
   <article class="columns">
