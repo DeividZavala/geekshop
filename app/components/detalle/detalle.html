@@ -52,10 +52,26 @@
 						
 						
 						<h4>Cantidad:</h4>
-						<input class="input is-medium" type="number" placeholder="1">
+						<input class="input is-medium" type="number" placeholder="1" ng-model="p.quantity">
 						<br><br>
 						<a class="button is-large" ng-click="cart.addProduct(product);added()">Añadir</a>
 						<br>
+
+						<form ng-submit="cart.addProduct(p);added();muestra()">
+
+							<select name="tallas" id="tallas" ng-model="p.size">
+								<option value="" selected disabled>Talla</option>
+								<option value="{{talla.size}}" ng-repeat="talla in product.stock">{{talla.size}}</option>
+							</select>
+							<input type="number" ng-model="p.quantity">
+							<select name="color" id="color" ng-model="p.color">
+								<option value="" disabled selected>Color</option>
+								<option value="{{color.name}}" ng-repeat="color in product.colors">{{color.name}}</option>
+							</select>
+							{{p}}
+							<input type="submit" value="Picale papa">
+
+						</form>
 
 						<span>Comparte: </span> <br>
 						<a class="button"><i class="fa fa-facebook" aria-hidden="true"></i></a>

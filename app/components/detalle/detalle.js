@@ -11,6 +11,11 @@
 		$scope.added = added;
 		$scope.cart = cartService;
 
+		$scope.muestra = function () {
+			$scope.p.id = $scope.product.id
+			console.log($scope.p)
+		}
+
 		DataServices.getProductDetail($scope.pID)
 			.then(function (response) {
 				$scope.product = response.data;
