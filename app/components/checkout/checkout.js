@@ -35,23 +35,19 @@
 
         function postOrder(user_info){
 
-            var products = new Array();
+            var products = new Object();
 
             for (var i in $scope.cart.details){
-                var obj = new Object({
-                    "id":$scope.cart.details[i].product.id,
-                    "quantity":$scope.cart.details[i].quantity
-                })
-                products.push(obj)
+                products[$scope.cart.details[i].product.id.toString(10)] = $scope.cart.details[i].quantity;
             }
             
             var order_info = user_info;
-            order_info.order = products
+            order_info.item = products; 
             order_info.total = $scope.cart.total
             console.log(typeof order_info.tel)
             console.log(order_info)
 
-            DataServices.postOrder(order_info)
+            //DataServices.postOrder(order_info)
         }
         
     }
