@@ -7,13 +7,13 @@
 
   function catalogCtrl($scope,DataServices) {
 
-        DataServices.getProducts()
-          .then(function (response) {
-            $scope.info = response.data
-          })
+        // DataServices.getProducts()
+        //   .then(function (response) {
+        //     $scope.info = response.data
+        //   })
 
-          $scope.openNav = openNav
-          $scope.closeNav = closeNav
+            $scope.openNav = openNav
+            $scope.closeNav = closeNav
 
 
             function openNav() {
@@ -21,7 +21,7 @@
                 document.getElementById("main").style.marginLeft = "250px";
              }
 
-             function closeNav() {
+            function closeNav() {
                  document.getElementById("mySidenav").style.width = "0";
                  document.getElementById("main").style.marginLeft= "0";
             }
@@ -62,7 +62,7 @@
   	           if ($(window).width() < 768) {
 			              $("section article div div.botonesCarrito").addClass("botonesCarritoMobile")
 				            $("section article div div.botonesCarrito").removeClass("botonesCarrito")
-                    
+
   	           }
 		              if ($(window).width() > 768) {
 				                 $("section article div div.botonesCarritoMobile").addClass("botonesCarrito")
