@@ -9,7 +9,7 @@
                     <article class="media">
                         <figure class="media-left">
                             <p class="image is-128x128">
-                            <img ng-src="{{item.product.image}}">
+                            <img ng-src="{{item.product.producto[0].img}}">
                             </p>
                         </figure>
                         <div class="media-content">
@@ -22,7 +22,7 @@
                                         <strong>Precio:</strong><span>{{item.product.price | currency}}</span>
                                     </li>
                                     <li>
-                                        <strong>Talla:</strong><span>{{item.product.size}}</span>
+                                        <strong>Talla:</strong><span>{{item.product.stock[0].size}}</span>
                                     </li>
                                     <li>
                                         <strong>Color:</strong><span>Blanco</span>
@@ -67,13 +67,13 @@
                             <div class="column">
                                 <label class="label">Nombre</label>
                                 <p class="control">
-                                    <input class="input" type="text" placeholder="Nombre" ng-model="client.name">
+                                    <input class="input" type="text" placeholder="Nombre" ng-model="client.cname">
                                 </p>
                             </div>
                             <div class="column">
                                 <label class="label">Apellido</label>
                                 <p class="control">
-                                    <input class="input" type="text" placeholder="Apellido" ng-model="client.lastName">
+                                    <input class="input" type="text" placeholder="Apellido" ng-model="client.clastname">
                                 </p>
                             </div>
 
@@ -81,12 +81,12 @@
 
                         <label class="label">Dirección 1</label>
                         <p class="control">
-                            <input class="input" type="text" placeholder="ej. Indepencia No. 136" ng-model="client.directionOne">
+                            <input class="input" type="text" placeholder="ej. Indepencia No. 136" ng-model="client.address1">
                         </p>
 
                         <label class="label">Dirección 2 (aprt,col,No.Int)</label>
                         <p class="control">
-                            <input class="input" type="text" placeholder="ej. col. Centro No.Int 4" ng-model="client.directionTwo">
+                            <input class="input" type="text" placeholder="ej. col. Centro No.Int 4" ng-model="client.address2">
                         </p>
 
                         <label class="label">País</label>
@@ -109,14 +109,14 @@
                             <div class="column">
                                 <label class="label">Código Postal</label>
                                 <p class="control">
-                                    <input class="input" type="text" placeholder="ej. 09131" ng-model="client.CP">
+                                    <input class="input" type="number" placeholder="ej. 09131" ng-model="client.cp">
                                 </p>
                             </div>
                         </div>
 
                         <label class="label">Número telefónico</label>
                         <p class="control">
-                            <input class="input" type="text" placeholder="55 555 555 55 " ng-model="client.number">
+                            <input class="input" type="number" placeholder="55 555 555 55 " ng-model="client.tel">
                         </p>
 
                         <div class="control is-grouped">
@@ -148,15 +148,15 @@
                             <tbody>
                                 <tr>
                                     <th>Nombre del Comprador:</th>
-                                    <td>{{client.name}} {{client.lastName}}</td>
+                                    <td>{{client.cname}} {{client.clastname}}</td>
                                 </tr>
                                 <tr>
                                     <th>Dirección 1:</th>
-                                    <td>{{client.directionOne}}</td>
+                                    <td>{{client.address1}}</td>
                                 </tr>
                                 <tr>
                                     <th>Dirección 2:</th>
-                                    <td>{{client.directionTwo}}</td>
+                                    <td>{{client.address2}}</td>
                                 </tr>
                                 <tr>
                                     <th>País:</th>
@@ -168,11 +168,11 @@
                                 </tr>
                                 <tr>
                                     <th>Código Postal:</th>
-                                    <td>{{client.CP}}</td>
+                                    <td>{{client.cp}}</td>
                                 </tr>
                                 <tr>
                                     <th>Número telefónico:</th>
-                                    <td>{{client.number}}</td>
+                                    <td>{{client.tel}}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -234,7 +234,7 @@
                                 <button class="button is-danger is-medium">Cancelar</button>
                             </p>
                             <p class="control">
-                                <button class="button is-success is-medium">
+                                <button class="button is-success is-medium" ng-click="postOrder(client)">
                                     ¡Pagar!
                                     <span class="icon is-small">
                                         <i class="fa fa-check"></i>

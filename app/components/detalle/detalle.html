@@ -13,23 +13,24 @@
 
 					<div class="columns">
 
-					<div class="column is-2">
+					<div class="column is-2" ng-show="product.producto.lenght > 1">
 					
-						<figure class="image is-square">
-							<img src="/assets/images/playera1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+						<figure class="image is-square" ng-repeat="p in product.producto">
+							<img ng-src="{{p.img}}" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+						</figure>
+						<br>
+						<!--<figure class="image is-square">
+							<img ng-src="{{product.producto[1].img}}" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
 						</figure>
 						<br>
 						<figure class="image is-square">
-							<img src="/assets/images/playera2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-						</figure>
-						<br>
-						<figure class="image is-square">
-							<img src="/assets/images/playera3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-						</figure>
+							<img ng-src="{{product.producto[2].img}}" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+						</figure>-->
+
 					</div>
 					<div class="column">
 						<figure class="image is-square">
-							<img src="{{product.image}}" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+							<img ng-src="{{product.producto[0].img}}" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
 						</figure>
 					</div>
 					<div class="column is-4">
@@ -46,17 +47,14 @@
 						</div>
 						<h4>Talla:</h4>
 						 <div class="block">
-						  <a class="button">Chica</a>
-						  <a class="button">Mediana</a>
-						  <a class="button">Grande</a>
-						  			  
-						</div>
+								<a class="button" ng-repeat="size in product.stock">{{size.size}}</a>						  			  
+						 </div>
 						
 						
 						<h4>Cantidad:</h4>
 						<input class="input is-medium" type="number" placeholder="1">
 						<br><br>
-						<a class="button is-large">Añadir</a>
+						<a class="button is-large" ng-click="cart.addProduct(product);added()">Añadir</a>
 						<br>
 
 						<span>Comparte: </span> <br>
@@ -83,15 +81,15 @@
   <span class="close cursor" onclick="closeModal()">&times;</span>
   <div class="modal-content">
 
-    <div class="mySlides">
-      <div class="numbertext">1 / 4</div>
+    <div class="mySlides" ng-repeat="i in product.producto">
+      <div class="numbertext">{{$index+1}} / 4</div>
       
-      	<img class="imslide" src="/assets/images/playera1.jpg">	
+      	<img class="imslide" ng-src="{{i.img}}">	
       
       
     </div>
 
-    <div class="mySlides">
+    <!--<div class="mySlides">
       <div class="numbertext">2 / 4</div>
       
       	<img class="imslide" src="/assets/images/playera2.jpg">	
@@ -113,7 +111,7 @@
       	<img class="imslide" src="/assets/images/playera4.jpg">	
       
 
-    </div>
+    </div>-->
     
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
