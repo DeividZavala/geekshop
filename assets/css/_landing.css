@@ -77,13 +77,11 @@
 }
 
 .Rectangulo:hover{
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 4px 8px 0 rgba(3,169,244, 0.2), 0 6px 20px 0 rgba(3,169,244, 0.19);
 	-webkit-transition: box-shadow 0.5s;
 	font-weight: bold;
 	position: relative;
 	z-index: 2;
-	background-color: FFFAFB;
-	-webkit-transition: background-color 1s;
 }
 
 .Rectangulo{
@@ -93,7 +91,7 @@
 }
 
 .Rectangulo:hover .subtitle{
-	font-weight: bold;
+
 	-webkit-transition: font-weight 0.1s;
 }
 
@@ -177,12 +175,10 @@
 }
 
 .parallax span{
-	margin-top: 10%;
+	margin-top: 12vh;
 	text-align: center;
 	font-size: 25px;
 	color: white;
-	italic;
-	bold;
 	position: absolute;
 	z-index: 999;
 }
