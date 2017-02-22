@@ -65,31 +65,8 @@
         </section>
         <section id="productos">
           <article class="imags">
-            <card-component></card-component>
-            <card-component></card-component>
-            <card-component></card-component>
-            <card-component></card-component>
-            <card-component></card-component>
-            <card-component></card-component>
-            <card-component></card-component>
-            <card-component></card-component>
-            <card-component></card-component>
-            <card-component></card-component>
-          </article>
-          <!--preguntar a david-->
-          <!-- <article class="reemplazo">
-            <div class="columns is-mobile">
-              <div class="column is-4 is-offset-8">
-                <nav class="pagination">
-                  <ul class="pagination-list">
-                    <li><a class="pagination-link is-current">1</a></li>
-                    <li><a class="pagination-link">2</a></li>
-                    <li><a class="pagination-link">3</a></li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-          </article> -->
+            <card-component ng-repeat="prod in info" product="prod"></card-component>
+
           </article>
         </section>
         <section id="slider">
@@ -103,12 +80,8 @@
                 <span id='right_scroll'><i class="fa fa-arrow-circle-right fa-2x" aria-hidden="true"></i></span>
               </div>
               <div class="cardsVistos">
-                <ul class='carousel_ul'>
-                    <li><card-component></card-component></li>
-                    <li><card-component></card-component></li>
-                    <li><card-component></card-component></li>
-                    <li><card-component></card-component></li>
-                    <li><card-component></card-component></li>
+                <ul class='carousel_ul' ng-repeat="prod in info">
+                    <li><card-component product="prod"></card-component></li>
                 </ul>
               </div>
             </div>

@@ -119,12 +119,8 @@
 					<span id='right_scroll'><i class="fa fa-arrow-circle-right fa-3x" aria-hidden="true"></i></span>
 				</div>
 				<div class="cardsVistos">
-					<ul class='carousel_ul'>
-							<li><card-component></card-component></li>
-							<li><card-component></card-component></li>
-							<li><card-component></card-component></li>
-							<li><card-component></card-component></li>
-							<li><card-component></card-component></li>
+					<ul class='carousel_ul' ng-repeat="prod in info">
+							<li><card-component product="prod"></card-component></li>
 					</ul>
 				</div>
 			</div>

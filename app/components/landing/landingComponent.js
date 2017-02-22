@@ -5,7 +5,7 @@
       controller: landingCtrl
 	}
 
-  function landingCtrl($scope){
+  function landingCtrl($scope, DataServices){
 
 			var slideIndex = 0;
 			showSlides();
@@ -54,6 +54,12 @@
 		}
 
 		});
+
+		DataServices.getProducts()
+			.then(function (response) {
+				$scope.info = response.data
+			})
+
 
 			$(document).ready(function() {
 						$('.carousel_ul li:first').before($('.carousel_ul li:last'));
