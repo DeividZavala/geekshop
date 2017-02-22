@@ -43,8 +43,8 @@ nav.has-shadow{
 .btn{
     margin: 2% 0;
     width: 50%;
-    border: none;
-    color: white;
+    border: none !important;
+    color: white !important;
 }
 .login_form{
     padding: 0 10%;
@@ -67,11 +67,11 @@ nav.has-shadow{
     border-radius: 50%;
 }
 .facebook{
-    background-color: #3b5998;
+    background-color: #3b5998 !important;
 }
 .facebook .fa-facebook-square{
     color: white !important;
 }
 .google_plus{
-    background-color: #dd4b39;
+    background-color: #dd4b39 !important;
 }
