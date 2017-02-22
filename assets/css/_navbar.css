@@ -44,6 +44,23 @@ header{
 .login_form{
     padding: 0 10%;
 }
+.badget{
+    position: relative
+}
+.badget .cart_quantity{
+    position: absolute;
+    color: white;
+    background: #dd4b39;
+    font-size: 10px;
+    width: 12px;
+    top: -15%;
+    right: -60%;
+    height: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
 .facebook{
     background-color: #3b5998;
 }

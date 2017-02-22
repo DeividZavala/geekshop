@@ -7,10 +7,21 @@
 
     }
 
-    function navbarCtrl($scope,$location) {
+    function navbarCtrl($scope,$location,cartService) {
 
         $scope.selectedTab = 1;
         $scope.checkRoute = checkRoute;
+        $scope.cart = cartService;     
+        $scope.cantidad = cantidad;
+
+        function cantidad() {
+            var quantity = 0;
+            for (var key in $scope.cart.details){
+                quantity += 1;
+            }
+            console.log(quantity)
+            return quantity;
+        }
             
         function checkRoute(route) {
             return $location.path() == route;

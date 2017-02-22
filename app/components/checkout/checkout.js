@@ -47,7 +47,7 @@
             console.log(typeof order_info.tel)
             console.log(order_info)
 
-            //DataServices.postOrder(order_info)
+            DataServices.postOrder(order_info)
         }
         
     }
