@@ -3,13 +3,19 @@
 @import "_footer.css";
 @import "_header.css";
 @import "_detail.css";
-@import "_detail.css";
 @import "_landing.css";
 @import "_catalogo.css";
 @import "_filtros.css";
 
+
+@import "_navbar.css";
+@import "_profile.css";
+@import "_cart.css";
+@import "_checkout.css";
+
+
 main{
-    min-height: 100vh;
+    min-height: 80vh;
 }
 
 #toast{
