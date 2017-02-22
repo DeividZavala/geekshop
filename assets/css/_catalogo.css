@@ -1,96 +1,90 @@
+.containerCatalog #main #productos .imags{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.containerCatalog #main #productos .reemplazo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerCatalog #main #productos .imags card-component{
+  margin: 3%;
+}
+
 .sidenav {
-    height: 90%;
+    height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
     top: 0;
     left: 0;
     background-color: #111;
     overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+    transition: 0.4s;
+    padding-top: 8%;
+    z-index: 1;
+    overflow: hidden;
 }
 
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
+.sidenav .closebtn {
+    position: relative;
+    font-size: 30px;
+    margin-left: 80%;
     color: #818181;
-    display: block;
-    transition: 0.3s
 }
 
 .sidenav a:hover, .offcanvas a:focus{
     color: #f1f1f1;
 }
-.sidenav p {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 3vh;
-    color: #818181;
-    display: block;
-    transition: 0.3s
+
+.sidenav h1{
+  position: relative;
+  padding: 1%;
+  text-decoration: none;
+  font-size: 36px;
+  color: #f1f1f1;
+  display: flex;
+  justify-content: center;
 }
 
-.sidenav p:hover, .offcanvas p:focus{
-    color: #f1f1f1;
+.misFiltros{
+  margin: 3% 10% 10% 10%;
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.sidenav .closebtn {
-    position: relative;;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 180px;
+.misFiltros section{
+  height: 20vh;
+  padding: 2%;
+  display: flex;
+  align-items: center;
+  max-width: 200px;
+  flex-direction:column;
+}
+
+.misFiltros section p{
+  padding: 1%;
+  text-decoration: none;
+  font-size: 20px;
+  color: #f1f1f1;
+  display: block;
 }
 
 #main {
     transition: margin-left .5s;
-    margin-left: 80px;
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-top: 10px;
+    padding-left: 6%;
+    padding-right: 5%;
+    padding-top: 2vh;
 }
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
-}
-.imgContenedor {
-    position: relative;
-    width: 100%;
-}
-
-.imageCat {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%)
-}
-
-.imgContenedor:hover .image {
-  opacity: 0.3;
-}
-
-.imgContenedor:hover .middle {
-  opacity: 1;
-}
-
-.textGaleria {
-  background-color: #4CAF50;
-  color: white;
-  font-size: 16px;
-  padding: 16px 32px;
 }

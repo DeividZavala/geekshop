@@ -1,61 +1,76 @@
 (function (){
 
   var catalogo = {
-    templateUrl: "/app/components/catalogo/catalogo.html",
+    templateUrl: "app/components/catalogo/catalogo.html",
     controller: catalogCtrl
   }
 
   function catalogCtrl($scope,DataServices) {
 
-        DataServices.getProducts()
-          .then(function (response) {
-            $scope.info = response.data
-          })
+        // DataServices.getProducts()
+        //   .then(function (response) {
+        //     $scope.info = response.data
+        //   })
 
+            $scope.openNav = openNav
+            $scope.closeNav = closeNav
 
-
-          /*$scope.openNav = openNav
-          $scope.closeNav = closeNav
 
             function openNav() {
                 document.getElementById("mySidenav").style.width = "250px";
                 document.getElementById("main").style.marginLeft = "250px";
              }
 
-             function closeNav() {
+            function closeNav() {
                  document.getElementById("mySidenav").style.width = "0";
                  document.getElementById("main").style.marginLeft= "0";
             }
 
-              var slideIndex = 1;
-                    showSlides(slideIndex);
+            $(document).ready(function() {
+                    $('.carousel_ul li:first').before($('.carousel_ul li:last'));
 
-                    function plusSlides(n) {
-                      showSlides(slideIndex += n);
-                    }
+                    $('#right_scroll i').click(function(){
 
-                    function currentSlide(n) {
-                      showSlides(slideIndex = n);
-                    }
+                        var item_width = $('.carousel_ul li').outerWidth() + 10;
 
-                    function showSlides(n) {
-                        var i;
-                        var slides = document.getElementsByClassName("mySlides");
-                        var dots = document.getElementsByClassName("dot");
-                        if (n > slides.length) {slideIndex = 1}
-                        if (n < 1) {slideIndex = slides.length}
-                          for (i = 0; i < slides.length; i++) {
-                              slides[i].style.display = "none";
-                          }
+                        var left_indent = parseInt($('.carousel_ul').css('left')) - item_width;
 
-                          for (i = 0; i < dots.length; i++) {
-                            dots[i].className = dots[i].className.replace(" active", "");
-                          }
-                               slides[slideIndex-1].style.display = "block";
-                               dots[slideIndex-1].className += " active";
-                    }*/
+                        $('.carousel_ul:not(:animated)').animate({'left' : left_indent},500,function(){
+
+                            $('.carousel_ul li:last').after($('.carousel_ul li:first'));
+
+                            $('.carousel_ul').css({'left' : '-255px'});
+                        });
+                    });
+
+                    $('#left_scroll i').click(function(){
+
+                        var item_width = $('.carousel_ul li').outerWidth() + 10;
+
+                        var left_indent = parseInt($('.carousel_ul').css('left')) + item_width;
+
+                        $('.carousel_ul:not(:animated)').animate({'left' : left_indent},500,function(){
+
+                        $('.carousel_ul li:first').before($('.carousel_ul li:last'));
+
+                        $('.carousel_ul').css({'left' : '-210px'});
+                        });
+                    });
+              });
+
+            $(window).resize(function() {
+  	           if ($(window).width() < 550) {
+			              $("section article div div.botonesCarrito").addClass("botonesCarritoMobile")
+				            $("section article div div.botonesCarrito").removeClass("botonesCarrito")
+                    closeNav();
+  	           }
+		              if ($(window).width() > 550) {
+				                 $("section article div div.botonesCarritoMobile").addClass("botonesCarrito")
+				                 $("section article div div.botonesCarritoMobile").removeClass("botonesCarritoMobile")
+
+		              }
+		         });
   }
-
 
   angular
      .module("geekshop")

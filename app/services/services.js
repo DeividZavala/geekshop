@@ -5,7 +5,7 @@
         .factory('DataServices',DataServices);
 
     function DataServices($http,$cookies) {
-        
+
         return {
 
             "getProducts"       : getProducts,
@@ -37,5 +37,5 @@
 
     }
 
-    
+
 })();

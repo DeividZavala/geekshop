@@ -32,7 +32,7 @@
   height: 100%;
   width: 260px;
   /* header height */
-  
+
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -110,7 +110,7 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  
+
 }
 .no-touch #cd-cart .cd-item-remove:hover {
   background-color: #e0e6ef;
@@ -218,10 +218,8 @@
   animation: cd-fade-in 0.3s;
 }
 
-/* -------------------------------- 
-
-xkeyframes 
-
+/* --------------------------------
+xkeyframes
 -------------------------------- */
 @-webkit-keyframes cd-fade-in {
   0% {

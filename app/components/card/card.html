@@ -2,13 +2,17 @@
     <div class="info_container">
         <div class="info_opacity">
             <div class="info">
+                <p class="data name">Nombre de la playera</p>
 
                 <p class="data name">{{$ctrl.product.name}}</p>
                 <div class="data">
                     <div class="cuadrito" ng-repeat="color in $ctrl.product.colors" style="background: {{color.hexa}}"></div cla>
                 </div>
+                <p class="data price">$234.00</p>
+                <button class="btn_card">Agregar al Carrito</button>
                 <p class="data price">{{$ctrl.product.price | currency}}</p>
-                
+
+                <button class="btn_card" ng-click="cart.addProduct($ctrl.product)">Agregar al Carrito</button>
                 <button class="btn_card" ng-click="cart.addProduct($ctrl.product);added()">Agregar al Carrito</button>
                 <a href="#/details/{{$ctrl.product.id}}" class="mas_info">Más Información</a>
             </div>
@@ -17,4 +21,5 @@
     <div class="img_container">
         <img class="img-responsive" id="product_img" ng-src="{{$ctrl.product.producto[0].img}}" alt="img_producto">
     </div>
+</article>
 </div>

@@ -30,9 +30,9 @@
                 $('#toast').removeClass('visible');
             },3000)
         }
-        
+
     }
-    
+
     angular
         .module('geekshop')
         .component('cardComponent',card);

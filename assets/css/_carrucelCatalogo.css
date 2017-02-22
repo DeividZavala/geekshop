@@ -1,95 +1,86 @@
-* {box-sizing:border-box}
-.mySlides {display:none}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;;
-  margin: auto;
+section article.carrito{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+  min-width: 290px;
+  min-height: 300px;
+  margin-bottom: 10vh;
 }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
+section article div.carritoTitle{
   text-align: center;
+  margin: 2%;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+section article div.sliderVistos{
+  border: 2px solid white;
+  width: 80%;
+  height: 50vh;
+  padding: 2%;
+  transition: all 2s .1s;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 288px;
+  min-height: 280px;
+  position: relative;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor:pointer;
-  height: 13px;
-  width: 13px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-  text-align: center;
+section article div.sliderVistos:hover{
+  border: 2px solid #b0bec5;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
+section article div div.botonesCarrito{
+    height: 33vh;
+    width: 80%;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    min-width: 333px;
+    min-height: 245px;
 }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+section article div div.botonesCarritoMobile{
+    height: 6vh;
+    width: 16%;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    margin-top: 50%;
+  }
+
+section article div .cardsVistos{
+  width: 66%;
+  overflow: hidden;
+  min-width: 245px;
+  min-height: 245px;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+section article div div ul.carousel_ul{
+  position: relative;
+  left: 0px;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  width:9999px;
+  padding-bottom:10px;
 }
 
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+section article div div ul.carousel_ul li{
+  background: grey;
+  float: left;
+  width: 245px;
+  height: 245px;
+  margin-top:10px;
+  margin-left:5px;
+  margin-right:5px;
+  min-width: 245px;
+  min-height: 245px;
 }
