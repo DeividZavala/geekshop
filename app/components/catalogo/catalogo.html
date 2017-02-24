@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     <!-- Inicio del Catalogo -->
     <head>
       <meta charset="utf-8">
@@ -48,78 +49,103 @@
                   </ul>
                 </article>
               </section>
+=======
+<!-- Inicio del Catalogo -->
+<head>
+  <meta charset="utf-8">
+  <title>Geek Shop</title>
+  <link rel="stylesheet" href="../../../assets/css/main.css">
+  <link rel="stylesheet" href="../../../assets/node_modules/bulma/css/bulma.css">
+  <script src="../../../assets/node_modules/angular/angular.js"></script>
+  <!-- <script src="/app/services/PaginationService.js"></script> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+    <div class="containerCatalog">
+      <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" ng-click="closeNav()">&times;</a>
+          <h1>FILTROS</h1>
+        <div class="misFiltros">
+          <section>
+            <p>Color</p>
+            <article class="filtroC" id="colores">
+              <button type="button" name="button" style="background: #ff1744"></button>
+              <button type="button" name="button" style="background: #6a1b9a"></button>
+              <button type="button" name="button" style="background: #536dfe"></button>
+              <button type="button" name="button" style="background: #03a9f4"></button>
+              <button type="button" name="button" style="background: #00796b"></button>
+              <button type="button" name="button" style="background: #76ff03"></button>
+              <button type="button" name="button" style="background: #ffea00"></button>
+              <button type="button" name="button" style="background: #f8a65"></button>
+            </article>
+          </section>
+          <section>
+            <p>Talla</p>
+            <article class="filtroC" id="talla">
+              <button type="button" name="button">XS</button>
+              <button type="button" name="button">S</button>
+              <button type="button" name="button">M</button>
+              <button type="button" name="button">L</button>
+              <button type="button" name="button">XL</button>
+              <button type="button" name="button">XXL</button>
+            </article>
+          </section>
+          <section>
+            <p>Precio</p>
+            <article class="filtroC" id="precio">
+              <ul>
+                <li><input type="range" id="rangeA" ng-model="minimo" min="0" max="200" step="10"></li>
+                <li>MINIMO: <p>{{minimo}}</p></li>
+                <li><input type="range" id="rangeB" ng-model="maximo" min="0" max="200" step="10"></li>
+                <li>MAXIMO: <p>{{maximo}}</p></li>
+              </ul>
+            </article>
+          </section>
+        </div>
+      </div>
+      <div id="main">
+        <section id="titulos">
+          <div class="columns">
+            <div class="column">
+              <p>MUJERES  TECNOLOGIA</p>
+>>>>>>> 9b4acfbd55bee3a714f3c943890bf75bcbe20ef2
             </div>
           </div>
-          <div id="main">
-            <section id="titulos">
-              <div class="columns">
-                <div class="column">
-                  <p>MUJERES  TECNOLOGIA</p>
-                </div>
-              </div>
-              <div class="columns">
-                <div class="column is-hidden-touch">
-                  <span style="font-size:30px;cursor:pointer" ng-click="openNav()">&#9776; FILTROS</span>
-                </div>
-              </div>
-            </section>
-            <section id="productos">
-              <article class="imags">
-                <card-component></card-component>
-                <card-component></card-component>
-                <card-component></card-component>
-                <card-component></card-component>
-                <card-component></card-component>
-                <card-component></card-component>
-                <card-component></card-component>
-                <card-component></card-component>
-                <card-component></card-component>
-                <card-component></card-component>
-              </article>
-              <!--preguntar a david-->
-              <!-- <article class="reemplazo">
-                <div class="columns is-mobile">
-                  <div class="column is-4 is-offset-8">
-                    <nav class="pagination">
-                      <ul class="pagination-list">
-                        <li><a class="pagination-link is-current">1</a></li>
-                        <li><a class="pagination-link">2</a></li>
-                        <li><a class="pagination-link">3</a></li>
-                      </ul>
-                    </nav>
-                  </div>
-                </div>
-              </article> -->
-              </article>
-            </section>
-            <section id="slider">
-              <article class="carrito">
-                <div class="carritoTitle">
-                  <h1 class="title is-2">YA VISTOS</h1>
-                </div>
-                <div class="sliderVistos">
-                  <div class="botonesCarrito">
-                    <span id='left_scroll'><i class="fa fa-arrow-circle-left fa-2x" aria-hidden="true"></i></span>
-                    <span id='right_scroll'><i class="fa fa-arrow-circle-right fa-2x" aria-hidden="true"></i></span>
-                  </div>
-                  <div class="cardsVistos">
-                    <ul class='carousel_ul'>
-                        <li><card-component></card-component></li>
-                        <li><card-component></card-component></li>
-                        <li><card-component></card-component></li>
-                        <li><card-component></card-component></li>
-                        <li><card-component></card-component></li>
-                    </ul>
-                  </div>
-                </div>
-              </article>
-            </section>
+          <div class="columns">
+            <div class="column is-hidden-touch">
+              <span style="font-size:30px;cursor:pointer" ng-click="openNav()">&#9776; FILTROS</span>
+            </div>
           </div>
-        </div>
+        </section>
+        <section id="productos">
+          <article class="imags">
+            <card-component ng-repeat="prod in info" product="prod"></card-component>
+
+          </article>
+        </section>
+        <section id="slider">
+          <article class="carrito">
+            <div class="carritoTitle">
+              <h1 class="title is-2">YA VISTOS</h1>
+            </div>
+            <div class="sliderVistos">
+              <div class="botonesCarrito">
+                <span id='left_scroll'><i class="fa fa-arrow-circle-left fa-2x" aria-hidden="true"></i></span>
+                <span id='right_scroll'><i class="fa fa-arrow-circle-right fa-2x" aria-hidden="true"></i></span>
+              </div>
+              <div class="cardsVistos">
+                <ul class='carousel_ul' ng-repeat="prod in info">
+                    <li><card-component product="prod"></card-component></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </div>
 
 <!-- Fin del Catalogo -->
 <!-- <section class="container">
-  <article class="columns">
-    <card-component class="column is-3" align="center" product = "p" ng-repeat="p in info"></card-component>
-  </article>
+<article class="columns">
+<card-component class="column is-3" align="center" product = "p" ng-repeat="p in info"></card-component>
+</article>
 </section> -->

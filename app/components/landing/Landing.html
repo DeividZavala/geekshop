@@ -1,30 +1,34 @@
 	<div class="BannerPrincipal columns is-mobile" style="margin: 0">
 
+		<div class="opacity">
+		</div>
+
 			<img class="animated fadeIn" src="../../../assets/images/Banner.jpg">
 
-		<div class="column is-4-desktop is-offset-2-desktop is-6-tablet is-offset-3-tablet is-6-mobile is-offset-3-mobile ">
+			<div class="column is-4-widescreen is-offset-2-widescreen is-8-tablet is-offset-2-tablet is-8-mobile is-offset-2-mobile is-8-desktop is-offset-2-desktop">
 
-			<h1 class="animated fadeInLeft title">
-				GeekShop
-			</h1>
+				<h1 class="animated fadeInLeft title">
+					GeekShop
+				</h1>
 
-			<h2 class="animated fadeInLeft subtitle">
-				Aqui encontraras playeras con disenos unicos!
-			</h2>
+				<h2 class="animated fadeInLeft subtitle">
+					Playeras con estilo como el tuyo, o crea tu propio estilo
 
-			<a class="button is-primary is-large animated fadeInLeft ">
-				Conoce mas
+				</h2>
+
+				<a class="button is-success is-large animated fadeInLeft ">
+					Conocelas!
   			</a>
 
-		</div>
+			</div>
 
-		<div class="column is-4 is-offset-1 is-hidden-tablet-only is-hidden-desktop-only">
+			<div class="column is-4 is-offset-1 is-hidden-touch is-hidden-desktop-only">
 
-			<img id="im1" class="animated fadeInRight" src="../../../assets/images/imagen1.png">
+				<img id="im1" class="animated fadeInRight" src="../../../assets/images/imagen1.png">
 
-			<img id="im2" class="animated fadeInRight" src="../../../assets/images/imagen2.png">
+				<img id="im2" class="animated fadeInRight" src="../../../assets/images/imagen2.png">
 
-		</div>
+			</div>
 
 
 	</div>
@@ -36,13 +40,13 @@
 		</h2>
 
 		<h3 class="subtitle">
-			Estas en una tienda online con disenos geniales creados por nosotros mismos
+			Estas en una tienda online con playeras diferentes pero con la seguridad para un presidente
 		</h3>
 
-			<div class="columns">
+		<div class="columns">
 				<div id="cua1" class="column Rectangulo">
 
-				<span class="icon is-large IconSuperior">
+				<span class="icon is-large iconSuperior">
   					<i class="fa fa-child"></i>
 				</span>
 
@@ -50,9 +54,9 @@
 					Encuentra las playeras en la talla que necesitas, no en la que haya!
 				</p>
 
-				<span class="icon is-medium iconInferior">
-  					<i class="fa fa-arrow-left"></i>
-				</span>
+				<a class="button is-primary is-large animated fadeInDown column iconInferior is-10-desktop is-9-tablet is-9-mobile">
+					Compruebalo!
+				</a>
 
 			</div>
 
@@ -66,9 +70,9 @@
 					Gracias a conekta, no tienes que preocuparte ni un segundo por los pagos que quieras hacer
 				</p>
 
-				<span class="icon is-medium iconInferior">
-  					<i class="fa fa-arrow-left"></i>
-				</span>
+				<a class="button is-primary is-large animated fadeInDown column iconInferior is-10-desktop is-9-tablet is-9-mobile">
+					Averigua porque
+				</a>
 
 			</div>
 
@@ -82,9 +86,9 @@
 					No te convence lo que ves? crea tu propia playera como a ti te guste!
 				</p>
 
-				<span class="icon is-medium iconInferior">
-  					<i class="fa fa-arrow-left"></i>
-				</span>
+				<a class="button is-primary is-large animated fadeInDown column iconInferior is-10-desktop is-9-tablet is-9-mobile">
+					UMaker!
+				</a>
 
 			</div>
 		</div>
@@ -94,12 +98,31 @@
 
 		<img src="../../../assets/images/geek1.jpg" class="column is-hidden-widescreen">
 
-		<span class="column is-12-mobile is-8-tablet is-offset-2-tablet">
-			Tienes un diseno propio al que quieres darle vida en una playera? Subelo! y crea una playera realmente tuya
+		<span class="column is-12-mobile is-8-tablet is-offset-2-tablet is-8-touch is-offset-2-touch">
+			Quieres algo realmente tuyo pero no sabes que? Inspirate con los diseños de la comunidad!
 		</span>
 
-	 	<a class="button is-primary is-large animated fadeInDown column is-2-tablet is-offset-5-tablet is-2-mobile is-offset-5-mobile">
-			UMaker!
+	 	<a class="button is-primary is-large animated fadeInDown column is-2-tablet is-offset-5-tablet is-6-mobile is-offset-3-mobile">
+			Inspiracion: ON!
 		</a>
 
 	</div>
+
+	<section>
+		<article class="carrito">
+			<div class="carritoTitle">
+				<h1 class="title is-2">Los mas populares</h1>
+			</div>
+			<div class="sliderVistos">
+				<div class="botonesCarrito">
+					<span id='left_scroll'><i class="fa fa-arrow-circle-left fa-3x" aria-hidden="true"></i></span>
+					<span id='right_scroll'><i class="fa fa-arrow-circle-right fa-3x" aria-hidden="true"></i></span>
+				</div>
+				<div class="cardsVistos">
+					<ul class='carousel_ul' ng-repeat="prod in info">
+							<li><card-component product="prod"></card-component></li>
+					</ul>
+				</div>
+			</div>
+		</article>
+	</section>

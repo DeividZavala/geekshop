@@ -34,7 +34,10 @@
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 9b4acfbd55bee3a714f3c943890bf75bcbe20ef2
         function postOrder(user_info){
 
             var products = new Object();
@@ -42,17 +45,21 @@
             for (var i in $scope.cart.details){
                 products[$scope.cart.details[i].product.id.toString(10)] = $scope.cart.details[i].quantity;
             }
-            
+
             var order_info = user_info;
-            order_info.item = products; 
+            order_info.item = products;
             order_info.total = $scope.cart.total
             console.log(typeof order_info.tel)
             console.log(order_info)
 
             //DataServices.postOrder(order_info)
         }
+<<<<<<< HEAD
         
 >>>>>>> bac47934bb50ac9c62854c30df0df286bb0c945f
+=======
+
+>>>>>>> 9b4acfbd55bee3a714f3c943890bf75bcbe20ef2
     }
 
     angular
