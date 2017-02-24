@@ -7,15 +7,12 @@
 
   function catalogCtrl($scope,DataServices) {
 
-        // DataServices.getProducts()
-        //   .then(function (response) {
-        //     $scope.info = response.data
-        //   })
+        DataServices.getProducts()
+          .then(function (response) {
+            $scope.info = response.data
+          })
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 9b4acfbd55bee3a714f3c943890bf75bcbe20ef2
             $scope.openNav = openNav
             $scope.closeNav = closeNav
 
@@ -66,11 +63,7 @@
   	           if ($(window).width() < 550) {
 			              $("section article div div.botonesCarrito").addClass("botonesCarritoMobile")
 				            $("section article div div.botonesCarrito").removeClass("botonesCarrito")
-<<<<<<< HEAD
-
-=======
                     closeNav();
->>>>>>> 9b4acfbd55bee3a714f3c943890bf75bcbe20ef2
   	           }
 		              if ($(window).width() > 550) {
 				                 $("section article div div.botonesCarritoMobile").addClass("botonesCarrito")

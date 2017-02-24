@@ -1,25 +1,15 @@
 @import "_card.css";
 @import "_carrucelCatalogo.css";
 @import "_footer.css";
-<<<<<<< HEAD
-@import "_header.css";
-=======
 @import "_navbar.css";
 @import "_catalogo.css";
->>>>>>> 9b4acfbd55bee3a714f3c943890bf75bcbe20ef2
 @import "_detail.css";
 @import "_landing.css";
 @import "_profile.css";
 @import "_cart.css";
 @import "_filtros.css";
 @import "_checkout.css";
-
-
-
-@import "_navbar.css";
-@import "_profile.css";
-@import "_cart.css";
-@import "_checkout.css";
+@import "_header.css";
 
 
 main{
