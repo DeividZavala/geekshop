@@ -15,11 +15,11 @@
         }
 
         function getProducts() {
-            return $http.get("https://calm-bastion-23564.herokuapp.com/products/api/products/")
+            return $http.get("https://still-beach-40836.herokuapp.com/products/api/products/")
         }
 
         function getProductDetail(id) {
-            return $http.get("https://calm-bastion-23564.herokuapp.com/products/api/products/"+id+"/")
+            return $http.get("https://still-beach-40836.herokuapp.com/products/api/products/"+id+"/")
         }
 
         function postOrder(order){
@@ -27,7 +27,7 @@
             console.log(csrf)
             $http({
                 method:'POST',
-                url:'https://calm-bastion-23564.herokuapp.com/orders/api/orders/',
+                url:'https://still-beach-40836.herokuapp.com/orders/api/orders/',
                 data: order,
                 //headers:{ 'Content-Type':  "multipart/form-data"},
             })

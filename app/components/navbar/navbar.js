@@ -19,7 +19,6 @@
             for (var key in $scope.cart.details){
                 quantity += 1;
             }
-            console.log(quantity)
             return quantity;
         }
             

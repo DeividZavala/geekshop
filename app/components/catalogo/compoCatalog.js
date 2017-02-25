@@ -7,10 +7,10 @@
 
   function catalogCtrl($scope,DataServices) {
 
-        // DataServices.getProducts()
-        //   .then(function (response) {
-        //     $scope.info = response.data
-        //   })
+         DataServices.getProducts()
+           .then(function (response) {
+             $scope.info = response.data
+        })
 
             $scope.openNav = openNav
             $scope.closeNav = closeNav
