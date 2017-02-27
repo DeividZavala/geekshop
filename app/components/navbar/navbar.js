@@ -11,7 +11,7 @@
 
         $scope.selectedTab = 1;
         $scope.checkRoute = checkRoute;
-        $scope.cart = cartService;     
+        $scope.cart = cartService;
         $scope.cantidad = cantidad;
 
         function cantidad() {
@@ -19,15 +19,14 @@
             for (var key in $scope.cart.details){
                 quantity += 1;
             }
-            console.log(quantity)
             return quantity;
         }
-            
+
         function checkRoute(route) {
             return $location.path() == route;
         }
-                
-        
+
+
         $(".nav-toggle").on('click',function () {
             $(".nav-toggle").toggleClass("is-active")
             $(".nav-right").css("position","absolute")
