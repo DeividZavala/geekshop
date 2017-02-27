@@ -1,11 +1,11 @@
 (function () {
-    
+
     angular
         .module('geekshop')
         .service('cartService',cartService);
 
         function cartService() {
-            
+
             return{
 
                 'count'         : parseInt(localStorage.getItem("count")) || 0,
@@ -54,7 +54,7 @@
                 this.save();
             }
 
-            function removeProduct(item) { 
+            function removeProduct(item) {
                 if(item.quantity < 1){
                     this.deleteProduct(item.product.id)
                 }else{

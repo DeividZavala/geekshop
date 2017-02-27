@@ -1,0 +1,70 @@
+.misFiltrosD{
+  margin: 15%;
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /*border: 1px solid green;*/
+  max-height: 100%;
+}
+
+.misFiltrosD section{
+  padding: 2%;
+  display: flex;
+  align-items: flex-start;
+  width: 330px;
+  flex-direction:column;
+  /*border: 1px solid pink;*/
+}
+
+.misFiltrosD section p{
+  padding: 1%;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  display: block;
+  /*border: 1px solid blue;*/
+}
+
+.filtroD{
+  display: block;
+  position: relative;
+  border-radius: 5px;
+  max-height: 100%;
+  min-width: 325px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  /*border: 1px solid black;*/
+}
+
+#coloresD input{
+  height: 3vh;
+  width: 3vh;
+  min-width:1vh;
+  min-height: 1vh;
+  border-radius: 8px;
+  box-shadow: 2px 2px 1px #263238;
+  margin-right: 4%;
+  border: none;
+}
+
+#tallaD input{
+  height: 5vh;
+  width: auto;
+  max-width:5vh;
+  max-height: 6vh;
+  border-radius: 3px;
+  box-shadow: 2px 2px 1px #263238;
+  margin: 2%;
+  padding-right: 55px;
+  background: #b2ebf2;
+  border: none;
+  text-align: center;
+}
+
+a{
+  margin-left: 10px;
+}

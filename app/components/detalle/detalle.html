@@ -7,25 +7,21 @@
 		<article class="content">
 			<div class="container">
 
-				
-					
-				
-
 					<div class="columns">
 
 					<div class="column is-2" ng-show="product.producto.lenght > 1">
-					
+
 						<figure class="image is-square" ng-repeat="p in product.producto">
 							<img ng-src="{{p.img}}" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
 						</figure>
 						<br>
-						<!--<figure class="image is-square">
+						<figure class="image is-square">
 							<img ng-src="{{product.producto[1].img}}" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
 						</figure>
 						<br>
 						<figure class="image is-square">
 							<img ng-src="{{product.producto[2].img}}" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-						</figure>-->
+						</figure>
 
 					</div>
 					<div class="column">
@@ -34,35 +30,31 @@
 						</figure>
 					</div>
 					<div class="column is-4">
-					
-						<h4>Precio: {{product.price | currency}}</h4>
-						<h4>Color:</h4>
+
+
+						<!-- <h4>Color:</h4>
 						 <div class="block">
 						  <a class="button is-primary">Color1</a>
 						  <a class="button is-info">Color2</a>
 						  <a class="button is-success">Color3</a>
 						  <a class="button is-danger">Color4</a>
-						  
-						  
+
+
 						</div>
 						<h4>Talla:</h4>
 						 <div class="block">
-								<a class="button" ng-repeat="size in product.stock">{{size.size}}</a>						  			  
-						 </div>
-						
-						
-						<h4>Cantidad:</h4>
-						<input class="input is-medium" type="number" placeholder="1" ng-model="p.quantity">
-						<br><br>
-						<a class="button is-large" ng-click="cart.addProduct(product);added()">Añadir</a>
-						<br>
+								<a class="button" ng-repeat="size in product.stock">{{size.size}}</a>
+						 </div> -->
 
-						<form ng-submit="cart.addProduct(p);added();muestra()">
+						<!-- <form ng-submit="cart.addProduct(p);added();muestra()">
 
 							<select name="tallas" id="tallas" ng-model="p.size">
 								<option value="" selected disabled>Talla</option>
 								<option value="{{talla.size}}" ng-repeat="talla in product.stock">{{talla.size}}</option>
 							</select>
+
+							<input type="radio" name="tallas" value="{{talla.size}}" ng-repeat="talla in product.stock" ng-model="p.size">{{talla.size}}">
+
 							<input type="number" ng-model="p.quantity">
 							<select name="color" id="color" ng-model="p.color">
 								<option value="" disabled selected>Color</option>
@@ -71,13 +63,49 @@
 							{{p}}
 							<input type="submit" value="Picale papa">
 
-						</form>
+						</form> -->
 
-						<span>Comparte: </span> <br>
-						<a class="button"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-						<a class="button"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-						
-						
+						<div class="misFiltrosD">
+							<section>
+								<p>Precio: {{product.price | currency}}</p>
+								<p>Cantidad:</p>
+								<input class="input is-medium" type="number" min="1" placeholder="1" ng-model="p.quantity">
+ 						 	</section>
+							<section>
+								<p style="margin: 0">Color</p>
+								<article class="filtroD" id="coloresD">
+									<!-- <button type="button" name="button" style="background:{{color.hexa}}" ng-repeat="color in product.colors"  ng-model="p.color"></button> -->
+
+									<input type="radio" ng-model="p.color" value="{{color.name}}"  name="colores" ng-repeat="color in product.colors">
+
+								</article>
+							</section>
+							<section>
+								<p style="margin: 0">Talla</p>
+								<article class="filtroD" id="tallaD">
+									<input type="radio" ng-model="p.size" value="{{talla.size}}"  name="tallas" ng-repeat="talla in product.stock">
+								</article>
+							</section>
+							<section>
+								<article class="filtroD">
+
+
+								<span>Comparte: </span> <br>
+								<a class="button"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+								<a class="button"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+								</article>
+							</section>
+
+							<a class="button is-large" ng-click="cart.addProduct(product);added()">Añadir</a>
+
+						<br>
+
+							{{p}}
+
+						</div>
+
+
+
 					</div>
 				</div>
 				<br>
@@ -99,45 +127,45 @@
 
     <div class="mySlides" ng-repeat="i in product.producto">
       <div class="numbertext">{{$index+1}} / 4</div>
-      
-      	<img class="imslide" ng-src="{{i.img}}">	
-      
-      
+
+      	<img class="imslide" ng-src="{{i.img}}">
+
+
     </div>
 
-    <!--<div class="mySlides">
+    <div class="mySlides">
       <div class="numbertext">2 / 4</div>
-      
-      	<img class="imslide" src="/assets/images/playera2.jpg">	
-      
+
+      	<img class="imslide" src="/assets/images/playera2.jpg">
+
 
     </div>
 
     <div class="mySlides">
       <div class="numbertext">3 / 4</div>
-      
-      	<img class="imslide" src="/assets/images/playera3.jpg">	
-      
+
+      	<img class="imslide" src="/assets/images/playera3.jpg">
+
 
     </div>
-    
+
     <div class="mySlides">
       <div class="numbertext">4 / 4</div>
-      
-      	<img class="imslide" src="/assets/images/playera4.jpg">	
-      
 
-    </div>-->
-    
+      	<img class="imslide" src="/assets/images/playera4.jpg">
+
+
+    </div>
+
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-    <!--<div class="caption-container">
+    <div class="caption-container">
       <p id="caption"></p>
-    </div>-->
+    </div>
 
 
-    <!--<div class="column">
+    <div class="column">
       <img class="demo cursor" src="/assets/images/playera1.jpg" onclick="currentSlide(1)" alt="Nature and sunrise">
     </div>
     <div class="column">
@@ -148,7 +176,7 @@
     </div>
     <div class="column">
       <img class="demo cursor" src="/assets/images/playera4.jpg" onclick="currentSlide(4)" alt="Northern Lights">
-    </div>-->
+    </div>
   </div>
 </div>
 
@@ -195,4 +223,3 @@
 		  //captionText.innerHTML = dots[slideIndex-1].alt;
 	}
 </script>
-
