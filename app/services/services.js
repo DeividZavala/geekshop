@@ -12,6 +12,7 @@
             "getProductDetail"  : getProductDetail,
             "postOrder"         : postOrder
 
+
         }
 
         function getProducts() {
@@ -33,7 +34,6 @@
             })
 
         }
-
 
     }
 

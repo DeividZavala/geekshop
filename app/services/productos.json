@@ -1,0 +1,55 @@
+HTTP 200 OK
+Allow: GET, POST, OPTIONS
+Content-Type: application/json
+Vary: Accept
+
+[
+    {
+        "name": "p1",
+        "colors": [
+            {
+                "name": "wer",
+                "hexa": "#ffffff"
+            }
+        ],
+        "price": 434,
+        "stock": [
+            {
+                "quantity": 4343,
+                "size": "CHICA",
+                "id": 1
+            }
+        ],
+        "id": 1,
+        "producto": [
+            {
+                "img": "https://still-beach-40836.herokuapp.com/media/imagenesproductos/descarga.png",
+                "prod": 1
+            }
+        ]
+    },
+    {
+        "name": "p2",
+        "colors": [
+            {
+                "name": "wer",
+                "hexa": "#ffffff"
+            }
+        ],
+        "price": 12,
+        "stock": [
+            {
+                "quantity": 4343,
+                "size": "CHICA",
+                "id": 1
+            }
+        ],
+        "id": 2,
+        "producto": [
+            {
+                "img": "https://still-beach-40836.herokuapp.com/media/imagenesproductos/descarga_1.jpg",
+                "prod": 2
+            }
+        ]
+    }
+]

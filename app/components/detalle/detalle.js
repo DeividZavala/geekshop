@@ -13,7 +13,6 @@
 
 		$scope.muestra = function () {
 			$scope.p.id = $scope.product.id
-			console.log($scope.p)
 		}
 
 		DataServices.getProductDetail($scope.pID)
