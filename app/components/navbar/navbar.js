@@ -19,7 +19,6 @@
             for (var key in $scope.cart.details){
                 quantity += 1;
             }
-            console.log(quantity)
             return quantity;
         }
 
@@ -39,10 +38,10 @@
         })
 
         $("#login").on('click',function () {
-            $(".modal").fadeIn()
+            $("header + div.modal").fadeIn()
         })
         $("#close_login").on("click",function () {
-            $(".modal").fadeOut()
+            $("header + div.modal").fadeOut()
         })
 
     }

@@ -32,20 +32,24 @@
             $scope.hiddenNumber = hidden + number[12] + number[13] + number[14] + number[15]
 
         }
+        console.log($scope.cart.details[1].quantity)
 
         function postOrder(user_info){
 
-            var products = new Object();
+            var product = new Object();
+            var productArray = new Array();
 
             for (var i in $scope.cart.details){
-                products[$scope.cart.details[i].product.id.toString(10)] = $scope.cart.details[i].quantity;
+                product = {
+                    "quantity": $scope.cart.details[i].quantity,
+                    "product" : $scope.cart.details[i].product.id
+                }
+                productArray.push(product)
             }
 
             var order_info = user_info;
-            order_info.item = products;
+            order_info.item = productArray;
             order_info.total = $scope.cart.total
-            console.log(typeof order_info.tel)
-            console.log(order_info)
 
             DataServices.postOrder(order_info)
         }

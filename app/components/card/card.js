@@ -31,6 +31,15 @@
             },3000)
         }
 
+        $scope.muestra = function (pro) {
+    			p.img  = pro.producto[0].img
+    			p.id = pro.id
+    			p.name = pro.productname
+    			p.price  = pro.price
+    			$scope.cart.addProduct(p,1)
+          console.log(p);
+    		}
+
     }
 
     angular

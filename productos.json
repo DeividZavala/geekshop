@@ -1,0 +1,40 @@
+{
+  "productos": {
+    "producto":{
+      "id": 1,
+      "name": "Playera 1",
+      "precio": 173,
+      "stock":{
+        "talla": "chica"
+      },
+      "color": {
+        "name": "azul",
+        "hexa": "#2196f3"
+      },
+      "quantity": 3,
+      "producto": {
+        "id": 1,
+        "img": "assets/images/playera1.jpg"
+      }
+
+    },
+    "producto":{
+      "id": 2,
+      "name": "Playera 2",
+      "precio": 321,
+      "stock": {
+        "talla": "grande"
+      },
+      "color": {
+        "name": "verde",
+        "hexa": "#388e3c"
+      },
+      "quantity": 1,
+      "producto": {
+        "id": 2,
+        "img": "assets/images/playera2.jpg"
+      }
+    }
+  }
+
+}

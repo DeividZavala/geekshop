@@ -7,8 +7,8 @@
                 <div class="data">
                     <div class="cuadrito" ng-repeat="color in $ctrl.product.colors" style="background: {{color.hexa}}"></div cla>
                 </div>
-                <p class="data price">{{$ctrl.product.price | currency}}</p>
-                <button class="btn_card" ng-click="cart.addProduct($ctrl.product);added()">Agregar al Carrito</button>
+                <p class="data price">{{$ctrl.product.price | currency}} </p>
+                <button class="btn_card" ng-click="muestra($ctrl.product);added()">Agregar al Carrito</button>
                 <a href="#/details/{{$ctrl.product.id}}" class="mas_info">Más Información</a>
             </div>
         </div>

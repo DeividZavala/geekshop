@@ -1,115 +1,98 @@
 <section class="hero">
-	<div class="hero">
-		<div class="hero-body">
-			<h1 class="title" align="center">{{product.name}}</h1>
+		<div class="hero">
+			<div class="hero-body">
+				<h1 class="title" align="center">{{product.name}}</h1>
+			</div>
 		</div>
-	</div>
 		<article class="content">
 			<div class="container">
-
 					<div class="columns">
 
 					<div class="column is-2" ng-show="product.producto.lenght > 1">
 
 						<figure class="image is-square" ng-repeat="p in product.producto">
 							<img ng-src="{{p.img}}" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-						</figure>
-						<br>
+						 </figure>
 						<figure class="image is-square">
 							<img ng-src="{{product.producto[1].img}}" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-						</figure>
-						<br>
+						 </figure>
 						<figure class="image is-square">
 							<img ng-src="{{product.producto[2].img}}" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-						</figure>
+						 </figure>
 
 					</div>
 					<div class="column">
 						<figure class="image is-square">
 							<img ng-src="{{product.producto[0].img}}" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-						</figure>
+						 </figure>
 					</div>
 					<div class="column is-4">
 
+						<!-- <form ng-submit="added();muestra(pro)">
 
-						<!-- <h4>Color:</h4>
-						 <div class="block">
-						  <a class="button is-primary">Color1</a>
-						  <a class="button is-info">Color2</a>
-						  <a class="button is-success">Color3</a>
-						  <a class="button is-danger">Color4</a>
-
-
-						</div>
-						<h4>Talla:</h4>
-						 <div class="block">
-								<a class="button" ng-repeat="size in product.stock">{{size.size}}</a>
-						 </div> -->
-
-						<!-- <form ng-submit="cart.addProduct(p);added();muestra()">
-
-							<select name="tallas" id="tallas" ng-model="p.size">
+							<select name="tallas" id="tallas" ng-model="pro.size">
 								<option value="" selected disabled>Talla</option>
 								<option value="{{talla.size}}" ng-repeat="talla in product.stock">{{talla.size}}</option>
 							</select>
 
-							<input type="radio" name="tallas" value="{{talla.size}}" ng-repeat="talla in product.stock" ng-model="p.size">{{talla.size}}">
+							<input type="radio" name="tallas" value="{{talla.size}}" ng-repeat="talla in product.stock" ng-model="pro.size">{{talla.size}}">
 
-							<input type="number" ng-model="p.quantity">
-							<select name="color" id="color" ng-model="p.color">
+							<input type="number" ng-model="pro.quantity">
+							<select name="color" id="color" ng-model="pro.color">
 								<option value="" disabled selected>Color</option>
 								<option value="{{color.name}}" ng-repeat="color in product.colors">{{color.name}}</option>
 							</select>
-							{{p}}
+							{{pro}}
 							<input type="submit" value="Picale papa">
 
-						</form> -->
+							</form> -->
 
+						<form ng-submit="added();muestra(p)">
 						<div class="misFiltrosD">
 							<section>
-								<p>Precio: {{product.price | currency}}</p>
-								<p>Cantidad:</p>
-								<input class="input is-medium" type="number" min="1" placeholder="1" ng-model="p.quantity">
+
+
+								<p ng-model="p.price"><span class="icon is-medium">
+										<i class="fa fa-money"></i>
+								</span>Precio: {{product.price | currency}}	</p>
+								<span ng-value=""	ng-model="p.id"></span>
+								<p><span class="icon is-medium">
+										<i class="fa fa-sort"></i>
+								</span>Cantidad:<input class="input is-medium" type="number" min="1" placeholder="1" required ng-model="p.quantity"></p>
  						 	</section>
 							<section>
 								<p style="margin: 0">Color</p>
 								<article class="filtroD" id="coloresD">
-									<!-- <button type="button" name="button" style="background:{{color.hexa}}" ng-repeat="color in product.colors"  ng-model="p.color"></button> -->
 
-									<input type="radio" ng-model="p.color" value="{{color.name}}"  name="colores" ng-repeat="color in product.colors">
-
+									<input type="radio" ng-model="p.color" required value="{{color.name}}" id="inputColores" name="colores" ng-repeat="color in product.colors">
+									<label for="inputColores"	style="background:{{color.hexa}}"	 ng-repeat="color in product.colors"></label>
 								</article>
 							</section>
 							<section>
 								<p style="margin: 0">Talla</p>
 								<article class="filtroD" id="tallaD">
-									<input type="radio" ng-model="p.size" value="{{talla.size}}"  name="tallas" ng-repeat="talla in product.stock">
+									<input type="radio" required ng-model="p.size" value="{{talla.size}}" id="inputTallas" name="tallas" ng-repeat="talla in product.stock">
+									<label for="inputTallas"	ng-repeat="talla in product.stock">{{talla.size}}</label>
 								</article>
 							</section>
 							<section>
 								<article class="filtroD">
-
-
-								<span>Comparte: </span> <br>
-								<a class="button"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-								<a class="button"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+									<input type="submit" class="button is-large is-success" value="Anadir">
 								</article>
 							</section>
+								</form>
 
-							<a class="button is-large" ng-click="cart.addProduct(product);added()">Añadir</a>
 
-						<br>
+								<span>Comparte: </span>
+								<div style="display:inline-block">
+								  <a class="button"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+									<a class="button"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+								</div>
 
-							{{p}}
 
 						</div>
-
-
-
 					</div>
 				</div>
-				<br>
-
 					<div class="box">
 						<h4>Comentarios:</h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -120,70 +103,51 @@
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					</div>
 			</div>
+			<!-- INICIO MODAL -->
+			<div id="myModal" class="modal">
+			  <span class="close cursor" onclick="closeModal()">&times;</span>
+			  <div class="modal-content">
+			    <div class="mySlides" ng-repeat="i in product.producto">
+			      <div class="numbertext">{{$index+1}} / 4</div>
+			      	<img class="imslide" ng-src="{{i.img}}">
+			    </div>
+			    <div class="mySlides">
+			      <div class="numbertext">2 / 4</div>
+			      	<img class="imslide" src="/assets/images/playera2.jpg">
+			    </div>
+			    <div class="mySlides">
+			      <div class="numbertext">3 / 4</div>
+			      	<img class="imslide" src="/assets/images/playera3.jpg">
+			    </div>
+			    <div class="mySlides">
+			      <div class="numbertext">4 / 4</div>
+			      	<img class="imslide" src="/assets/images/playera4.jpg">
+			    </div>
 
-<div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
-  <div class="modal-content">
+			    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			    <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-    <div class="mySlides" ng-repeat="i in product.producto">
-      <div class="numbertext">{{$index+1}} / 4</div>
+			    <div class="caption-container">
+			      <p id="caption"></p>
+			    </div>
 
-      	<img class="imslide" ng-src="{{i.img}}">
-
-
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">2 / 4</div>
-
-      	<img class="imslide" src="/assets/images/playera2.jpg">
-
-
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">3 / 4</div>
-
-      	<img class="imslide" src="/assets/images/playera3.jpg">
-
-
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">4 / 4</div>
-
-      	<img class="imslide" src="/assets/images/playera4.jpg">
-
-
-    </div>
-
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-    <div class="caption-container">
-      <p id="caption"></p>
-    </div>
-
-
-    <div class="column">
-      <img class="demo cursor" src="/assets/images/playera1.jpg" onclick="currentSlide(1)" alt="Nature and sunrise">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="/assets/images/playera3.jpg" onclick="currentSlide(2)" alt="Trolltunga, Norway">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="/assets/images/playera2.jpg" onclick="currentSlide(3)" alt="Mountains and fjords">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="/assets/images/playera4.jpg" onclick="currentSlide(4)" alt="Northern Lights">
-    </div>
-  </div>
-</div>
-
-
-
+			    <div class="column">
+			      <img class="demo cursor" src="/assets/images/playera1.jpg" onclick="currentSlide(1)" alt="Nature and sunrise">
+			    </div>
+			    <div class="column">
+			      <img class="demo cursor" src="/assets/images/playera3.jpg" onclick="currentSlide(2)" alt="Trolltunga, Norway">
+			    </div>
+			    <div class="column">
+			      <img class="demo cursor" src="/assets/images/playera2.jpg" onclick="currentSlide(3)" alt="Mountains and fjords">
+			    </div>
+			    <div class="column">
+			      <img class="demo cursor" src="/assets/images/playera4.jpg" onclick="currentSlide(4)" alt="Northern Lights">
+			    </div>
+			  </div>
+			</div>
+			<!-- FIN MODAL -->
 		</article>
-	</section>
+</section>
 
 <script>
 	function openModal() {
