@@ -38,10 +38,10 @@
         })
 
         $("#login").on('click',function () {
-            $(".modal").fadeIn()
+            $("header + div.modal").fadeIn()
         })
         $("#close_login").on("click",function () {
-            $(".modal").fadeOut()
+            $("header + div.modal").fadeOut()
         })
 
     }

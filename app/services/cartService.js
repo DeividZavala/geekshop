@@ -38,37 +38,51 @@
                     return this.details[product_id].quantity;
                 }
                 return 0;
+                console.log(this.details[product_id]);
             }
 
-            function addProduct(product) {
+            function addProduct(product, lu) {
                 if ( typeof this.details[product.id] == "undefined") {
                     this.details[product.id] = {
-                        quantity : 1,
+                        quantity : product.quantity,
                         product  : product
                     }
                 } else {
-                    this.details[product.id].quantity += 1
+                    product.quantity += 1
+                    console.log();
                 }
-                this.count += 1;
-                this.total += product.price;
+                if(lu==0){
+
+                  this.count +=(product.quantity);
+                }else {
+                  this.count += 1;
+                }
+
+                this.total += (product.price * product.quantity);
                 this.save();
+                console.log(product);
             }
 
             function removeProduct(item) {
                 if(item.quantity < 1){
-                    this.deleteProduct(item.product.id)
+                    this.deleteProduct(item.id)
                 }else{
-                    this.details[item.product.id].quantity -= 1;
+                    item.quantity = item.quantity - 1
                 }
-                this.count -= 1;
-                this.total -= item.product.price;
+
+
+                  this.count -= 1;
+
+                this.total -= item.price;
                 this.save();
+                console.log(item);
             }
 
-            function deleteProduct(product_id) {
-                this.count -= this.details[product_id].quantity;
-                this.total -= (this.details[product_id].quantity * this.details[product_id].product.price);
-                delete this.details[product_id];
+
+            function deleteProduct(item) {
+                this.count -= item.quantity;
+                this.total -= (item.price * item.quantity);
+                delete this.details[item.id]
                 this.save();
             }
 
