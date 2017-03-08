@@ -28,14 +28,14 @@
 				    <nav class="level">
 				      <div class="level-left">
 
-				         <a class="button is-small" ng-click="cart.removeProduct(item.product,1)" ng-class="{'is-disabled':item.product.quantity == 1}">
+				         <a class="button is-small" ng-click="cart.removeProduct(item.product)" ng-class="{'is-disabled':item.product.quantity == 1}">
 										<span class="icon is-small">
 											<i class="fa fa-minus"></i>
 										</span>
 
 									</a>
 									<span class="cantidad">{{item.product.quantity}}</span>
-									<a class="button is-small" ng-click="cart.addProduct(item.product,1)">
+									<a class="button is-small" ng-click="cart.addProduct(item.product, 1)">
 										<span class="icon is-small">
 											<i class="fa fa-plus"></i>
 										</span>

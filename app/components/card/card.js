@@ -31,14 +31,21 @@
             },3000)
         }
 
-        $scope.muestra = function (pro) {
-    			p.img  = pro.producto[0].img
-    			p.id = pro.id
-    			p.name = pro.productname
-    			p.price  = pro.price
-    			$scope.cart.addProduct(p,1)
-          console.log(p);
-    		}
+        $scope.muestra = muestra;
+
+          function muestra(p) {
+            var miProd = {
+              id: p.id,
+              color: p.colors[0].name,
+              img: p.producto[0].img,
+              name: p.name,
+              price: p.price,
+              quantity: 1,
+              size: p.stock[0].size
+             }
+            console.log(miProd);
+            $scope.cart.addProduct(miProd,1)
+          }
 
     }
 
