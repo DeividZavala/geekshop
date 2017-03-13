@@ -40,31 +40,13 @@
 }
 
 #coloresD input{
-  /*height: 3vh;
-  width: 3vh;
-  min-width:1vh;
-  min-height: 1vh;
-  border-radius: 8px;
-  box-shadow: 2px 2px 1px #263238;
-  margin-right: 4%;
-  border: none;*/
-  display: none;
+  opacity: 0;
 }
 
 #tallaD input{
-  /*height: 5vh;
-  width: auto;
-  max-width:5vh;
-  max-height: 6vh;
-  border-radius: 3px;
-  box-shadow: 2px 2px 1px #263238;
-  margin: 2%;
-  padding-right: 55px;
-  background: #b2ebf2;
-  border: none;
-  text-align: center;*/
-  display: none;
+  opacity: 0;
 }
+
 
 a{
   margin-left: 10px;
@@ -131,5 +113,4 @@ a{
 
 .filtroD input[type="submit"]{
   margin-bottom: 2vh;
-
 }

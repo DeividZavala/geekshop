@@ -35,6 +35,18 @@
 				},3000)
 			}
 
+window.onload=function(){
+			var input= document.getElementById("inputColores");
+
+			input.addEventListener('invalid', function(e) {
+			    if(input.validity.valueMissing){
+			       input= document.getElementsByClassName("title").innerHTML = "La cagaste chavo"
+			    } else if(!input.validity.valid) {
+			        e.target.setCustomValidity("U R DOIN IT WRONG!");
+			    }
+			}, false);
+		}
+
 	}
 
 	angular

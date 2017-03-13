@@ -48,31 +48,38 @@
                           product  : product
                       }
 
-                      this.count =(this.details[product.id].quantity);
+                      this.count += product.quantity;
                       product.quantity = this.details[product.id].quantity;
+                      this.total += (product.price * product.quantity);
+                      this.save();
+                      this.details[product.id].product.quantity =this.details[product.id].quantity;
+
 
                     } else {
 
                     // product.quantity += 1
                     if(lu==0){
 
-                      this.count += (product.quantity);
+                      this.count += product.quantity;
                       this.details[product.id].quantity += product.quantity;
-                      product.quantity = this.details[product.id].quantity;
-                      console.log("Que paso si hay "+product.quantity+" productos!");
+                      this.total += (product.price * product.quantity);
+                      this.save();
+                      this.details[product.id].product.quantity =this.details[product.id].quantity;
 
                     }else {
+
                       this.count += 1;
                       this.details[product.id].quantity += 1;
-                      product.quantity = this.details[product.id].quantity;
+                      this.total += product.price;
+                      this.save();
+                      this.details[product.id].product.quantity =this.details[product.id].quantity;
                     }
-
 
                   }
 
-                  this.total = (product.price * product.quantity);
-                  this.save();
-
+                  // this.total += (product.price * product.quantity);
+                  // this.save();
+                  // this.details[product.id].product.quantity =this.details[product.id].quantity;
                   }
 
             function removeProduct(item) {

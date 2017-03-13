@@ -34,13 +34,14 @@
         $scope.muestra = muestra;
 
           function muestra(p) {
+            var can=1;
             var miProd = {
               id: p.id,
               color: p.colors[0].name,
               img: p.producto[0].img,
               name: p.name,
               price: p.price,
-              quantity: 1,
+              quantity: can,
               size: p.stock[0].size
              }
             console.log(miProd);

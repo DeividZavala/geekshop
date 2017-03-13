@@ -68,10 +68,12 @@ nav.has-shadow{
 }
 .facebook{
     background-color: #3b5998 !important;
+    min-width: 150px;
 }
 .facebook .fa-facebook-square{
     color: white !important;
 }
 .google_plus{
     background-color: #dd4b39 !important;
+    min-width: 150px;
 }
