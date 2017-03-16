@@ -13,7 +13,7 @@
   flex-wrap: wrap;
 }
 
-#colores button{
+#colores label{
   height: 3vh;
   width: 3vh;
   min-width:1vh;
@@ -24,9 +24,17 @@
   border: none;
 }
 
-#talla button{
-  height: 5vh;
-  width: 5vh;
+#colores input{
+  display: none;
+}
+
+#colores input[type="radio"]:checked + label{
+  box-shadow: 2px 2px 1px #eeeeee;
+}
+
+#talla label{
+  height: 4vh;
+  width: 4vh;
   min-width:1vh;
   min-height: 1vh;
   border-radius: 3px;
@@ -38,6 +46,14 @@
   text-align: center;
 }
 
+#talla input{
+  display: none;
+}
+
+#talla input[type="radio"]:checked + label{
+  box-shadow: 2px 2px 1px #eeeeee;
+}
+
 /*ESTILOS SLIDER*/
 input[type=range] {
   -webkit-appearance: none;
@@ -47,17 +63,17 @@ input[type=range]:focus {
   outline: none;
 }
 input[type=range]::-webkit-slider-runnable-track {
-  height: 1vh;
+  height: 1px;
   cursor: pointer;
-  box-shadow: 0px 0px 4px #000000;
+  /*box-shadow: 0px 0px 4px #000000;*/
   background: rgba(162, 0, 161, 0.96);
-  border-radius: 2px;
+  /*border-radius: 2px;*/
   border: 5px solid rgba(0, 0, 0, 0);
 }
 input[type=range]::-webkit-slider-thumb {
   box-shadow: 3.5px 3.5px 11px rgba(0, 0, 0, 0.5);
-  height: 23px;
-  width: 23px;
+  height: 20px;
+  width: 20px;
   border-radius: 15px;
   background: #00eeff;
   cursor: pointer;
@@ -65,13 +81,15 @@ input[type=range]::-webkit-slider-thumb {
   margin-top: -11.85px;
 }
 
+.filtroC ul{
+  margin-top: 6%;
+}
 .filtroC ul li{
   display: display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-
 .filtroC ul li p{
   display: inline-block;
 }

@@ -70,6 +70,28 @@
 
 		              }
 		         });
+
+
+            $scope.minimo = "0";
+            $scope.maximo = "600";
+
+            $scope.setearRan = setearRan;
+            function setearRan(mi,ma) {
+              $scope.minimo = mi;
+              $scope.maximo = ma;
+            }
+
+            $scope.RangeM=function(value) {
+              var miMin = 0;
+              var miMax = 600;
+              miMin = $scope.minimo;
+              miMax = $scope.maximo;
+               if ((value.price >= miMin) && (value.price <= miMax)) {
+                  return true;
+                } else {
+                  return false;
+                  }
+            }
   }
 
   angular
