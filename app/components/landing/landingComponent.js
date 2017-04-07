@@ -5,7 +5,7 @@
       controller: landingCtrl
 	}
 
-  function landingCtrl($scope, DataServices){
+  function landingCtrl($scope, DataServices, swipeService){
 
 			var slideIndex = 0;
 			showSlides();
@@ -60,36 +60,23 @@
 				$scope.info = response.data
 			})
 
+			$scope.RightS = swipeService.swipeRight
+			$scope.LeftS = swipeService.swipeLeft
+
 
 			$(document).ready(function() {
 						$('.carousel_ul li:first').before($('.carousel_ul li:last'));
 
 						$('#right_scroll i').click(function(){
 
-								var item_width = $('.carousel_ul li').outerWidth() + 10;
+								$scope.RightS();
 
-								var left_indent = parseInt($('.carousel_ul').css('left')) - item_width;
-
-								$('.carousel_ul:not(:animated)').animate({'left' : left_indent},500,function(){
-
-										$('.carousel_ul li:last').after($('.carousel_ul li:first'));
-
-										$('.carousel_ul').css({'left' : '-255px'});
-								});
 						});
 
 						$('#left_scroll i').click(function(){
 
-								var item_width = $('.carousel_ul li').outerWidth() + 10;
+								$scope.LeftS();
 
-								var left_indent = parseInt($('.carousel_ul').css('left')) + item_width;
-
-								$('.carousel_ul:not(:animated)').animate({'left' : left_indent},500,function(){
-
-								$('.carousel_ul li:first').before($('.carousel_ul li:last'));
-
-								$('.carousel_ul').css({'left' : '-255px'});
-								});
 						});
 			});
 

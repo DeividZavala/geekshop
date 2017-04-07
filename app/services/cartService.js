@@ -51,36 +51,33 @@
                       this.count += product.quantity;
                       product.quantity = this.details[product.id].quantity;
                       this.total += (product.price * product.quantity);
-                      this.save();
                       this.details[product.id].product.quantity =this.details[product.id].quantity;
-
+                      this.save();
 
                     } else {
 
-                    // product.quantity += 1
-                    if(lu==0){
+                        if(lu==0){
 
-                      this.count += product.quantity;
-                      this.details[product.id].quantity += product.quantity;
-                      this.total += (product.price * product.quantity);
-                      this.save();
-                      this.details[product.id].product.quantity =this.details[product.id].quantity;
+                          this.count += product.quantity;
+                          this.details[product.id].quantity += product.quantity;
+                          this.total += (product.price * product.quantity);
+                          this.details[product.id].product.quantity =this.details[product.id].quantity;
+                          this.save();
 
-                    }else {
 
-                      this.count += 1;
-                      this.details[product.id].quantity += 1;
-                      this.total += product.price;
-                      this.save();
-                      this.details[product.id].product.quantity =this.details[product.id].quantity;
-                    }
+                        }else {
 
-                  }
+                          this.count += 1;
+                          this.details[product.id].quantity += 1;
+                          this.total += product.price;
+                          this.details[product.id].product.quantity =this.details[product.id].quantity;
+                          this.save();
 
-                  // this.total += (product.price * product.quantity);
-                  // this.save();
-                  // this.details[product.id].product.quantity =this.details[product.id].quantity;
-                  }
+                        }
+
+                   }
+
+              }
 
             function removeProduct(item) {
                 if(item.quantity < 1){
