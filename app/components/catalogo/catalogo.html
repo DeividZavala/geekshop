@@ -5,7 +5,6 @@
   <link rel="stylesheet" href="../../../assets/css/main.css">
   <link rel="stylesheet" href="../../../assets/node_modules/bulma/css/bulma.css">
   <script src="../../../assets/node_modules/angular/angular.js"></script>
-  <script src="../../../assets/node_modules/jquery/dist/jquery.js"></script>
   <!-- <script src="/app/services/PaginationService.js"></script> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -15,73 +14,36 @@
           <h1>FILTROS</h1>
         <div class="misFiltros">
           <section>
-            <p>
-                  Color
-                  <input type="radio" name="filColors" value="" ng-model="filtroC.colors.name" id="color0" class="cancel">
-                  <label for="color0" class="cancel">X</label>
-             </p>
+            <p>Color</p>
             <article class="filtroC" id="colores">
-              <input type="radio" name="filColors" value="red" ng-model="filtroC.colors.name" id="color1" >
-              <label for="color1" style="background: #ff1744" ></label>
-
-              <input type="radio" name="filColors" value="purple" ng-model="filtroC.colors.name" id="color2">
-              <label for="color2" style="background: #6a1b9a"></label>
-
-              <input type="radio" name="filColors" value="wer" ng-model="filtroC.colors.name" id="color3">
-              <label for="color3" style="background: #fafafa"></label>
-
-              <input type="radio" name="filColors" value="blue" ng-model="filtroC.colors.name" id="color4">
-              <label for="color4" style="background: #03a9f4"></label>
-
-              <input type="radio" name="filColors" value="green" ng-model="filtroC.colors.name" id="color5">
-              <label for="color5" style="background: #00796b"></label>
-
-              <input type="radio" name="filColors" value="lemon" ng-model="filtroC.colors.name" id="color6">
-              <label for="color6" style="background: #76ff03"></label>
-
-              <input type="radio" name="filColors" value="yellow" ng-model="filtroC.colors.name" id="color7">
-              <label for="color7" style="background: #ffea00"></label>
-
-              <input type="radio" name="filColors" value="wer" ng-model="filtroC.colors.name" id="color8">
-              <label for="color8" style="background: #fafafa"></label>
+              <button type="button" name="button" style="background: #ff1744"></button>
+              <button type="button" name="button" style="background: #6a1b9a"></button>
+              <button type="button" name="button" style="background: #536dfe"></button>
+              <button type="button" name="button" style="background: #03a9f4"></button>
+              <button type="button" name="button" style="background: #00796b"></button>
+              <button type="button" name="button" style="background: #76ff03"></button>
+              <button type="button" name="button" style="background: #ffea00"></button>
+              <button type="button" name="button" style="background: #f8a65"></button>
             </article>
           </section>
           <section>
-            <p>
-                  Talla
-                  <input type="radio" name="filTallas" value="" ng-model="filtroT.stock.size" id="talla0" class="cancel">
-                  <label for="talla0" class="cancel">X</label>
-             </p>
+            <p>Talla</p>
             <article class="filtroC" id="talla">
-              <input type="radio" name="filTallas" value="EXTRACHICA" ng-model="filtroT.stock.size" id="talla1" >
-              <label for="talla1">XS</label>
-
-              <input type="radio" name="filTallas" value="CHICA" ng-model="filtroT.stock.size" id="talla2" >
-              <label for="talla2">S</label>
-
-              <input type="radio" name="filTallas" value="MEDIANA" ng-model="filtroT.stock.size" id="talla3" >
-              <label for="talla3">M</label>
-
-              <input type="radio" name="filTallas" value="MAS" ng-model="filtroT.stock.size" id="talla4" >
-              <label for="talla4">L</label>
-
-              <input type="radio" name="filTallas" value="GRANDE" ng-model="filtroT.stock.size" id="talla5" >
-              <label for="talla5">XL</label>
-
-              <input type="radio" name="filTallas" value="EXTRAGRANDE" ng-model="filtroT.stock.size" id="talla6" >
-              <label for="talla6">XXL</label>
+              <button type="button" name="button">XS</button>
+              <button type="button" name="button">S</button>
+              <button type="button" name="button">M</button>
+              <button type="button" name="button">L</button>
+              <button type="button" name="button">XL</button>
+              <button type="button" name="button">XXL</button>
             </article>
           </section>
           <section>
-             <p>
-                Precio
-                <label class="cancel" ng-click="setearRan(0,600)" id="priceLabel">X</label>
-             </p>
+            <p>Precio</p>
             <article class="filtroC" id="precio">
               <ul>
-                <li><input type="range" id="rangeA" ng-model="minimo" min="0" max="600" step="5" value="0"></li>
+                <li><input type="range" id="rangeA" ng-model="minimo" min="0" max="200" step="10"></li>
                 <li>MINIMO: <p>{{minimo}}</p></li>
-                <li><input type="range" id="rangeB" ng-model="maximo" min="{{minimo}}" max="600" step="5" value="600"></li>
+                <li><input type="range" id="rangeB" ng-model="maximo" min="0" max="200" step="10"></li>
                 <li>MAXIMO: <p>{{maximo}}</p></li>
               </ul>
             </article>
@@ -103,7 +65,8 @@
         </section>
         <section id="productos">
           <article class="imags">
-            <card-component ng-repeat="prod in info | filter:filtroC | filter:filtroT | filter:RangeM" product="prod"></card-component>
+            <card-component ng-repeat="prod in info" product="prod"></card-component>
+
           </article>
         </section>
         <section id="slider">
@@ -118,7 +81,7 @@
               </div>
               <div class="cardsVistos">
                 <ul class='carousel_ul'>
-                    <li ng-repeat="prod in info"><card-component product="prod"></card-component></li>
+                    <li ng-repeat="prod in info"><card-component product="prod" ng-swipe-right="LeftS()" ng-swipe-left="RightS()"></card-component></li>
                 </ul>
               </div>
             </div>
@@ -126,4 +89,5 @@
         </section>
       </div>
     </div>
+
 <!-- Fin del Catalogo -->

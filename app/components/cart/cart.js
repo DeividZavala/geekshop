@@ -24,6 +24,7 @@
 			//open cart
 			$cart_trigger.on('click', function(event){
 				event.preventDefault();
+				console.log("Mierda estas dando click!");
 				//close lateral menu (if it's open)
 				$menu_navigation.removeClass('speed-in');
 				toggle_panel_visibility($lateral_cart, $shadow_layer, $('body'));

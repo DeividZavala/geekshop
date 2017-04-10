@@ -8,24 +8,28 @@
 			<div class="container">
 					<div class="columns">
 
+
 					<div class="column is-2" ng-show="product.producto.lenght > 1">
 
 						<figure class="image is-square" ng-repeat="p in product.producto">
 							<img ng-src="{{p.img}}" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
 						 </figure>
 						<figure class="image is-square">
-							<img ng-src="{{product.producto[1].img}}" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+							<img ng-src="{{product.producto[2].img}}" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
 						 </figure>
 						<figure class="image is-square">
-							<img ng-src="{{product.producto[2].img}}" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+							<img ng-src="{{product.producto[3].img}}" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
 						 </figure>
 
 					</div>
 					<div class="column">
 						<figure class="image is-square">
-							<img ng-src="{{product.producto[0].img}}" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+							<img ng-src="{{product.producto[4].img}}" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
 						 </figure>
 					</div>
+
+
+
 					<div class="column is-4">
 
 
@@ -33,27 +37,30 @@
 						<div class="misFiltrosD">
 							<section>
 
-
 								<p ng-model="p.price"><span class="icon is-medium">
 										<i class="fa fa-money"></i>
 								</span>Precio: {{product.price | currency}}	</p>
 								<span ng-value=""	ng-model="p.id"></span>
 								<p><span class="icon is-medium">
 										<i class="fa fa-sort"></i>
-								</span>Cantidad:<input class="input is-medium" type="number" min="1" placeholder="1" required ng-model="p.quantity"></p>
+								</span>Cantidad:<input class="input is-medium" type="number" min="1" placeholder="1" required ng-model="p.quantity"
+								oninvalid="this.setCustomValidity('Metele algo papu')" onchange="this.setCustomValidity('')" ></p>
+
  						 	</section>
 							<section>
 								<p style="margin: 0">Color</p>
 								<article class="filtroD" id="coloresD">
 
-									<input type="radio" ng-model="p.color" required value="{{color.name}}" id="inputColores" name="colores" ng-repeat="color in product.colors">
+									<input type="radio" ng-model="p.color" required value="{{color.name}}" id="inputColores" name="colores" ng-repeat="color in product.colors"
+									oninvalid="this.setCustomValidity('Apoco si muy monocromatico chavo')" onchange="this.setCustomValidity('')">
 									<label for="inputColores"	style="background:{{color.hexa}}"	 ng-repeat="color in product.colors"></label>
 								</article>
 							</section>
 							<section>
 								<p style="margin: 0">Talla</p>
 								<article class="filtroD" id="tallaD">
-									<input type="radio" required ng-model="p.size" value="{{talla.size}}" id="inputTallas" name="tallas" ng-repeat="talla in product.stock">
+									<input type="radio" required ng-model="p.size" value="{{talla.size}}" id="inputTallas" name="tallas" ng-repeat="talla in product.stock"
+									oninvalid="this.setCustomValidity('Ay wey apoco si muy delgado')" onchange="this.setCustomValidity('')">
 									<label for="inputTallas"	ng-repeat="talla in product.stock">{{talla.size}}</label>
 								</article>
 							</section>
@@ -88,6 +95,7 @@
 			<!-- INICIO MODAL -->
 			<div id="myModal" class="modal">
 			  <span class="close cursor" onclick="closeModal()">&times;</span>
+
 			  <div class="modal-content">
 			    <div class="mySlides" ng-repeat="i in product.producto">
 			      <div class="numbertext">{{$index+1}} / 4</div>
@@ -113,16 +121,16 @@
 			      <p id="caption"></p>
 			    </div>
 
-			    <div class="column">
+			    <div class="columnD">
 			      <img class="demo cursor" src="/assets/images/playera1.jpg" onclick="currentSlide(1)" alt="Nature and sunrise">
 			    </div>
-			    <div class="column">
-			      <img class="demo cursor" src="/assets/images/playera3.jpg" onclick="currentSlide(2)" alt="Trolltunga, Norway">
+			    <div class="columnD">
+			      <img class="demo cursor" src="/assets/images/playera2.jpg" onclick="currentSlide(2)" alt="Trolltunga, Norway">
 			    </div>
-			    <div class="column">
-			      <img class="demo cursor" src="/assets/images/playera2.jpg" onclick="currentSlide(3)" alt="Mountains and fjords">
+			    <div class="columnD">
+			      <img class="demo cursor" src="/assets/images/playera3.jpg" onclick="currentSlide(3)" alt="Mountains and fjords">
 			    </div>
-			    <div class="column">
+			    <div class="columnD">
 			      <img class="demo cursor" src="/assets/images/playera4.jpg" onclick="currentSlide(4)" alt="Northern Lights">
 			    </div>
 			  </div>

@@ -1,4 +1,17 @@
+.rowD > .columnD {
+  padding: 0 8px;
+}
 
+.rowD:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.columnD {
+  float: left;
+  width: 25%;
+}
 /* The Modal (background) */
 .modal {
   display: none;
@@ -17,8 +30,12 @@
   background-color: #fefefe;
   margin: auto;
   padding: 0;
-  width: 50%;
-  max-width: 1200px;
+  min-width: 35%;
+  width: 80vw;
+  max-width: 600px;
+  max-height: 75vh;
+  height: 100%;
+  min-height: 70vh;
 
 }
 
@@ -39,6 +56,14 @@
   cursor: pointer;
 }
 
+.CerrarMobile{
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  display: block;
+  margin-left: 48%;
+}
+
 .mySlides {
   display: none;
 
@@ -46,7 +71,8 @@
 
 .imslide{
   width: 100%;
-  min-height: 80vh;
+  height: 60vh;
+  min-height: 60vh;
   max-height: 80vh;
 }
 

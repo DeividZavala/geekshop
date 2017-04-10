@@ -96,3 +96,7 @@
 .info_container .info_opacity .info .mas_info:hover{
     color: white;
 }
+
+.nonDraggableImage{
+    -webkit-user-drag: none;
+}

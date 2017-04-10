@@ -5,7 +5,7 @@
     controller: catalogCtrl
   }
 
-  function catalogCtrl($scope,DataServices) {
+  function catalogCtrl($scope,DataServices, swipeService) {
 
          DataServices.getProducts()
            .then(function (response) {
@@ -26,37 +26,25 @@
                  document.getElementById("main").style.marginLeft= "0";
             }
 
-            $(document).ready(function() {
-                    $('.carousel_ul li:first').before($('.carousel_ul li:last'));
+            $scope.RightS = swipeService.swipeRight
+      			$scope.LeftS = swipeService.swipeLeft
 
-                    $('#right_scroll i').click(function(){
 
-                        var item_width = $('.carousel_ul li').outerWidth() + 10;
+      			$(document).ready(function() {
+      						$('.carousel_ul li:first').before($('.carousel_ul li:last'));
 
-                        var left_indent = parseInt($('.carousel_ul').css('left')) - item_width;
+      						$('#right_scroll i').click(function(){
 
-                        $('.carousel_ul:not(:animated)').animate({'left' : left_indent},500,function(){
+      								$scope.RightS();
 
-                            $('.carousel_ul li:last').after($('.carousel_ul li:first'));
+      						});
 
-                            $('.carousel_ul').css({'left' : '-255px'});
-                        });
-                    });
+      						$('#left_scroll i').click(function(){
 
-                    $('#left_scroll i').click(function(){
+      								$scope.LeftS();
 
-                        var item_width = $('.carousel_ul li').outerWidth() + 10;
-
-                        var left_indent = parseInt($('.carousel_ul').css('left')) + item_width;
-
-                        $('.carousel_ul:not(:animated)').animate({'left' : left_indent},500,function(){
-
-                        $('.carousel_ul li:first').before($('.carousel_ul li:last'));
-
-                        $('.carousel_ul').css({'left' : '-210px'});
-                        });
-                    });
-              });
+      						});
+      			});
 
             $(window).resize(function() {
   	           if ($(window).width() < 550) {
@@ -70,28 +58,6 @@
 
 		              }
 		         });
-
-
-            $scope.minimo = "0";
-            $scope.maximo = "600";
-
-            $scope.setearRan = setearRan;
-            function setearRan(mi,ma) {
-              $scope.minimo = mi;
-              $scope.maximo = ma;
-            }
-
-            $scope.RangeM=function(value) {
-              var miMin = 0;
-              var miMax = 600;
-              miMin = $scope.minimo;
-              miMax = $scope.maximo;
-               if ((value.price >= miMin) && (value.price <= miMax)) {
-                  return true;
-                } else {
-                  return false;
-                  }
-            }
   }
 
   angular

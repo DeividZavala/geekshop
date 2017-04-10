@@ -13,7 +13,6 @@
 
 				<h2 class="animated fadeInLeft subtitle">
 					Playeras con estilo como el tuyo, o crea tu propio estilo
-
 				</h2>
 
 				<a class="button is-success is-large animated fadeInLeft ">
@@ -23,14 +22,10 @@
 			</div>
 
 			<div class="column is-4 is-offset-1 is-hidden-touch is-hidden-desktop-only">
-
 				<img id="im1" class="animated fadeInRight" src="../../../assets/images/imagen1.png">
-
 				<img id="im2" class="animated fadeInRight" src="../../../assets/images/imagen2.png">
-
 			</div>
-
-
+			
 	</div>
 
 	<div class="BannerCaracteristicas">
@@ -120,7 +115,7 @@
 				</div>
 				<div class="cardsVistos">
 					<ul class='carousel_ul'>
-							<li ng-repeat="prod in info"><card-component product="prod"></card-component></li>
+							<li ng-repeat="prod in info"><card-component product="prod" ng-swipe-right="LeftS()" ng-swipe-left="RightS()"></card-component></li>
 					</ul>
 				</div>
 			</div>

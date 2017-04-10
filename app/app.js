@@ -1,7 +1,7 @@
 (function () {
 
     angular
-        .module('geekshop',['ngRoute','ngCookies'])
+        .module('geekshop',['ngRoute','ngCookies','ngTouch'])
         .config(token)
         .controller("tabsMenu",tabsMenu);
 
@@ -14,7 +14,7 @@
 
             $scope.selectedTab = 1;
             $scope.checkRoute = checkRoute;
-            
+
             function checkRoute(route) {
                 return $location.path() == route;
             }
