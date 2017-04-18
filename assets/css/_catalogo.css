@@ -4,16 +4,19 @@
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  /*border: 2px solid blue;*/
 }
 
 .containerCatalog #main #productos .reemplazo{
   display: flex;
   align-items: center;
   justify-content: center;
+  /*border: 2px solid blue;*/
 }
 
 .containerCatalog #main #productos .imags card-component{
   margin: 3%;
+  /*border: 2px solid blue;*/
 }
 
 .sidenav {
@@ -28,6 +31,7 @@
     padding-top: 8%;
     z-index: 1;
     overflow: hidden;
+    /*border: 2px solid purple;*/
 }
 
 .sidenav .closebtn {
@@ -35,6 +39,7 @@
     font-size: 30px;
     margin-left: 80%;
     color: #818181;
+    /*border: 2px solid purple;*/
 }
 
 .sidenav a:hover, .offcanvas a:focus{
@@ -49,6 +54,7 @@
   color: #f1f1f1;
   display: flex;
   justify-content: center;
+  /*border: 2px solid purple;*/
 }
 
 .misFiltros{
@@ -58,15 +64,17 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  /*border: 2px solid blue;*/
 }
 
 .misFiltros section{
-  height: 20vh;
+  height: 21vh;
   padding: 2%;
   display: flex;
   align-items: center;
   max-width: 200px;
   flex-direction:column;
+  /*border: 2px solid red;*/
 }
 
 .misFiltros section p{
@@ -74,7 +82,32 @@
   text-decoration: none;
   font-size: 20px;
   color: #f1f1f1;
-  display: block;
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  /*border: 2px solid purple;*/
+}
+
+.misFiltros section p label.cancel{
+  height: 3vh;
+  width: 3vh;
+  min-width:1vh;
+  min-height: 1vh;
+  border-radius: 4px;
+  border: 2px solid white;
+  color: white;
+  text-align: center;
+  margin: 2%;
+  font-size: 12px;
+}
+
+.misFiltros section p input.cancel{
+  display: none;
+}
+
+.misFiltros section p label.cancel:hover{
+    border: 2px solid blue;
 }
 
 #main {
