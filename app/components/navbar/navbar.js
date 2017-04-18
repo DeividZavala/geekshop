@@ -26,25 +26,7 @@
             return $location.path() == route;
         }
 
-
-        $(".nav-toggle").on('click',function () {
-            $(".nav-toggle").toggleClass("is-active")
-            $(".nav-right").css("position","absolute")
-            $(".nav-menu").toggleClass("is-active")
-        })
-
-        $("#search").on("click",function () {
-            $("#search_box").slideToggle("fast");
-        })
-
-        $("#login").on('click',function () {
-            $("header + div.modal").fadeIn()
-        })
-        $("#close_login").on("click",function () {
-            $("header + div.modal").fadeOut()
-        })
-
-        var $L = 1200,
+  			var $L = 1200,
   				$menu_navigation = $('#main-nav'),
   				$cart_trigger = $('#cd-cart-trigger'),
 
@@ -114,6 +96,27 @@
   				$navigation.insertAfter('header');
   			}
   		}
+
+
+
+        $(".nav-toggle").on('click',function () {
+            $(".nav-toggle").toggleClass("is-active")
+            $(".nav-right").css("position","absolute")
+            $(".nav-menu").toggleClass("is-active")
+        })
+
+        $("#search").on("click",function () {
+            $("#search_box").slideToggle("fast");
+        })
+
+        $("#login").on('click',function () {
+            $("header + div.modal").fadeIn()
+        })
+        $("#close_login").on("click",function () {
+            $("header + div.modal").fadeOut()
+        })
+
+
 
 
     }

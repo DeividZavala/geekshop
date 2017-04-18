@@ -32,7 +32,7 @@
             $scope.hiddenNumber = hidden + number[12] + number[13] + number[14] + number[15]
 
         }
-        console.log($scope.cart.details[1].quantity)
+        // console.log($scope.cart.details[1].quantity)
 
         function postOrder(user_info){
 

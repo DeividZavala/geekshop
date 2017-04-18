@@ -27,8 +27,8 @@
 .BannerPrincipal h1{
 	color: white;
 	font-size: 36px;
-	margin-top: 15%;
-	text-align: justify;
+	margin-top: 15vh;
+	text-align: center;
 	font-weight: bolder;
 }
 
@@ -36,7 +36,11 @@
 	color: white;
 	font-size: 25px;
 	font-style: normal;
-	text-align: left;
+	text-align: center;
+}
+
+.BannerPrincipal a{
+	left: 45%;
 }
 
 .BannerPrincipal #im1{
@@ -177,7 +181,6 @@
 .parallax span{
 	margin-top: 12vh;
 	text-align: center;
-	font-size: 25px;
 	color: white;
 	position: absolute;
 	z-index: 999;
