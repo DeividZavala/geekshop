@@ -24,8 +24,9 @@
         }
 
         function postOrder(order){
-            var csrf = $cookies.get('csrftoken');
-            console.log(csrf)
+          console.log(order);
+            // var csrf = $cookies.get('csrftoken');
+            // console.log(csrf)
             $http({
                 method:'POST',
                 url:'https://still-beach-40836.herokuapp.com/orders/api/orders/',

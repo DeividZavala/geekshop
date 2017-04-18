@@ -57,7 +57,7 @@
 
         <div class="column checkout_forms">
             <div class="payment_info">
-                <form>
+                <form action="" method="post" id="card-form">
 
                     <!-- Primera Parte -->
                     <div ng-show="checkSection(0)">
@@ -199,28 +199,28 @@
 
                         <label class="label">Nombre del tarjetahabiente</label>
                         <p class="control">
-                            <input class="input" type="text" placeholder="Nombre del tarjetahabiente">
+                            <input class="input" type="text" data-conekta="card[name]" placeholder="Nombre del tarjetahabiente">
                         </p>
 
                         <label class="label">Número de tarjeta de crédito</label>
                         <p class="control">
-                            <input class="input" type="text" placeholder="ej.4242424242424242" size="20">
+                            <input class="input" type="text" data-conekta="card[number]" placeholder="ej.4242424242424242" size="20">
                         </p>
 
                         <div class="columns card_date">
                             <div class="column">
                                 <label class="label">CVC</label>
                                 <p class="control">
-                                    <input class="input" type="text" size="20">
+                                    <input class="input" type="text" data-conekta="card[cvc]" size="20">
                                 </p>
                             </div>
                             <div class="column">
                                 <label class="label">Fecha de expiración (MM/AAAA)</label>
                                 <!--<p class="control">-->
                                     <div class="columns card_date_expiration">
-                                        <input class="input column" type="text" size="2">
+                                        <input class="input column" type="text" data-conekta="card[exp_month]" size="2">
                                         <span class="column slash">/</span>
-                                        <input class="input column" type="text" size="4">
+                                        <input class="input column" type="text" data-conekta="card[exp_year]" size="4">
                                     </div>
                                 <!--</p>-->
                             </div>
@@ -234,7 +234,7 @@
                                 <button class="button is-danger is-medium">Cancelar</button>
                             </p>
                             <p class="control">
-                                <button class="button is-success is-medium" ng-click="postOrder(client)">
+                                <button class="button is-success is-medium" id="tokenizar" type="submit" ng-click="postOrder(client)">
                                     ¡Pagar!
                                     <span class="icon is-small">
                                         <i class="fa fa-check"></i>
@@ -254,3 +254,24 @@
 
     </article>
 </section>
+<script type="text/javascript">
+   Conekta.setPublishableKey('key_H9Sv81Y41b7o2UuKmBs5cPw');
+
+   var conektaSuccessResponseHandler = function(token) {
+     var $form = $("#card-form");
+     $form.get(0).submit();
+   };
+   var conektaErrorResponseHandler = function(response) {
+     var $form = $("#card-form");
+     $form.find("#tokenizar").prop("disabled", false);
+   };
+
+   $(function () {
+     $("#card-form").submit(function(event) {
+       var $form = $(this);
+       $form.find("#tokenizar").prop("disabled", true);
+       Conekta.token.create($form, conektaSuccessResponseHandler, conektaErrorResponseHandler);
+       return false;
+     });
+   });
+</script>
