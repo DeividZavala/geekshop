@@ -116,7 +116,33 @@
             $("header + div.modal").fadeOut()
         })
 
+        $(".nav-menu").on('click',function(){
+          $(".nav-toggle").toggleClass("is-active")
+          // $(".nav-right").css("position","absolute")
+          $(".nav-menu").toggleClass("is-active")
+        })
 
+
+
+
+        $(window).resize(function() {
+  				 if ($(window).width() < 700) {
+  							$(".modal-close").css({"z-index": "8", "display": "block",  "position": "relative", "top": "1px", "right" : "-48%"})
+
+  				 }
+  						if ($(window).width() > 700){
+  							 $(".modal-close").css({"z-index": "8", "display": "inline-block",  "position": "absolute", "top": "20px", "right" : "20px"})
+                 $(".nav-right").css("position","relative")
+  						}
+  			 });
+
+         if ($(window).width() < 600) {
+           $(".modal-close").css({"z-index": "8", "display": "block",  "position": "relative", "top": "1px", "right" : "-48%"})
+
+     		  }
+     		   else {
+             $(".modal-close").css({"z-index": "8", "display": "inline-block",  "position": "absolute", "top": "20px", "right" : "20px"})
+     		}
 
 
     }

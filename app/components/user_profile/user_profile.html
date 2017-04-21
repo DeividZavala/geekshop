@@ -6,7 +6,7 @@
 		<img class="animated fadeIn" src="../../../assets/images/BannerUser.jpg">
 
 		<div class="column is-6-widescreen is-offset-3-widescreen is-8-tablet is-offset-2-tablet is-8-mobile is-offset-2-mobile is-8-desktop is-offset-2-desktop">
-			<h1 class="animated fadeInDown title">
+			<h1 class="animated fadeInDown title" style="word-break: keep-all">
 				Bienvenido NombreUsuario
 			</h1>
 
@@ -36,32 +36,32 @@
 
 		<article class="content" id="BABP">
 
+
 			<div class="container">
 				<div class="columns">
 
+					<div class="PersonalInfo column is-3 is-offset-1 Title">
+						<h3>Nombres</h3>
+						<h3>Correo</h3>
+						<h3>otro</h3>
+						<h3>Nombre</h3>
+					</div>
 
 
 					<div class="column">
-						<div class="tabs is-medium">
+						<div class="tabs is-medium is-boxed">
 						  <ul>
-						    <li ng-class = "{active:isSelected(1)}" class="is-active"><a href ng-click="selectTab(1)">Personal</a> </li>
-						     <li ng-class = "{active:isSelected(2)}"><a href ng-click="selectTab(2)">Direcciones</a></li>
-						     <li ng-class = "{active:isSelected(3)}"><a href ng-click="selectTab(3)">Compras</a></li>
-						     <li ng-class = "{active:isSelected(4)}"><a href ng-click="selectTab(4)">Wishlist</a></li>
-						     <li ng-class = "{active:isSelected(5)}"><a href ng-click="selectTab(5)">Diseños</a></li>
+						     <li ng-class = "{'is-active':isSelected(1)}"><a href ng-click="selectTab(1)"><span class="icon is-small"><i class="fa fa-paper-plane"></i></span> Direcciones</a></li>
+						     <li ng-class = "{'is-active':isSelected(2)}"><a href ng-click="selectTab(2)"><span class="icon is-small"><i class="fa fa-shopping-bag"></i></span>Compras</a></li>
+						     <li ng-class = "{'is-active':isSelected(3)}"><a href ng-click="selectTab(3)"><span class="icon is-small"><i class="fa fa-magic"></i></span>Wishlist</a></li>
+						     <li ng-class = "{'is-active':isSelected(4)}"><a href ng-click="selectTab(4)"><span class="icon is-small"><i class="fa fa-paint-brush"></i></span>Diseños</a></li>
 						  </ul>
 
 						</div>
-						<div class="panel" ng-show="tab===1">
-							<h3>Nombres</h3>
-							<h3>Correo</h3>
-							<h3>otro</h3>
-							<h3>Nombre</h3>
 
-						</div>
-						<div class="panel" ng-show="isSelected(2)">Direcciones</div>
-						<div class="panel" ng-show="isSelected(3)">Compras</div>
-						<div class="panel" ng-show="isSelected(4)">
+						<div class="panel" ng-show="isSelected(1)">Direcciones</div>
+						<div class="panel" ng-show="isSelected(2)">Compras</div>
+						<div class="panel" ng-show="isSelected(3)">
 							<div class="whish">
 								<div class="card">
 								  <div class="card-image">
@@ -79,7 +79,7 @@
 								</div>
 							</div>
 					</div>
-					<div class="panel" ng-show="isSelected(5)">
+					<div class="panel" ng-show="isSelected(4)">
 						Hola que hace
 					</div>
 

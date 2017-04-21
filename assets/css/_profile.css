@@ -47,18 +47,6 @@
 	margin:0 !important;
 }
 
-.columns .column:nth-child(2) div:nth-child(2){
-	padding-left: 50px;
-}
-
-.columns .column:nth-child(2) div:nth-child(3){
-	padding-left: 50px;
-}
-
-.columns .column:nth-child(2) div:nth-child(4){
-	padding-left: 50px;
-}
-
 /*Inicio de nuevos elementos
 ******************************
 ******************************
@@ -129,4 +117,16 @@
 
 #BABP{
 	margin-bottom: 200px;
+}
+
+.panel{
+	padding-left: 12%;
+}
+
+.PersonalInfo{
+	text-align: center;
+}
+
+.PersonalInfo h3{
+	font-family: sans-serif;
 }

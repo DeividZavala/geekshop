@@ -13,9 +13,21 @@
 			$scope.selectTab = function(setTab){
 				$scope.tab = setTab;
 			};
+
 			$scope.isSelected = function(checkTab){
-				return $scope.tab === checkTab; 
+				return $scope.tab === checkTab;
 			};
+
+			$(window).resize(function() {
+				 if ($(window).width() < 550) {
+							$("#contenPerfil").css({"left":"22%", "bottom":"-32%"})
+
+				 }
+						if ($(window).width() > 550) {
+							$("#contenPerfil").css({"left":"20%", "bottom":"-10%"})
+
+						}
+			 });
 
 	}
 

@@ -27,18 +27,18 @@
                     <a class="nav-item is-tab is-hidden-mobile" id="search"><i class="fa fa-search" aria-hidden="true"></i></a>
                     <a href="#/profile/1" class="nav-item is-tab">
                         <figure class="image is-16x16" style="margin-right: 8px;">
-                        <!-- <img src="http://bulma.io/images/jgthms.png"> -->
+
                         <span class="icon iconSuperior">
                   					<i class="fa fa-user fa-5x"></i>
                 				</span>
-                        </figure>
+                      </figure>
                         Profile
                     </a>
                     <a class="nav-item is-tab" id="login">Inicia sesión</a>
                     <a class="nav-item is-tab">Log out</a>
                     <a class="nav-item is-tab" id="cd-cart-trigger">
-                        <span class="badget">
-                            <i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
+                        <span class="badget icon">
+                            <i class="fa fa-shopping-cart " aria-hidden="true"></i>
                             <span class="cart_quantity">{{cantidad()}}</span>
                         </span>
                     </a>
@@ -54,8 +54,9 @@
     <!-- Inicio Login -->
 
         <div class="modal">
+          <button class="modal-close" id="close_login"></button>
             <div class="modal-background"></div>
-                <div class="modal-content">
+                <div class="modal-content" style="margin:auto">
                     <!-- Any other Bulma elements you want -->
                     <div class="login_container">
 
@@ -100,7 +101,6 @@
 
                     </div>
                 </div>
-            <button class="modal-close" id="close_login"></button>
         </div>
 
     <!-- Fin Login -->

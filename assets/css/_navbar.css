@@ -4,6 +4,7 @@ header{
 .nav-right{
     position: relative;
 }
+
 .nav-right .input_search{
     padding-top: 2%;
     position: absolute;
@@ -27,6 +28,7 @@ nav.has-shadow{
 }
 .modal-content{
     border-radius: 5px;
+    min-height: 500px;
 }
 .login_container{
     padding: 5%;

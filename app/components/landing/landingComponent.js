@@ -27,13 +27,50 @@
 		if ($(window).width() < 600) {
 			  $("section article div div.botonesCarrito").addClass("botonesCarritoMobile")
 				$("section article div div.botonesCarrito").removeClass("botonesCarrito")
+
+				$(".parallax span").addClass("spanChi")
+				$(".parallax .spanChi").removeClass("PaM")
+
+				$(".parallax .PaBu").addClass("buChi")
+				$(".parallax .buChi").removeClass("PaBu")
+
   	}
+
 		if ($(window).width() > 600) {
 				$("section article div div.botonesCarritoMobile").addClass("botonesCarrito")
 				$("section article div div.botonesCarritoMobile").removeClass("botonesCarritoMobile")
+
+				$(".parallax .spanChi").addClass("PaM")
+				$(".parallax span").removeClass("spanChi")
+
+				$(".parallax .buChi").addClass("PaBu")
+				$(".parallax .PaBu").removeClass("buChi")
+
 		}
 
 		});
+
+		if ($(window).width() < 600) {
+			$("section article div div.botonesCarrito").addClass("botonesCarritoMobile")
+			$("section article div div.botonesCarrito").removeClass("botonesCarrito")
+
+			$(".parallax span").addClass("spanChi")
+			$(".parallax .spanChi").removeClass("PaM")
+
+			$(".parallax .PaBu").addClass("buChi")
+			$(".parallax .buChi").removeClass("PaBu")
+
+		}
+		else {
+			$("section article div div.botonesCarritoMobile").addClass("botonesCarrito")
+			$("section article div div.botonesCarritoMobile").removeClass("botonesCarritoMobile")
+
+			$(".parallax .spanChi").addClass("PaM")
+			$(".parallax span").removeClass("spanChi")
+
+			$(".parallax .buChi").addClass("PaBu")
+			$(".parallax .PaBu").removeClass("buChi")
+		}
 
 		DataServices.getProducts()
 			.then(function (response) {
