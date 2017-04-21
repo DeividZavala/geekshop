@@ -54,26 +54,23 @@
             </div>
 
         </div>
-
         <div class="column checkout_forms">
             <div class="payment_info">
-                <form action="" method="post" id="card-form">
-
                     <!-- Primera Parte -->
                     <div ng-show="checkSection(0)">
-
+                      <form ng-submit="selectSection(1)">
                         <div class="columns">
 
                             <div class="column">
                                 <label class="label">Nombre</label>
                                 <p class="control">
-                                    <input class="input" type="text" placeholder="Nombre" ng-model="client.cname">
+                                    <input class="input" type="text" placeholder="Nombre" required ng-model="client.cname">
                                 </p>
                             </div>
                             <div class="column">
                                 <label class="label">Apellido</label>
                                 <p class="control">
-                                    <input class="input" type="text" placeholder="Apellido" ng-model="client.clastname">
+                                    <input class="input" type="text" placeholder="Apellido" required ng-model="client.clastname">
                                 </p>
                             </div>
 
@@ -81,18 +78,18 @@
 
                         <label class="label">Dirección 1</label>
                         <p class="control">
-                            <input class="input" type="text" placeholder="ej. Indepencia No. 136" ng-model="client.address1">
+                            <input class="input" type="text" placeholder="ej. Indepencia No. 136" required ng-model="client.address1">
                         </p>
 
                         <label class="label">Dirección 2 (aprt,col,No.Int)</label>
                         <p class="control">
-                            <input class="input" type="text" placeholder="ej. col. Centro No.Int 4" ng-model="client.address2">
+                            <input class="input" type="text" placeholder="ej. col. Centro No.Int 4" required ng-model="client.address2">
                         </p>
 
                         <label class="label">País</label>
                         <p class="control">
                             <span class="select is-medium">
-                                <select ng-model="client.country" >
+                                <select required ng-model="client.country" >
                                 <option value="" disabled selected>País</option>
                                 <option value="México">México</option>
                                 </select>
@@ -103,20 +100,20 @@
                             <div class="column">
                                 <label class="label">Ciudad</label>
                                 <p class="control">
-                                    <input class="input" type="text" placeholder="CDMX" ng-model="client.city">
+                                    <input class="input" type="text" placeholder="CDMX" required ng-model="client.city">
                                 </p>
                             </div>
                             <div class="column">
                                 <label class="label">Código Postal</label>
                                 <p class="control">
-                                    <input class="input" type="number" placeholder="ej. 09131" ng-model="client.cp">
+                                    <input class="input" type="number" placeholder="ej. 09131" required ng-model="client.cp">
                                 </p>
                             </div>
                         </div>
 
                         <label class="label">Número telefónico</label>
                         <p class="control">
-                            <input class="input" type="number" placeholder="55 555 555 55 " ng-model="client.tel">
+                            <input class="input" type="number" placeholder="55 555 555 55" required ng-model="client.tel">
                         </p>
 
                         <div class="control is-grouped">
@@ -124,15 +121,16 @@
                                 <button class="button is-danger is-medium">Cancelar</button>
                             </p>
                             <p class="control">
-                                <button class="button is-primary is-medium" ng-click="selectSection(1)">
+                              <input type="submit" value="SIGUIENTE">
+                                <!-- <button class="button is-primary is-medium" ng-click="">
                                     Siguiente
                                     <span class="icon is-small">
                                         <i class="fa fa-chevron-right" aria-hidden="true"></i>
                                     </span>
-                                </button>
+                                </button> -->
                             </p>
                         </div>
-
+                      </form>
                     </div>
                     <!-- Fin de primera parte -->
 
@@ -196,31 +194,31 @@
 
                     <!-- Inicio de la tercera parte -->
                     <div class="card_info" ng-show="checkSection(2)">
-
+                      <form id="card-form" ng-submit="postOrder(client)">
                         <label class="label">Nombre del tarjetahabiente</label>
                         <p class="control">
-                            <input class="input" type="text" data-conekta="card[name]" placeholder="Nombre del tarjetahabiente">
+                            <input class="input" type="text" required data-conekta="card[name]" placeholder="Nombre del tarjetahabiente">
                         </p>
 
                         <label class="label">Número de tarjeta de crédito</label>
                         <p class="control">
-                            <input class="input" type="text" data-conekta="card[number]" placeholder="ej.4242424242424242" size="20">
+                            <input class="input" type="text" required data-conekta="card[number]" placeholder="ej.4242424242424242" size="20">
                         </p>
 
                         <div class="columns card_date">
                             <div class="column">
                                 <label class="label">CVC</label>
                                 <p class="control">
-                                    <input class="input" type="text" data-conekta="card[cvc]" size="20">
+                                    <input class="input" type="text" required data-conekta="card[cvc]" size="20">
                                 </p>
                             </div>
                             <div class="column">
                                 <label class="label">Fecha de expiración (MM/AAAA)</label>
                                 <!--<p class="control">-->
                                     <div class="columns card_date_expiration">
-                                        <input class="input column" type="text" data-conekta="card[exp_month]" size="2">
+                                        <input class="input column" type="text" required data-conekta="card[exp_month]" size="2">
                                         <span class="column slash">/</span>
-                                        <input class="input column" type="text" data-conekta="card[exp_year]" size="4">
+                                        <input class="input column" type="text" required data-conekta="card[exp_year]" size="4">
                                     </div>
                                 <!--</p>-->
                             </div>
@@ -234,7 +232,7 @@
                                 <button class="button is-danger is-medium">Cancelar</button>
                             </p>
                             <p class="control">
-                                <button class="button is-success is-medium" id="tokenizar" type="submit" ng-click="postOrder(client)">
+                                <button class="button is-success is-medium" id="tokenizar" type="submit">
                                     ¡Pagar!
                                     <span class="icon is-small">
                                         <i class="fa fa-check"></i>
@@ -242,16 +240,11 @@
                                 </button>
                             </p>
                         </div>
-
+                      </form>
                     </div>
                     <!-- Fin de la tercera parte -->
-
-                </form>
-
             </div>
-
         </div>
-
     </article>
 </section>
 <script type="text/javascript">
